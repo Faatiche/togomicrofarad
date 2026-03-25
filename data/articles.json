@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Comment remplacer les condensateurs électrolytiques d'une alimentation de téléviseur ou d'ampli audio ? ",
+    "date": "2026-03-11",
+    "category": "Conseils",
+    "url": "/blog/posts/remplacer-condensateurs-electrolytique-alimentation-téléviseur-et-ampli.html",
+    "excerpt": "Remplacer un condensateur est à la portée d'un amateur averti. Avec des composants de qualité, vous prolongerez la vie de vos appareils.......",
+    "image": "/assets/images/remplacer-condensateur-alimentation-tv.png"
+  },
+  {
+  "title": "Comment mesurer la capacité d'un condensateur électrolytique avec un multimètre ?",
+  "date": "2026-03-14",
+  "category": "Réparation électronique",
+  "url": "/blog/posts/comment-tester-condensateur-electrolytique-avec-un-multimetre.html",
+  "excerpt": "La mesure de capacité est essentielle pour diagnostiquer un condensateur. Mais tous les multimètres ne sont pas égaux. Suivez ce guide illustré étape par étape...",
+  "image": "/assets/images/un Multimètre et un condensateur électrolytique sur un plan de travail.png"
+},
+{
+  "title": "Pourquoi les condensateurs gonflent-ils ? Guide de réparation au Togo",
+  "date": "2026-03-17",
+  "category": "Guide technique",
+  "url": "/blog/posts/pourquoi-les-condensateurs-gonflent.html",
+  "excerpt": "Si vous avez déjà ouvert un téléviseur en panne, une alimentation de PC ou une carte mère de machine à laver, vous avez sans doute remarqué ces petits cylindres dont le sommet n'est plus plat, mais bombé. Au Togo, avec les variations de tension et la chaleur ambiante, le phénomène de condensateur gonflé est l'une des causes de panne les plus fréquentes.",
+  "image": "/assets/images/condensateur-gonfler.png"
+},
+{
+  "title": "Comment lire la valeur d’un condensateur électrolytique ? (Guide complet)",
+  "date": "2026-03-21",
+  "category": "Guide pratique",
+  "url": "/blog/posts/lire-condensateur-electrolytique.html",
+  "excerpt": "Apprenez à lire facilement la valeur d'un condensateur électrolytique : capacité (µF), tension (V), polarité et astuces. Guide complet pour débutants et réparateurs.",
+  "image": "/assets/images/lire-condensateur.png"
+},
+{
+  "title": "Pourquoi un condensateur chauffe ? Causes, dangers et solutions (Guide complet)",
+  "date": "2026-03-22",
+  "category": "Guide pratique",
+  "url": "/blog/posts/pourquoi-condensateur-chauffe.html",
+  "excerpt": "Découvrez pourquoi un condensateur chauffe, les causes principales comme l’ESR, la surtension ou la chaleur, ainsi que les solutions pour éviter les pannes électroniques.",
+  "image": "/assets/images/condensateur-chauffe.png"
+},
+{
+  "title": "Comment éviter d'endommager une carte électronique ? Le guide complet",
+  "date": "2026-03-24",
+  "category": "Maintenance Pro",
+  "url": "/blog/posts/eviter-dommager-carte-electronique.html",
+  "excerpt": "Apprenez à protéger vos PCB contre les décharges électrostatiques (ESD), l'oxydation et les erreurs de soudure pour prolonger la durée de vie de vos appareils.",
+  "image": "/assets/images/Protection-des-cartes-electroniques.png"
+}
+]

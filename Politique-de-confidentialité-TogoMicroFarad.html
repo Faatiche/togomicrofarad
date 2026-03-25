@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Politique de confidentialité de TogoMicroFarad. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://togomicrofarad.com/Politique-de-confidentialité-TogoMicroFarad.html">
+    <meta property="og:title" content="Politique de confidentialité - TogoMicroFarad">
+    <meta property="og:description" content="Politique de confidentialité de TogoMicroFarad. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/confidencialiter.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://togomicrofarad.com/Politique-de-confidentialité-TogoMicroFarad.html">
+    <meta property="twitter:title" content="Politique de confidentialité - TogoMicroFarad">
+    <meta property="twitter:description" content="Politique de confidentialité de TogoMicroFarad. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles.">
+    <meta property="twitter:image" content="https://togomicrofarad.com/assets/images/confidencialiter.png">
+
+    <title>Politique de confidentialité - TogoMicroFarad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fichier de styles principal (identique aux autres pages) -->
+    <link rel="stylesheet" href="assets/css/output.css">
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+
+    <style>
+        /* Styles supplémentaires pour la page de politique */
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -12px rgba(26,26,46,0.1);
+            padding: 3rem 2rem;
+        }
+        .privacy-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .privacy-section {
+            margin-bottom: 2rem;
+        }
+        .privacy-section h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e1e2f;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .privacy-section h2 i {
+            color: #2563eb;
+            font-size: 1.3rem;
+        }
+        .privacy-section p {
+            color: #4a4a6a;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .privacy-section ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: #4a4a6a;
+            margin-bottom: 1rem;
+        }
+        .privacy-section li {
+            margin-bottom: 0.3rem;
+        }
+        .privacy-highlight {
+            background: #f3f4f6;
+            border-left: 4px solid #2563eb;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 640px) {
+            .privacy-container {
+                padding: 2rem 1rem;
+            }
+            .privacy-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Toast container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+
+    <!-- Header identique aux autres pages -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
+                <h2 class="text-xl font-black">TogoMicroFarad</h2>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+                <a href="condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <a href="blog/index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                
+                <!-- Menu déroulant Articles -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 cursor-pointer">
+                        Articles
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <!-- injecté par JS -->
+                    </div>
+                </div>
+
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative" id="cart-container">
+                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 cursor-pointer transition-all duration-300 flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="hidden sm:inline">Panier</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                    </button>
+                    
+                    <!-- Dropdown du panier -->
+                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+                </div>
+                
+                <!-- Bouton burger (mobile) -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                    <a href="condensateurs-electrolytiques-togo.html" class="mobile-nav-link">
+                        <i class="fas fa-box"></i>
+                        <span>Produits</span>
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="index.html#applications" class="mobile-nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Applications</span>
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                    <a href="a-propos.html" class="mobile-nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>À propos</span>
+                    </a>
+                </nav>
+                
+                <div class="mobile-menu-footer">
+                    <div class="mobile-contact-info">
+                        <p><i class="fas fa-phone"></i> +228 93 60 29 26</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div id="menu-overlay" class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="privacy-container">
+                
+                <h1 class="privacy-title">Politique de confidentialité</h1>
+
+                <!-- Section 1 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-info-circle"></i> 1. Introduction</h2>
+                    <p>La présente politique de confidentialité décrit comment les informations des utilisateurs sont collectées, utilisées et protégées lorsque vous visitez le site TogoMicroFarad.</p>
+                    <p>En accédant à ce site, vous acceptez les termes de cette politique de confidentialité.</p>
+                </section>
+
+                <!-- Section 2 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-database"></i> 2. Collecte des informations</h2>
+                    <p>Nous pouvons collecter certaines informations lorsque vous utilisez notre site, notamment :</p>
+                    <ul>
+                        <li>Adresse IP</li>
+                        <li>Type de navigateur</li>
+                        <li>Pages visitées</li>
+                        <li>Durée de visite</li>
+                        <li>Données de navigation</li>
+                    </ul>
+                    <p>Ces données sont collectées à des fins statistiques et d’amélioration de l’expérience utilisateur.</p>
+                </section>
+
+                <!-- Section 3 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-cookie"></i> 3. Utilisation des cookies</h2>
+                    <p>Notre site utilise des cookies pour :</p>
+                    <ul>
+                        <li>Améliorer l’expérience utilisateur</li>
+                        <li>Analyser le trafic</li>
+                        <li>Personnaliser le contenu</li>
+                    </ul>
+                    <p>Vous pouvez désactiver les cookies via les paramètres de votre navigateur.</p>
+                </section>
+
+                <!-- Section 4 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-ad"></i> 4. Google AdSense</h2>
+                    <p>Ce site utilise Google AdSense, un service de publicité fourni par Google.</p>
+                    <p>Google utilise des cookies, notamment le cookie DART, pour diffuser des annonces aux utilisateurs en fonction de leur visite sur ce site et d’autres sites Internet.</p>
+                    <p>Les utilisateurs peuvent désactiver l’utilisation du cookie DART en se rendant sur la page de confidentialité des annonces de Google.</p>
+                    <p>Les partenaires publicitaires de Google peuvent également utiliser des cookies et des balises web.</p>
+                </section>
+
+                <!-- Section 5 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-chart-line"></i> 5. Utilisation des données</h2>
+                    <p>Les informations collectées peuvent être utilisées pour :</p>
+                    <ul>
+                        <li>Améliorer le contenu du site</li>
+                        <li>Analyser les performances</li>
+                        <li>Proposer des publicités pertinentes</li>
+                    </ul>
+                </section>
+
+                <!-- Section 6 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-shield-alt"></i> 6. Protection des informations</h2>
+                    <p>Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos informations personnelles contre tout accès, modification ou divulgation non autorisés.</p>
+                </section>
+
+                <!-- Section 7 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-external-link-alt"></i> 7. Liens externes</h2>
+                    <p>Notre site peut contenir des liens vers d’autres sites. Nous ne sommes pas responsables des politiques de confidentialité de ces sites tiers.</p>
+                </section>
+
+                <!-- Section 8 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-check-circle"></i> 8. Consentement</h2>
+                    <p>En utilisant notre site, vous consentez à notre politique de confidentialité.</p>
+                </section>
+
+                <!-- Section 9 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-sync-alt"></i> 9. Mise à jour</h2>
+                    <p>Cette politique de confidentialité peut être modifiée à tout moment. Les modifications seront publiées sur cette page.</p>
+                </section>
+
+                <!-- Section 10 -->
+                <section class="privacy-section">
+                    <h2><i class="fas fa-envelope"></i> 10. Contact</h2>
+                    <p>Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter via la page de contact du site.</p>
+                </section>
+
+                <div class="privacy-highlight">
+                    <p class="font-medium text-gray-800"><i class="fas fa-info-circle mr-2 text-blue-600"></i> Dernière mise à jour : 19 mars 2026</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer identique aux autres pages -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                        <h1 class="text-xl font-black">TogoMicroFarad</h1>
+                    </div>
+                    <p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li>
+                        <li><a href="blog/index.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="index.html#applications" class="text-gray-400 hover:text-white">Applications</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                        <li><a href="conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li>
+                        <li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:parfaitementzix@gmail.com" class="text-gray-400 hover:text-white hover:underline">parfaitementzix@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p>
+                    <div class="flex">
+                        <input type="email" id="email" placeholder="parfaitementzix@gmail.com"
+                               class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required>
+                        <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200">
+                            <i class="fas fa-paper-plane text-white"></i>
+                        </button>
+                    </div>
+                    <p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/articles.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

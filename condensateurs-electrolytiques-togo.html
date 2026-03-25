@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez notre catalogue complet de condensateurs électrolytiques 0.1µF à 1000µF au Togo. Tensions 10V à 50V, idéaux pour réparation téléviseur, alimentation, audio. Livraison rapide à Lomé et partout. Achetez en ligne.">
+    <meta property="og:title" content="TogoMicroFarad - Condensateurs électrolytiques au Togo">
+    <meta property="og:description" content="Vente de condensateurs électrolytiques de qualité. Livraison rapide partout au Togo.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/condensateur 6.png">
+    <meta property="og:url" content="https://togomicrofarad.com">
+    <meta property="og:type" content="website">
+    <title>Catalogue condensateurs électrolytiques 0.1µF à 1000µF - TogoMicroFarad Togo</title>
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.png">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+</head>
+<body>
+
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
+                <h2 class="text-xl font-black">TogoMicroFarad</h2>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+                <a href="condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <!-- Ajout du lien Blog -->
+                <a href="blog/index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                
+                <!-- Menu déroulant Articles -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 cursor-pointer">
+                        Articles
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 hidden group-hover:block transition-all duration-300 z-50">
+                        <!-- Le contenu sera injecté par JavaScript -->
+                    </div>
+                </div>
+
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <div class="relative" id="cart-container">
+                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 cursor-pointer transition-all duration-300 flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="hidden sm:inline">Panier</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                    </button>
+                    
+                    <!-- Dropdown du panier -->
+                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+                </div>
+                
+                <!-- Bouton burger (mobile) -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                    <a href="condensateurs-electrolytiques-togo.html" class="mobile-nav-link">
+                        <i class="fas fa-box"></i>
+                        <span>Produits</span>
+                    </a>
+                    <!-- Ajout du lien Blog dans le menu mobile -->
+                    <a href="blog/index.html" class="mobile-nav-link">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="index.html#applications" class="mobile-nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Applications</span>
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                    <a href="a-propos.html" class="mobile-nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>À propos</span>
+                    </a>
+                    <!-- Lien Articles (déjà présent dans le dropdown, mais on garde le lien direct ? Le dropdown est géré par JS, donc on peut garder "Articles" comme lien vers blog/index.html ? 
+                    Dans la version précédente, on avait "Articles" pointant vers blog/index.html. Ici on a déjà "Blog", donc on peut soit enlever "Articles" du menu mobile, soit le conserver comme dropdown. 
+                    Mais pour rester cohérent avec la version index.html modifiée, on avait : Accueil, Produits, Blog, Applications, Contact, et plus de "Articles" dans le menu mobile. Je vais supprimer "Articles" du menu mobile car on a déjà "Blog". -->
+                </nav>
+                
+                <div class="mobile-menu-footer">
+                    <div class="mobile-contact-info">
+                        <p><i class="fas fa-phone"></i> +228 93 60 29 26</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div id="menu-overlay" class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <!-- Contenu principal (catalogue) -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Titre animé (NB) -->
+            <h2 id="hero-title" class="text-xl font-semibold mb-4 text-black w-full bg-blue-500/20 mt-6 rounded-lg text-center
+                       opacity-0 -translate-x-10 transition-all duration-700 ease-out">
+                <span class="attention-pulse inline-block transform-gpu scale-95">
+                    <span class="text-red-500 text-2xl font-black mr-2">NB</span>:
+                    Ajoutez au panier puis cliquez sur le panier pour finaliser l'achat par WhatsApp! <i class="fab fa-whatsapp text-green-500 text-3xl ml-3"></i>
+                </span>
+            </h2>
+
+            <!-- Paragraphe d'introduction -->
+            <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto mb-6">
+                Bienvenue sur notre catalogue complet de condensateurs électrolytiques. Que vous soyez à Lomé, Kara ou ailleurs au Togo, retrouvez toutes les valeurs (0.1µF à 1000µF) et tensions (10V à 50V) pour vos réparations de téléviseurs, alimentations, équipements audio et bien plus. Livraison rapide partout au TOGO.
+            </p>
+
+            <!-- Section des Filtres -->
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8 filter-section opacity-0 translate-y-8 transition-all duration-700 ease-out mt-0">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-filter text-blue-700 mr-3"></i>
+                    Filtrer les condensateurs
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Filtre par Capacité -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-gray-700">
+                            <i class="fas fa-microchip mr-2 text-blue-700"></i>
+                            Capacité (µF)
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="filter-btn capacite-filter px-4 py-2 rounded-full border-2 border-blue-700 text-blue-700 hover:bg-blue-600 hover:text-white active" data-capacite="tous">
+                                Tous
+                            </button>
+                            <button class="filter-btn capacite-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-capacite="0.1">
+                                0.1 - 1µF
+                            </button>
+                            <button class="filter-btn capacite-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-capacite="2.2">
+                                2.2 - 10µF
+                            </button>
+                            <button class="filter-btn capacite-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-capacite="22">
+                                22 - 47µF
+                            </button>
+                            <button class="filter-btn capacite-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-capacite="100">
+                                100 - 470µF
+                            </button>
+                            <button class="filter-btn capacite-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-capacite="680">
+                                680 - 1000µF
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Filtre par Tension -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3 text-gray-700">
+                            <i class="fas fa-bolt mr-2 text-blue-600"></i>
+                            Tension (V)
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <button class="filter-btn tension-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white active" data-tension="tous">
+                                Tous
+                            </button>
+                            <button class="filter-btn tension-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-tension="10">
+                                10V
+                            </button>
+                            <button class="filter-btn tension-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-tension="16">
+                                16V
+                            </button>
+                            <button class="filter-btn tension-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-tension="25">
+                                25V
+                            </button>
+                            <button class="filter-btn tension-filter px-4 py-2 rounded-full border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white" data-tension="50">
+                                50V
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bouton de réinitialisation -->
+                <div class="mt-6 flex justify-end">
+                    <button id="resetFilters" class="px-6 py-2 bg-gray-600 text-white rounded-full hover:bg-gray-700 transition-all duration-300 flex items-center gap-2">
+                        <i class="fas fa-redo"></i>
+                        Réinitialiser les filtres
+                    </button>
+                </div>
+
+                <!-- Compteur de résultats -->
+                <div class="mt-4 text-center">
+                    <p class="text-gray-600">
+                        <span id="resultsCount" class="font-bold text-blue-600">24</span> produit(s) trouvé(s)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Message si aucun résultat -->
+            <div id="noResults" class="hidden text-center py-12 bg-white rounded-lg shadow-md mb-8">
+                <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-600 mb-2">Aucun produit trouvé</h3>
+                <p class="text-gray-500">Essayez de modifier vos critères de recherche</p>
+            </div>
+
+            <!-- Grille des produits (24 produits) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/0.47.png" alt="Condensateur électrolytique 0.1µF 50V 105°C pour réparation téléviseur - TogoMicroFarad Togo" class="w-full h-150 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 0.1μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Idéal pour le filtrage haute fréquence dans les téléviseurs et alimentations. Tension: 50V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">200 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 0.1μF"
+                                data-tension="50V"
+                                data-temperature="105°C"
+                                data-quantite="1"
+                                data-prix="200">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">6 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 0.1μF (Lot de 6)"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="6"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/0.22.png" alt="Condensateur électrolytique 0.22µF 50V -40°C à +105°C pour circuits audio - TogoMicroFarad Togo" class="w-full h-150 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 0.22μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Souvent utilisé dans les étages audio et les filtres passe-bas. Tension: 50V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">200 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 0.22μF"
+                                data-tension="50V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="200">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">6 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 0.22μF (Lot de 6)"
+                                data-tension="50V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="6"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/0.1.png" alt="Condensateur électrolytique 0.47µF 50V 105°C pour alimentations - TogoMicroFarad Togo" class="w-full h-150 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 0.47μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Parfait pour le découplage dans les alimentations à découpage. Tension: 50V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">200 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 0.47μF"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="200">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">6 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 0.47μF (Lot de 6)"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="6"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/1.png" alt="Condensateur électrolytique 1µF 50V 105°C pour filtrage général - TogoMicroFarad Togo" class="w-full h-150 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 1μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Utilisé dans de nombreux circuits électroniques, du filtrage au couplage. Tension: 50V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">200 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 1μF"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="200">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">6 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 1μF (Lot de 6)"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="6"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/2.2µF 50V 105°.png" alt="Condensateur électrolytique 2.2µF 50V 105°C pour circuits d'oscillation - TogoMicroFarad Togo" class="w-full h-40 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 2.2μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Souvent utilisé dans les oscillateurs et les filtres actifs. Tension: 50V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 2.2μF"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 2.2μF (Lot de 5)"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/3.3µF 50V 105°.png" alt="Condensateur électrolytique 3.3µF 50V 105°C pour temporisations - TogoMicroFarad Togo" class="w-full h-50 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 3.3μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Idéal pour les circuits de temporisation et de filtrage. Tension: 50V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 3.3μF"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 3.3μF (Lot de 5)"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/4.7µF 50V -40 +105°.png" alt="Condensateur électrolytique 4.7µF 50V -40°C à +105°C pour applications automobiles - TogoMicroFarad Togo" class="w-full h-50 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 4.7μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Convient aux environnements sévères (automobile, industriel). Tension: 50V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 4.7μF"
+                                data-tension="50V"
+                                data-temperature="-40 à +105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 4.7μF (Lot de 5)"
+                                data-tension="50V"
+                                data-temperature="-40 à +105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/10µF 50V 105°C.png" alt="Condensateur électrolytique 10µF 25V 105°C pour alimentations basse tension - TogoMicroFarad Togo" class="w-full h-50 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 10μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Utilisé dans les régulateurs de tension et les filtres de sortie. Tension: 25V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 10μF"
+                                data-tension="25V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 10μF (Lot de 5)"
+                                data-tension="25V"
+                                data-temperature="+105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/10µF 50V 105°C.png" alt="Condensateur électrolytique 10µF 50V -40°C à +105°C pour usage général - TogoMicroFarad Togo" class="w-full h-50 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 10μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Version 50V, idéale pour les circuits nécessitant une tension plus élevée. Tension: 50V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 10μF"
+                                data-tension="50V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 10μF (Lot de 5)"
+                                data-tension="50V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/22µF 16V.png" alt="Condensateur électrolytique 22µF 16V 105°C pour cartes mères - TogoMicroFarad Togo" class="w-full h-50 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 22μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Souvent utilisé dans les alimentations de cartes mères et périphériques. Tension: 16V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 22μF"
+                                data-tension="16V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 22μF (Lot de 5)"
+                                data-tension="16V"
+                                data-temperature="+105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/22µF 25V.png" alt="Condensateur électrolytique 22µF 25V 105°C pour alimentations - TogoMicroFarad Togo" class="w-20 h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 22μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Adapté aux alimentations 24V et circuits de filtrage. Tension: 25V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 22μF"
+                                data-tension="25V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 22μF (Lot de 5)"
+                                data-tension="25V"
+                                data-temperature="+105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/33µF 16V.png" alt="Condensateur électrolytique 33µF 16V 105°C pour équipements audio - TogoMicroFarad Togo" class="w-20 h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 33μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Parfait pour le couplage audio et le filtrage dans les petits amplis. Tension: 16V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 33μF"
+                                data-tension="16V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 33μF (Lot de 5)"
+                                data-tension="16V"
+                                data-temperature="+105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/47µF 10V.png" alt="Condensateur électrolytique 47µF 10V -40°C à +105°C pour circuits logiques - TogoMicroFarad Togo" class="w-20 h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 47μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Utilisé dans les circuits numériques et le découplage des cartes. Tension: 10V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 47μF"
+                                data-tension="10V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 47μF (Lot de 5)"
+                                data-tension="10V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/47µF 25V.png" alt="Condensateur électrolytique 47µF 25V -40°C à +105°C pour alimentations industrielles - TogoMicroFarad Togo" class="w-20 h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 47μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Idéal pour les alimentations 24V et les convertisseurs. Tension: 25V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 47μF"
+                                data-tension="25V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 47μF (Lot de 5)"
+                                data-tension="25V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/47µF 50V.png" alt="Condensateur électrolytique 47µF 50V 105°C pour amplificateurs - TogoMicroFarad Togo" class="w-20 h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 47μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Souvent utilisé dans les étages de sortie des amplis audio. Tension: 50V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">250 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 47μF"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="250">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">5 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 47μF (Lot de 5)"
+                                data-tension="50V"
+                                data-temperature="+105°C"
+                                data-quantite="5"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/100µF 16V.png" alt="Condensateur électrolytique 100µF 16V -40°C à +105°C pour filtrage - TogoMicroFarad Togo" class="w-20 h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 100μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Parfait pour le lissage dans les alimentations basse tension. Tension: 16V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">300 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 100μF"
+                                data-tension="16V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="300">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">4 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 100μF (Lot de 4)"
+                                data-tension="16V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="4"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/100µF 25V.png" alt="Condensateur électrolytique 100µF 25V -40°C à +105°C pour alimentations - TogoMicroFarad Togo" class="w-80 h-30 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 100μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Utilisé dans les alimentations 24V et les convertisseurs DC-DC. Tension: 25V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">300 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 100μF"
+                                data-tension="25V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="300">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">4 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 100μF (Lot de 4)"
+                                data-tension="25V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="4"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/220µF 10V.png" alt="Condensateur électrolytique 220µF 10V -40°C à +105°C pour découplage - TogoMicroFarad Togo" class="w-100 h-30 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 220μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Idéal pour le découplage sur les cartes numériques 5V/3.3V. Tension: 10V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">300 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 220μF"
+                                data-tension="10V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="300">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">4 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 220μF (Lot de 4)"
+                                data-tension="10V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="4"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/220µF 25V.png" alt="Condensateur électrolytique 220µF 25V 105°C pour alimentations - TogoMicroFarad Togo" class="w-60 h-40 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 220μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Parfait pour les alimentations de puissance moyenne. Tension: 25V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">300 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 220μF"
+                                data-tension="25V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="300">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">4 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 220μF (Lot de 4)"
+                                data-tension="25V"
+                                data-temperature="+105°C"
+                                data-quantite="4"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/330µF 25V.png" alt="Condensateur électrolytique 330µF 25V 105°C pour filtrage - TogoMicroFarad Togo" class="w-60 h-40 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 330μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Utilisé dans les alimentations pour lisser les tensions. Tension: 25V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">300 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 330μF"
+                                data-tension="25V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="300">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">4 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 330μF (Lot de 4)"
+                                data-tension="25V"
+                                data-temperature="+105°C"
+                                data-quantite="4"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 21 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/470µF 10V.png" alt="Condensateur électrolytique 470µF 10V -40°C à +105°C pour alimentations PC - TogoMicroFarad Togo" class="w-60 h-40 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 470μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Souvent utilisé sur les cartes mères et alimentations PC. Tension: 10V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">300 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 470μF"
+                                data-tension="10V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="300">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">4 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 470μF (Lot de 4)"
+                                data-tension="10V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="4"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 22 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/470µF 16V.png" alt="Condensateur électrolytique 470µF 16V 105°C pour amplificateurs - TogoMicroFarad Togo" class="w-60 h-40 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 470μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Idéal dans les étages de filtrage des amplis audio. Tension: 16V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">300 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 470μF"
+                                data-tension="16V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="300">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">4 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 470μF (Lot de 4)"
+                                data-tension="16V"
+                                data-temperature="+105°C"
+                                data-quantite="4"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 23 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/680µF 16V.png" alt="Condensateur électrolytique 680µF 16V 105°C pour alimentations - TogoMicroFarad Togo" class="w-60 h-30 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 680μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Utilisé dans les alimentations nécessitant une forte capacité de lissage. Tension: 16V • Température: +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">300 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 680μF"
+                                data-tension="16V"
+                                data-temperature="+105°C"
+                                data-quantite="1"
+                                data-prix="300">
+                                Ajouter
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">4 à <span class="text-blue-600 font-black">1000 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 mt-2 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 680μF (Lot de 4)"
+                                data-tension="16V"
+                                data-temperature="+105°C"
+                                data-quantite="4"
+                                data-prix="1000">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 24 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden product-card opacity-0 translate-y-8 transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:rotate-1 transform-gpu">
+                    <div class="h-48 bg-black/10 flex items-center justify-center overflow-hidden">
+                        <img src="assets/images/1000µF 16V.png" alt="Condensateur électrolytique 1000µF 16V -40°C à +105°C pour filtrage lourd - TogoMicroFarad Togo" class="w-60 h-40 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg mb-2 font-black">Condensateur 1000μF</h3>
+                        <p class="text-gray-600 text-sm mb-4">Parfait pour le filtrage principal dans les alimentations et onduleurs. Tension: 16V • Température: -40°C à +105°C</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600 font-bold">l'unité à <span class="text-blue-600 font-black">500 fcfa</span></span>
+                            <button class="bg-blue-600 text-white py-1 px-3 rounded text-sm hover:bg-blue-700 transition hover:cursor-pointer duration-300 btn-shine relative overflow-hidden"
+                                data-nom="Condensateur 1000μF"
+                                data-tension="16V"
+                                data-temperature="-40°C à +105°C"
+                                data-quantite="1"
+                                data-prix="500">
+                                Ajouter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                        <h1 class="text-xl font-black">TogoMicroFarad</h1>
+                    </div>
+                    <p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li>
+                        <!-- Ajout du lien Blog dans le footer -->
+                        <li><a href="blog/index.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="index.html#applications" class="text-gray-400 hover:text-white">Applications</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                        <li><a href="conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li>
+                        <li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:parfaitementzix@gmail.com" class="text-gray-400 hover:text-white hover:underline">parfaitementzix@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p>
+                    <div class="flex">
+                        <input type="email" id="email" placeholder="parfaitementzix@gmail.com"
+                               class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required>
+                        <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200 hover:cursor-pointer">
+                            <i class="fas fa-paper-plane text-white"></i>
+                        </button>
+                    </div>
+                    <p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/articles.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

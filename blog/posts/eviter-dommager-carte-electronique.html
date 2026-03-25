@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Comment éviter d'endommager une carte électronique ? Guide complet sur la protection ESD, la manipulation des PCB, le nettoyage et la maintenance électronique. Conseils pour réparateurs et passionnés.">
+    <meta name="keywords" content="maintenance électronique, protection ESD, manipulation PCB, composants électroniques, éviter court-circuit, nettoyage carte électronique, réparation, Togo">
+    <meta name="author" content="TogoMicroFarad">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html">
+    <meta property="og:title" content="Comment éviter d'endommager une carte électronique ? Le guide complet">
+    <meta property="og:description" content="Découvrez les meilleures pratiques pour protéger vos cartes électroniques : décharges électrostatiques, stockage, soudure, nettoyage et gestion thermique.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/Protection-des-cartes-electroniques.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html">
+    <meta property="twitter:title" content="Comment éviter d'endommager une carte électronique ? Le guide complet">
+    <meta property="twitter:description" content="Guide complet pour la manipulation et la maintenance des cartes électroniques : ESD, stockage, soudure, nettoyage.">
+    <meta property="twitter:image" content="https://togomicrofarad.com/assets/images/Protection-des-cartes-electroniques.png">
+
+    <title>Comment éviter d'endommager une carte électronique ? - TogoMicroFarad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fichier de styles principal (identique aux autres pages) -->
+    <link rel="stylesheet" href="../../assets/css/output.css">
+    
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+
+    <style>
+        /* ===== NOUVEAU DESIGN POUR LE CONTENU DE L'ARTICLE ===== */
+        .article-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem;
+        }
+        .article-card {
+            background: #ffffff;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease;
+        }
+        .article-hero {
+            position: relative;
+            height: 440px;
+            overflow: hidden;
+        }
+        .article-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        .article-hero:hover img {
+            transform: scale(1.03);
+        }
+        .article-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(145deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+        }
+        .article-hero-badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 2;
+            background: rgba(37, 99, 235, 0.9);
+            backdrop-filter: blur(4px);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.45rem 1rem;
+            border-radius: 60px;
+            letter-spacing: 0.03em;
+        }
+        .article-body {
+            padding: 2.5rem 3rem;
+        }
+        @media (max-width: 640px) {
+            .article-hero { height: 240px; }
+            .article-body { padding: 1.8rem 1.5rem; }
+        }
+        .breadcrumb {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        .breadcrumb a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .article-title {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 800;
+            line-height: 1.25;
+            letter-spacing: -0.01em;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.2rem;
+        }
+        .article-lead {
+            font-size: 1.1rem;
+            color: #334155;
+            border-left: 4px solid #2563eb;
+            padding-left: 1.25rem;
+            margin-bottom: 2rem;
+            font-weight: 450;
+        }
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #0f172a;
+        }
+        .section-title i {
+            font-size: 1.5rem;
+            color: #2563eb;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+        .value-card {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 1.4rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .value-card:hover {
+            transform: translateY(-4px);
+            border-color: #2563eb;
+            box-shadow: 0 12px 20px -12px rgba(37,99,235,0.2);
+        }
+        .value-card h3 {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #0f172a;
+        }
+        .tip-box {
+            background: #eef2ff;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid #2563eb;
+        }
+        .warning-box {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
+        .product-card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 1.6rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .product-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 20px 30px -15px rgba(37,99,235,0.2);
+        }
+        .product-card-icon {
+            width: 52px; height: 52px;
+            background: #dbeafe;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .product-card-icon i { font-size: 1.5rem; color: #2563eb; }
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2563eb;
+            margin: 0.5rem 0;
+        }
+        .btn-add-cart {
+            width: 100%;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 60px;
+            padding: 0.7rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .btn-add-cart:hover { background: #1d4ed8; transform: scale(1.02); }
+        .btn-secondary {
+            display: block;
+            text-align: center;
+            background: #f1f5f9;
+            border-radius: 60px;
+            padding: 0.5rem;
+            font-weight: 500;
+            color: #1e293b;
+            margin-top: 0.8rem;
+            text-decoration: none;
+        }
+        .whatsapp-cta {
+            background: linear-gradient(115deg, #f0fdf4, #dcfce7);
+            border-radius: 28px;
+            padding: 1.8rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #16a34a;
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 99px;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        .btn-wa:hover { background: #15803d; transform: scale(1.02); }
+        .article-footer {
+            border-top: 2px solid #eef2ff;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #eef2ff;
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1e293b;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .share-section {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+        .share-btn {
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: transform 0.2s;
+        }
+        .share-btn:hover { transform: scale(1.1); }
+        .related-section {
+            margin-top: 3rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 520px) { .related-grid { grid-template-columns: 1fr; } }
+        .related-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -10px rgba(0,0,0,0.1);
+        }
+        .related-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        .related-card-body { padding: 1rem; }
+        .related-card-meta { font-size: 0.75rem; color: #6b7280; margin-bottom: 0.3rem; }
+        .related-card-body h4 { font-weight: 700; font-size: 0.95rem; }
+        .related-card-body h4 a { color: #111827; text-decoration: none; }
+        .related-card-body h4 a:hover { color: #2563eb; }
+        /* Ajustement pour éviter les conflits avec le header */
+        header { z-index: 1000; }
+        article header { position: static !important; transform: none !important; }
+        #cart-dropdown {
+            z-index: 100000 !important;
+            background-color: #ffffff !important;
+        }
+        #cart-dropdown button, #cart-dropdown a {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+        }
+        .cart-overlay.active { pointer-events: none; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Toast container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+
+    <!-- Header identique aux autres pages (inchangé) -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
+                <h2 class="text-xl font-black">TogoMicroFarad</h2>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="../../index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+                <a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <a href="../index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                
+                <!-- Menu déroulant Articles -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 cursor-pointer">
+                        Articles
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <!-- injecté par JS -->
+                    </div>
+                </div>
+
+                <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="../../a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative" id="cart-container">
+                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 cursor-pointer transition-all duration-300 flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="hidden sm:inline">Panier</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                    </button>
+                    
+                    <!-- Dropdown du panier -->
+                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+                </div>
+                
+                <!-- Bouton burger (mobile) -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="../../index.html" class="mobile-nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                    <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link">
+                        <i class="fas fa-box"></i>
+                        <span>Produits</span>
+                    </a>
+                    <a href="../index.html" class="mobile-nav-link">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="../../index.html#applications" class="mobile-nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Applications</span>
+                    </a>
+                    <a href="../../contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                    <a href="../../a-propos.html" class="mobile-nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>À propos</span>
+                    </a>
+                </nav>
+                
+                <div class="mobile-menu-footer">
+                    <div class="mobile-contact-info">
+                        <p><i class="fas fa-phone"></i> +228 93 60 29 26</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div id="menu-overlay" class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <!-- Contenu principal avec nouveau design -->
+    <main style="padding-top: 80px;">
+        <div class="article-wrapper">
+            <article class="article-card">
+                <div class="article-hero">
+                    <span class="article-hero-badge"><i class="fas fa-shield-alt mr-1"></i> GUIDE ULTIME</span>
+                    <img src="../../assets/images/Protection-des-cartes-electroniques.png" alt="Protection des cartes électroniques">
+                </div>
+                <div class="article-body">
+                    <div class="breadcrumb">
+                        <a href="../../index.html">Accueil</a> › <a href="../index.html">Blog</a> › <span>Éviter d’endommager une carte électronique</span>
+                    </div>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar-alt"></i> 24 mars 2026</span>
+                        <span><i class="far fa-clock"></i> 7 min de lecture</span>
+                    </div>
+                    <h1 class="article-title">Comment éviter d'endommager une carte électronique ? Le guide complet</h1>
+                    <p class="article-lead">Que vous soyez un amateur de Raspberry Pi, un passionné de drone ou un technicien en maintenance, la manipulation d'une carte électronique (PCB) est une opération délicate. Un simple geste inapproprié ou une décharge invisible peut rendre un composant inutilisable en une fraction de seconde. Dans cet article, nous passons en revue les meilleures pratiques pour protéger vos composants et prolonger la durée de vie de vos appareils.</p>
+
+                    <!-- SOMMAIRE (Table of Contents) -->
+                    <div style="background: #f8fafc; border-radius: 24px; padding: 1.5rem; margin: 2rem 0; border: 1px solid #e2e8f0;">
+                        <h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">📋 Sommaire</h2>
+                        <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem;">
+                            <li><a href="#esd" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 1. La menace invisible : Les décharges électrostatiques (ESD)</a></li>
+                            <li><a href="#stockage" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 2. Le stockage : Sacs antistatiques et environnement</a></li>
+                            <li><a href="#soudure" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 3. Précautions lors des branchements et soudures</a></li>
+                            <li><a href="#nettoyage" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 4. Nettoyage et entretien : Les bons produits</a></li>
+                            <li><a href="#thermique" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 5. La gestion de la chaleur (Thermique)</a></li>
+                            <li><a href="#conclusion" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 6. Conclusion</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 1 : ESD -->
+                    <section id="esd">
+                        <h2 class="section-title"><i class="fas fa-bolt"></i> 1. La menace invisible : Les décharges électrostatiques (ESD)</h2>
+                        <p>C'est la cause numéro un de panne sur les cartes neuves. Le corps humain peut accumuler des milliers de volts d'électricité statique. En touchant un composant sensible (comme un microprocesseur), vous provoquez un arc électrique minuscule mais dévastateur.</p>
+                        <div class="grid-2">
+                            <div class="value-card"><h3><i class="fas fa-wristwatch"></i> Bracelet antistatique</h3><p>Reliez-le à la terre pour évacuer votre charge corporelle.</p></div>
+                            <div class="value-card"><h3><i class="fas fa-hand-peace"></i> Manipulez par les bords</h3><p>Ne touchez jamais les pistes en cuivre ou les broches.</p></div>
+                            <div class="value-card"><h3><i class="fas fa-table"></i> Tapis ESD</h3><p>Évitez les surfaces en plastique ou en tissu (moquette).</p></div>
+                        </div>
+                        <div class="tip-box"><i class="fas fa-lightbulb"></i> <strong>Conseil :</strong> Même sans équipement, touchez un objet métallique relié à la terre avant chaque manipulation.</div>
+                    </section>
+
+                    <!-- Section 2 : Stockage -->
+                    <section id="stockage">
+                        <h2 class="section-title"><i class="fas fa-box"></i> 2. Le stockage : Sacs antistatiques et environnement</h2>
+                        <p>Laisser une carte électronique à l'air libre sur un bureau est risqué (poussière, humidité, chocs).</p>
+                        <div class="grid-2">
+                            <div class="value-card"><h3><i class="fas fa-shopping-bag"></i> Sacs de protection</h3><p>Sacs gris métallisés (shielding bags) ou roses antistatiques.</p></div>
+                            <div class="value-card"><h3><i class="fas fa-tint"></i> Évitez l'humidité</h3><p>L'oxydation est le cancer de l'électronique. Ajoutez des sachets de gel de silice.</p></div>
+                        </div>
+                    </section>
+
+                    <!-- Section 3 : Branchements et soudures -->
+                    <section id="soudure">
+                        <h2 class="section-title"><i class="fas fa-soldering"></i> 3. Précautions lors des branchements et soudures</h2>
+                        <div class="warning-box"><i class="fas fa-exclamation-triangle text-red-500"></i> <strong>⚠️ Danger :</strong> Inverser la polarité ou souder trop chaud peut détruire une carte.</div>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li><strong>Vérifiez la polarité</strong> : Utilisez des détrompeurs. Inverser le "+" et le "-" est fatal pour la plupart des circuits intégrés.</li>
+                            <li><strong>Ne branchez jamais "à chaud"</strong> : Éteignez et débranchez toujours l’alimentation avant de connecter un module.</li>
+                            <li><strong>Maîtrisez la température de soudage</strong> : Un fer trop chaud peut décoller les pistes. Utilisez un fer à température réglable (300-350°C) et des durées courtes.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 4 : Nettoyage -->
+                    <section id="nettoyage">
+                        <h2 class="section-title"><i class="fas fa-broom"></i> 4. Nettoyage et entretien : Les bons produits</h2>
+                        <p>La poussière accumulée peut devenir conductrice avec l’humidité ou empêcher le refroidissement.</p>
+                        <div class="grid-2">
+                            <div class="value-card"><h3><i class="fas fa-vial"></i> Alcool isopropylique (IPA)</h3><p>À 99%, il s'évapore sans laisser de résidus et dissout les flux de soudure.</p></div>
+                            <div class="value-card"><h3><i class="fas fa-toothbrush"></i> Brosse à dents souple</h3><p>Utilisez une brosse à poils souples pour frotter délicatement.</p></div>
+                            <div class="value-card"><h3><i class="fas fa-wind"></i> Air comprimé</h3><p>Pour déloger la poussière dans les ports de connexion, privilégiez les bombes d’air sec.</p></div>
+                        </div>
+                        <div class="tip-box"><i class="fas fa-check-circle"></i> <strong>Astuce :</strong> Évitez l'eau ou les produits ménagers agressifs. L’IPA est votre meilleur allié.</div>
+                    </section>
+
+                    <!-- Section 5 : Gestion thermique -->
+                    <section id="thermique">
+                        <h2 class="section-title"><i class="fas fa-thermometer-half"></i> 5. La gestion de la chaleur (Thermique)</h2>
+                        <p>La surchauffe réduit drastiquement la durée de vie des semi-conducteurs.</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li><strong>Pâte thermique et dissipateurs :</strong> Assurez-vous que les puces de puissance disposent de radiateurs bien fixés avec une interface thermique de qualité.</li>
+                            <li><strong>Flux d’air :</strong> Ne confinez pas vos cartes dans des boîtiers trop étroits sans aération si elles dégagent de la chaleur.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section produits -->
+                    <section>
+                        <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Acheter des condensateurs et accessoires au Togo</h2>
+                        <p>Pour vos réparations, TogoMicroFarad propose des condensateurs de qualité, des fer à souder, de l’alcool isopropylique et bien plus. Livraison rapide à Lomé, Kara, Sokodé et partout au Togo.</p>
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <div class="product-card-icon"><i class="fas fa-boxes"></i></div>
+                                <h3 class="font-bold text-lg">📦 Lot de 10 valeurs courantes</h3>
+                                <p class="desc text-gray-500 text-sm">0,1 µF à 100 µF (50V) — toutes en 105°C</p>
+                                <div class="product-price">2 500 <small>FCFA</small></div>
+                                <button class="btn-add-cart btn-shine"
+                                        data-nom="Lot 10 valeurs courantes"
+                                        data-tension="50V"
+                                        data-temperature="105°C"
+                                        data-quantite="10"
+                                        data-prix="2500">
+                                    <i class="fas fa-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-card-icon"><i class="fas fa-microchip"></i></div>
+                                <h3 class="font-bold text-lg">⚡ Condensateurs individuels</h3>
+                                <p class="desc text-gray-500 text-sm">Achetez exactement la valeur dont vous avez besoin.</p>
+                                <div class="product-price">200 <small>FCFA</small></div>
+                                <p class="text-xs text-gray-400">par unité · lot de 6 à 1 000 FCFA</p>
+                                <a href="../../condensateurs-electrolytiques-togo.html" class="btn-secondary">Voir toutes les valeurs</a>
+                            </div>
+                        </div>
+                        <div class="whatsapp-cta">
+                            <p class="font-semibold text-green-800">📱 Besoin de conseils ou d’un kit de maintenance ?</p>
+                            <a href="https://wa.me/22893602926?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20maintenance%20électronique." class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Commander ou poser une question</a>
+                        </div>
+                    </section>
+
+                    <!-- Conclusion -->
+                    <footer id="conclusion" class="article-footer">
+                        <p class="outro text-gray-700 leading-relaxed">Prendre soin d’une carte électronique demande de la rigueur et un équipement minimal (bracelet ESD, alcool isopropylique). En respectant ces quelques règles de manipulation et de stockage, vous réduirez de plus de 80% les risques de pannes inexpliquées. Protégez vos investissements et réparez durablement grâce à <a href="../../condensateurs-electrolytiques-togo.html" class="text-blue-600 hover:underline font-semibold">TogoMicroFarad</a>.</p>
+                        <div class="footer-links">
+                            <a href="../../condensateurs-electrolytiques-togo.html"><i class="fas fa-arrow-right"></i> Découvrez notre catalogue</a>
+                            <a href="../../contact.html"><i class="fas fa-envelope"></i> Nous contacter</a>
+                            <a href="../index.html"><i class="fas fa-newspaper"></i> Retour au blog</a>
+                        </div>
+                        <div class="share-section">
+                            <span class="text-gray-500 text-sm">Partager :</span>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html" class="share-btn share-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url=https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html&text=Comment%20éviter%20d'endommager%20une%20carte%20électronique%20%3F" class="share-btn share-tw" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html" class="share-btn share-li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/?text=Comment%20éviter%20d'endommager%20une%20carte%20électronique%20%3F%20https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html" class="share-btn share-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+
+            <!-- Articles similaires -->
+            <div class="related-section">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">📖 Vous aimerez aussi</h3>
+                <div class="related-grid" id="related-articles"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer identique aux autres pages -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                        <h1 class="text-xl font-black">TogoMicroFarad</h1>
+                    </div>
+                    <p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../../index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li>
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="../../a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="../../index.html#applications" class="text-gray-400 hover:text-white">Applications</a></li>
+                        <li><a href="../../contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                        <li><a href="../../conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li>
+                        <li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:parfaitementzix@gmail.com" class="text-gray-400 hover:text-white hover:underline">parfaitementzix@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p>
+                    <div class="flex">
+                        <input type="email" id="email" placeholder="parfaitementzix@gmail.com"
+                               class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required>
+                        <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200">
+                            <i class="fas fa-paper-plane text-white"></i>
+                        </button>
+                    </div>
+                    <p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="../../conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/articles.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+    <!-- Script pour les articles similaires -->
+    <script>
+    (function() {
+        if (!window.recentArticles || !Array.isArray(window.recentArticles) || window.recentArticles.length === 0) {
+            console.warn('Aucun article disponible pour la section "Vous aimerez aussi".');
+            return;
+        }
+
+        const currentUrl = window.location.pathname;
+
+        const others = window.recentArticles
+            .filter(article => article.url !== currentUrl)
+            .slice(0, 2);
+
+        if (others.length === 0) {
+            console.log('Aucun autre article à suggérer.');
+            return;
+        }
+
+        const container = document.getElementById('related-articles');
+        if (!container) {
+            console.error('Conteneur #related-articles introuvable.');
+            return;
+        }
+
+        container.innerHTML = others.map(article => `
+            <div class="related-card">
+                <a href="${article.url}">
+                    <img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy">
+                </a>
+                <div class="related-card-body">
+                    <div class="related-card-meta">${article.category || 'Article'} · ${article.date || 'Date inconnue'}</div>
+                    <h4><a href="${article.url}">${article.title}</a></h4>
+                </div>
+            </div>
+        `).join('');
+    })();
+    </script>
+</body>
+</html>

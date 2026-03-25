@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez TogoMicroFarad pour vos besoins en condensateurs électrolytiques et réparation électronique au Togo. Téléphone, WhatsApp, email et adresse.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://togomicrofarad.com/contact.html">
+    <meta property="og:title" content="Contact - TogoMicroFarad">
+    <meta property="og:description" content="Contactez TogoMicroFarad pour vos besoins en condensateurs électrolytiques et réparation électronique au Togo.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/togomicrofarad.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://togomicrofarad.com/contact.html">
+    <meta property="twitter:title" content="Contact - TogoMicroFarad">
+    <meta property="twitter:description" content="Contactez TogoMicroFarad pour vos besoins en condensateurs électrolytiques et réparation électronique au Togo.">
+    <meta property="twitter:image" content="https://togomicrofarad.com/assets/images/togomicrofarad.png">
+
+    <title>Contact - TogoMicroFarad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fichier de styles principal -->
+    <link rel="stylesheet" href="assets/css/output.css">
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+
+    <style>
+        /* Styles supplémentaires pour la page contact */
+        .contact-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -12px rgba(26,26,46,0.1);
+            padding: 3rem 2rem;
+        }
+        .contact-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .contact-subtitle {
+            color: #4a4a6a;
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+        .contact-info-card {
+            background: #f9fafb;
+            border-radius: 20px;
+            padding: 1.8rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e5e7eb;
+        }
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -12px rgba(37,99,235,0.15);
+            border-color: #2563eb;
+        }
+        .contact-icon {
+            width: 56px;
+            height: 56px;
+            background: #dbeafe;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+        .contact-icon i {
+            font-size: 1.6rem;
+            color: #2563eb;
+        }
+        .contact-info-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1e1e2f;
+        }
+        .contact-info-card p, .contact-info-card a {
+            color: #4a4a6a;
+            line-height: 1.6;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact-info-card a:hover {
+            color: #2563eb;
+        }
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #25D366;
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 99px;
+            margin-top: 1rem;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .whatsapp-button:hover {
+            background: #128C7E;
+            transform: scale(1.02);
+            color: white;
+        }
+        .map-placeholder {
+            background: #f3f4f6;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            margin-top: 2rem;
+        }
+        .map-placeholder img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .business-hours {
+            background: #f3f4f6;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin-top: 1rem;
+            border-left: 4px solid #2563eb;
+        }
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            .contact-container {
+                padding: 2rem 1rem;
+            }
+            .contact-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Toast container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+
+    <!-- Header identique aux autres pages -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
+                <h2 class="text-xl font-black">TogoMicroFarad</h2>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+                <a href="condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <a href="blog/index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                
+                <!-- Menu déroulant Articles -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 cursor-pointer">
+                        Articles
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <!-- injecté par JS -->
+                    </div>
+                </div>
+
+                <a href="index.html#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative" id="cart-container">
+                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 cursor-pointer transition-all duration-300 flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="hidden sm:inline">Panier</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                    </button>
+                    
+                    <!-- Dropdown du panier -->
+                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+                </div>
+                
+                <!-- Bouton burger (mobile) -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                    <a href="condensateurs-electrolytiques-togo.html" class="mobile-nav-link">
+                        <i class="fas fa-box"></i>
+                        <span>Produits</span>
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="a-propos.html" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i>
+                        <span>À propos</span>
+                    </a>
+                    <a href="index.html#contact" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                    <a href="a-propos.html" class="mobile-nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>À propos</span>
+                    </a>
+                </nav>
+                
+                <div class="mobile-menu-footer">
+                    <div class="mobile-contact-info">
+                        <p><i class="fas fa-phone"></i> +228 93 60 29 26</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div id="menu-overlay" class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="contact-container">
+                
+                <h1 class="contact-title">Contactez-nous</h1>
+                <p class="contact-subtitle">Une question, une commande ou un besoin technique ? Nous sommes à votre écoute.</p>
+
+                <div class="contact-grid">
+                    <!-- Téléphone -->
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Téléphone</h3>
+                        <p><a href="tel:+22893602926">+228 93 60 29 26</a></p>
+                        <p class="text-sm text-gray-500 mt-1">Appelez-nous pour une assistance rapide.</p>
+                    </div>
+
+                    <!-- WhatsApp -->
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/22893602926" target="_blank">+228 93 60 29 26</a></p>
+                        <a href="https://wa.me/22893602926?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20vos%20condensateurs." target="_blank" class="whatsapp-button">
+                            <i class="fab fa-whatsapp"></i> Écrire sur WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:parfaitementzix@gmail.com">parfaitementzix@gmail.com</a></p>
+                        <p class="text-sm text-gray-500 mt-1">Nous répondons généralement sous 24h.</p>
+                    </div>
+
+                    <!-- Adresse -->
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Adresse</h3>
+                        <p>Djabou Mango, Togo</p>
+                        <p class="text-sm text-gray-500 mt-1">Livraison à Lomé, Kara, Sokodé, Atakpamé, Dapaong et partout au Togo.</p>
+                    </div>
+                </div>
+
+                <!-- Horaires d'ouverture -->
+                <div class="business-hours">
+                    <div class="flex items-center gap-2 mb-2">
+                        <i class="fas fa-clock text-blue-600"></i>
+                        <strong class="text-gray-800">Horaires de réponse</strong>
+                    </div>
+                    <p class="text-gray-600">Lundi – Samedi : 8h00 – 18h00</p>
+                    <p class="text-gray-600 text-sm mt-1">Fermé le dimanche. Les messages reçus le dimanche sont traités le lundi.</p>
+                </div>
+
+                <!-- Carte (place holder avec image) -->
+                <!-- <div class="map-placeholder">
+                    <img src="assets/images/togo-map.png" alt="Carte du Togo avec localisation approximative de Djabou Mango" loading="lazy">
+                    <div class="p-3 bg-gray-50 text-center text-gray-500 text-sm border-t">
+                        <i class="fas fa-map-pin text-blue-600 mr-1"></i> Djabou Mango, région des Savanes, Togo
+                    </div>
+                </div> -->
+
+                <div class="mt-8 text-center text-gray-500 text-sm">
+                    <p>Vous pouvez également nous contacter directement depuis notre boutique en ligne via le panier WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer identique aux autres pages -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                        <h1 class="text-xl font-black">TogoMicroFarad</h1>
+                    </div>
+                    <p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li>
+                        <li><a href="blog/index.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                        <li><a href="conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li>
+                        <li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:parfaitementzix@gmail.com" class="text-gray-400 hover:text-white hover:underline">parfaitementzix@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p>
+                    <div class="flex">
+                        <input type="email" id="email" placeholder="parfaitementzix@gmail.com"
+                               class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required>
+                        <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200">
+                            <i class="fas fa-paper-plane text-white"></i>
+                        </button>
+                    </div>
+                    <p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/articles.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

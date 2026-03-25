@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez TogoMicroFarad, votre spécialiste en condensateurs électrolytiques et réparation électronique au Togo. Notre mission, notre expertise et nos valeurs.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://togomicrofarad.com/a-propos.html">
+    <meta property="og:title" content="À propos - TogoMicroFarad">
+    <meta property="og:description" content="Découvrez TogoMicroFarad, votre spécialiste en condensateurs électrolytiques et réparation électronique au Togo. Notre mission, notre expertise et nos valeurs.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/a-propos.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://togomicrofarad.com/a-propos.html">
+    <meta property="twitter:title" content="À propos - TogoMicroFarad">
+    <meta property="twitter:description" content="Découvrez TogoMicroFarad, votre spécialiste en condensateurs électrolytiques et réparation électronique au Togo. Notre mission, notre expertise et nos valeurs.">
+    <meta property="twitter:image" content="https://togomicrofarad.com/assets/images/a-propos.png">
+
+    <title>À propos - TogoMicroFarad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fichier de styles principal (identique aux autres pages) -->
+    <link rel="stylesheet" href="assets/css/output.css">
+    
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+
+    <style>
+        /* Styles supplémentaires pour la page À propos */
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -12px rgba(26,26,46,0.1);
+            padding: 3rem 2rem;
+        }
+        .about-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .about-section {
+            margin-bottom: 2.5rem;
+        }
+        .about-section h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1e1e2f;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .about-section h2 i {
+            color: #2563eb;
+            font-size: 1.5rem;
+        }
+        .about-section p {
+            color: #4a4a6a;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        .about-section ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .about-section li {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .about-section li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -8px rgba(37,99,235,0.2);
+            border-color: #2563eb;
+        }
+        .about-section li i {
+            font-size: 1.8rem;
+            color: #2563eb;
+            width: 40px;
+            text-align: center;
+        }
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .about-value-card {
+            background: linear-gradient(135deg, #f0f9ff, #e6f0fa);
+            border-radius: 16px;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border: 1px solid #dbeafe;
+        }
+        .about-value-card i {
+            font-size: 2rem;
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+        .about-value-card h3 {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .about-value-card p {
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+        @media (max-width: 640px) {
+            .about-container {
+                padding: 2rem 1rem;
+            }
+            .about-title {
+                font-size: 2rem;
+            }
+            .about-section ul {
+                grid-template-columns: 1fr;
+            }
+            .about-values {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+        }
+        .about-highlight {
+            background: #f3f4f6;
+            border-left: 4px solid #2563eb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Toast container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+
+    <!-- Header identique aux autres pages -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
+                <h2 class="text-xl font-black">TogoMicroFarad</h2>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+                <a href="condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <a href="blog/index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                
+                <!-- Menu déroulant Articles -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 cursor-pointer">
+                        Articles
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <!-- injecté par JS -->
+                    </div>
+                </div>
+
+                <a href="contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative" id="cart-container">
+                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 cursor-pointer transition-all duration-300 flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="hidden sm:inline">Panier</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                    </button>
+                    
+                    <!-- Dropdown du panier -->
+                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+                </div>
+                
+                <!-- Bouton burger (mobile) -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html" class="mobile-nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>Accueil</span>
+                    </a>
+                    <a href="condensateurs-electrolytiques-togo.html" class="mobile-nav-link">
+                        <i class="fas fa-box"></i>
+                        <span>Produits</span>
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Blog</span>
+                    </a>
+                    <a href="index.html#applications" class="mobile-nav-link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Applications</span>
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                    <a href="a-propos.html" class="mobile-nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>À propos</span>
+                    </a>
+                </nav>
+                
+                <div class="mobile-menu-footer">
+                    <div class="mobile-contact-info">
+                        <p><i class="fas fa-phone"></i> +228 93 60 29 26</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlay -->
+            <div id="menu-overlay" class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="about-container">
+                
+                <h1 class="about-title">À propos de TogoMicroFarad</h1>
+
+                <!-- Section Qui sommes-nous -->
+                <section class="about-section">
+                    <h2><i class="fas fa-users"></i> Qui sommes-nous ?</h2>
+                    <p>TogoMicroFarad est une plateforme spécialisée dans la vente de composants électroniques, notamment des condensateurs électrolytiques, destinée aux passionnés, techniciens et réparateurs au Togo.</p>
+                    <p>Notre mission est simple : faciliter l’accès à des composants fiables tout en accompagnant nos utilisateurs avec des conseils pratiques en réparation électronique.</p>
+                </section>
+
+                <!-- Section Notre objectif -->
+                <section class="about-section">
+                    <h2><i class="fas fa-bullseye"></i> Notre objectif</h2>
+                    <p>Au Togo, il est souvent difficile de trouver des composants électroniques de qualité rapidement et à un prix accessible.</p>
+                    <p>TogoMicroFarad a été créé pour répondre à ce besoin en proposant :</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Des condensateurs adaptés aux réparations courantes</li>
+                        <li><i class="fas fa-lightbulb"></i> Des conseils techniques clairs et utiles</li>
+                        <li><i class="fas fa-rocket"></i> Un accès simplifié aux composants électroniques</li>
+                    </ul>
+                </section>
+
+                <!-- Section Notre expertise -->
+                <section class="about-section">
+                    <h2><i class="fas fa-microchip"></i> Notre expertise</h2>
+                    <p>Nous partageons régulièrement des articles et guides pratiques pour aider :</p>
+                    <ul>
+                        <li><i class="fas fa-search"></i> à diagnostiquer les pannes électroniques</li>
+                        <li><i class="fas fa-book-open"></i> à comprendre le fonctionnement des composants</li>
+                        <li><i class="fas fa-tools"></i> à réparer des appareils comme les téléviseurs, amplificateurs, alimentations etc...</li>
+                    </ul>
+                    <p>Notre contenu est basé sur des cas réels et des expériences pratiques en réparation électronique.</p>
+                </section>
+
+                <!-- Section Pourquoi nous faire confiance -->
+                <section class="about-section">
+                    <h2><i class="fas fa-shield-alt"></i> Pourquoi nous faire confiance ?</h2>
+                    <div class="about-values">
+                        <div class="about-value-card">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Fiabilité</h3>
+                            <p>Produits sélectionnés pour leur qualité</p>
+                        </div>
+                        <div class="about-value-card">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h3>Pédagogie</h3>
+                            <p>Contenu accessible à tous</p>
+                        </div>
+                        <div class="about-value-card">
+                            <i class="fas fa-wrench"></i>
+                            <h3>Pratique</h3>
+                            <p>Approche orientée réparation réelle</p>
+                        </div>
+                        <div class="about-value-card">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h3>Local</h3>
+                            <p>Connaissance du marché togolais</p>
+                        </div>
+                    </div>
+                    <p>Nous mettons un point d'honneur à fournir des informations utiles et des produits adaptés aux besoins locaux.</p>
+                </section>
+
+                <!-- Section Notre vision -->
+                <section class="about-section">
+                    <h2><i class="fas fa-eye"></i> Notre vision</h2>
+                    <p>Nous souhaitons devenir une référence au Togo dans le domaine de la réparation électronique et de la distribution de composants.</p>
+                    <p>À long terme, notre ambition est de contribuer au développement des compétences techniques et à la réduction du gaspillage électronique grâce à la réparation.</p>
+                </section>
+
+                <!-- Section Où sommes-nous situés -->
+                <section class="about-section">
+                    <h2><i class="fas fa-map-marker-alt"></i> Où sommes-nous situés ?</h2>
+                    <p>Nous opérons principalement au Togo et proposons nos services aux clients situés sur le territoire.</p>
+                </section>
+
+                <!-- Section Contact -->
+                <section class="about-section">
+                    <h2><i class="fas fa-envelope"></i> Contact</h2>
+                    <p>Pour toute question, demande ou commande, vous pouvez nous contacter via <a href="contact.html" class="text-blue-600 hover:underline">notre page dédiée</a>.</p>
+                    <p>Nous restons disponibles pour vous accompagner dans vos projets et réparations électroniques.</p>
+                </section>
+
+                <div class="about-highlight">
+                    <p class="font-medium text-gray-800"><i class="fas fa-heart mr-2 text-blue-600"></i> Merci de votre confiance ! Ensemble, réparons et apprenons.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer identique aux autres pages -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                        <h1 class="text-xl font-black">TogoMicroFarad</h1>
+                    </div>
+                    <p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li>
+                        <li><a href="blog/index.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="index.html#applications" class="text-gray-400 hover:text-white">Applications</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                        <li><a href="conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li>
+                        <li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:parfaitementzix@gmail.com" class="text-gray-400 hover:text-white hover:underline">parfaitementzix@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p>
+                    <div class="flex">
+                        <input type="email" id="email" placeholder="parfaitementzix@gmail.com"
+                               class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required>
+                        <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200">
+                            <i class="fas fa-paper-plane text-white"></i>
+                        </button>
+                    </div>
+                    <p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/articles.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

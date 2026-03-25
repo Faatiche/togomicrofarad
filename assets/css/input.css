@@ -1,0 +1,707 @@
+@import "tailwindcss";
+
+  .product-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+    /* Effet "shine" permanent sur les boutons produits*/
+.btn-shine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    animation: shine 2.5s infinite linear;
+}
+
+@keyframes shine {
+    0% { left: -150%; }
+    100% { left: 150%; }
+}
+
+/* 3D hover */
+.product-card {
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+/* Animation permanente pour attirer l’attention bouton Produit */
+@keyframes pulse-btn {
+  0% { transform: scale(1); box-shadow: 0 0 0 rgba(59, 130, 246, 0.5); }
+  50% { transform: scale(1.05); box-shadow: 0 0 15px rgba(59, 130, 246, 0.7); }
+  100% { transform: scale(1); box-shadow: 0 0 0 rgba(59, 130, 246, 0.5); }
+}
+
+.btn-attention {
+  animation: pulse-btn 2s infinite ease-in-out;
+}
+
+/* Animation au scroll pour les sections application, contact et footer */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* animation NB page produit */
+/* Pulsation douce (sur l'élément interne) */
+@keyframes pulseSoft {
+  0%   { transform: scale(0.98); }
+  50%  { transform: scale(1.04); }
+  100% { transform: scale(0.98); }
+}
+
+/* applique la pulsation sur le span interne */
+.attention-pulse {
+  display: inline-block;       /* nécessaire pour animer scale */
+  animation: pulseSoft 2.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* classes utilitaires pour la révélation (si tu utilises la méthode reveal) */
+.revealed {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+/* caroussel */
+/* ----- CAROUSEL ----- */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    transition: transform 0.6s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain; /* pas de zoom étrange */
+    pointer-events: none;
+}
+
+/* ---- Indicateurs ---- */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #d1d5db; /* gris */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: #2563eb; /* bleu */
+}
+/* systeme de filtre */
+/* Styles pour les filtres */
+.filter-btn {
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn.active {
+    background-color: #2563eb;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.filter-section {
+    animation: fadeInUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* menu burger */
+
+/* ============================================
+   MENU BURGER - STYLES
+   ============================================ */
+
+/* Bouton Hamburger */
+.hamburger {
+    width: 28px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #4B5563;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation du hamburger quand le menu est ouvert */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+    background: #2563EB;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+    background: #2563EB;
+}
+
+/* Menu mobile */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow-y: auto;
+    padding-top: 80px;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+/* Navigation mobile */
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    margin-bottom: 8px;
+    color: #374151;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mobile-nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #2563EB;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-link:hover::before,
+.mobile-nav-link:active::before {
+    transform: scaleY(1);
+}
+
+.mobile-nav-link i {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #2563EB;
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-link:hover {
+    background: #EFF6FF;
+    transform: translateX(5px);
+}
+
+.mobile-nav-link:hover i {
+    transform: scale(1.2);
+}
+
+.mobile-nav-link span {
+    font-size: 16px;
+}
+
+/* Footer du menu mobile */
+.mobile-menu-footer {
+    padding: 20px;
+    border-top: 1px solid #E5E7EB;
+    margin-top: 20px;
+}
+
+.mobile-contact-info {
+    background: #F9FAFB;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #2563EB;
+}
+
+.mobile-contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #6B7280;
+    font-size: 14px;
+}
+
+.mobile-contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-contact-info i {
+    margin-right: 10px;
+    color: #2563EB;
+    font-size: 16px;
+    width: 20px;
+}
+
+/* Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Empêcher le scroll quand le menu est ouvert */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Animation d'entrée des liens */
+.mobile-menu.active .mobile-nav-link {
+    animation: slideInRight 0.4s ease forwards;
+    opacity: 0;
+}
+
+.mobile-menu.active .mobile-nav-link:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.mobile-menu.active .mobile-nav-link:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.mobile-menu.active .mobile-nav-link:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.mobile-menu.active .mobile-nav-link:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .mobile-menu,
+    .menu-overlay,
+    #mobile-menu-btn {
+        display: none;
+    }
+}
+
+/* Amélioration du style du header pour éviter le chevauchement */
+header {
+    position: relative;
+    z-index: 1000;
+}
+/* newslatter */
+/* ============================================
+   NEWSLETTER - ANIMATIONS UX
+   ============================================ */
+
+/* Amélioration de l'input email */
+#email {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#email:focus {
+    outline: none;
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Animation de secousse pour les erreurs */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake-animation {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Animation du bouton */
+#submitBtn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#submitBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+#submitBtn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Animation de pulsation pour attirer l'attention */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+    }
+}
+
+#email:focus {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Style pour les bordures de validation */
+#email.border-green-500 {
+    border-color: #10B981 !important;
+}
+
+#email.border-red-500 {
+    border-color: #EF4444 !important;
+}
+
+/* Animation du message */
+#message {
+    transform-origin: center;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#message.opacity-100 {
+    transform: scale(1);
+}
+
+#message.opacity-0 {
+    transform: scale(0.8);
+}
+
+/* Animation de rotation du spinner */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+/* Header fixe */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* Padding pour compenser la hauteur du header */
+body {
+    padding-top: 80px; /* Ajuste cette valeur selon la hauteur réelle de ton header */
+}
+
+/* Menu burger - Corrections */
+.hamburger {
+    width: 28px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001; /* Au-dessus de tout */
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #4B5563;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation du hamburger quand le menu est ouvert */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+    background: #2563EB;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+    background: #2563EB;
+}
+
+/* Menu mobile */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    overflow-y: auto;
+    padding-top: 80px;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+/* Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Empêcher le scroll quand le menu est ouvert */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* S'assurer que le header est au-dessus */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+/* ============================================
+   PANIER - RESPONSIVE FIX
+   ============================================ */
+
+/* Container du panier */
+#cart-container {
+    position: relative;
+}
+
+/* Dropdown du panier - Mobile first */
+#cart-dropdown {
+    /* Position fixe sur mobile pour éviter les débordements */
+    position: fixed;
+    top: 70px; /* En dessous du header */
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-width: calc(100vw - 16px); /* Prend toute la largeur moins les marges */
+    max-height: calc(100vh - 80px); /* Hauteur maximale */
+    overflow-y: auto;
+    z-index: 9999; /* Au-dessus de tout */
+}
+
+/* Scroll personnalisé pour le panier sur mobile */
+#cart-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+#cart-dropdown::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#cart-dropdown::-webkit-scrollbar-thumb {
+    background: #2563EB;
+    border-radius: 10px;
+}
+
+/* Sur tablette et desktop */
+@media (min-width: 640px) {
+    #cart-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: auto;
+        width: 320px;
+        max-width: 320px;
+        margin-top: 8px;
+        max-height: 500px;
+    }
+}
+
+/* Sur grand écran */
+@media (min-width: 768px) {
+    #cart-dropdown {
+        width: 360px;
+        max-width: 360px;
+    }
+}
+
+/* Overlay pour le panier sur mobile */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* S'assurer que le header reste au-dessus */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+/* Bouton panier responsive */
+#cart-btn {
+    padding: 10px 12px;
+}
+
+@media (min-width: 640px) {
+    #cart-btn {
+        padding: 10px 20px;
+    }
+}
+
+/* Animation d'ouverture du panier sur mobile */
+@media (max-width: 639px) {
+    #cart-dropdown.show-mobile {
+        animation: slideDownFade 0.3s ease-out forwards;
+    }
+    
+    @keyframes slideDownFade {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Empêcher le scroll du body quand le panier est ouvert sur mobile */
+@media (max-width: 639px) {
+    body.cart-open {
+        overflow: hidden;
+    }
+}

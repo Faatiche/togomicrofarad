@@ -1,0 +1,13 @@
+{
+  "name": "condoshop",
+  "version": "1.0.0",
+  "description": "Site CondoShop - Condensateurs électrolytiques au Togo",
+  "dependencies": {
+    "tailwindcss": "^4.1.17",
+    "@tailwindcss/cli": "^4.1.17"
+  },
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify",
+      "build:blog": "node scripts/build-blog.js"
+  }
+}
