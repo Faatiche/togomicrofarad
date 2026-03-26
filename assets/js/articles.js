@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "Télévision en panne ou appareil qui ne s'allume plus ? Le guide complet sur les condensateurs électrolytiques au Togo",
+    "url": "/blog/posts/condensateur-electrolytique-tv-panne-togo.html",
+    "category": "Guide pratique",
+    "date": "2026-03-26",
+    "image": "/assets/images/condensateur-electrolytique-tv-panne-togo.png"
+  },
+  {
     "title": "Comment éviter d'endommager une carte électronique ? Le guide complet",
     "url": "/blog/posts/eviter-dommager-carte-electronique.html",
     "category": "Maintenance Pro",

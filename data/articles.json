@@ -46,5 +46,13 @@
   "url": "/blog/posts/eviter-dommager-carte-electronique.html",
   "excerpt": "Apprenez à protéger vos PCB contre les décharges électrostatiques (ESD), l'oxydation et les erreurs de soudure pour prolonger la durée de vie de vos appareils.",
   "image": "/assets/images/Protection-des-cartes-electroniques.png"
+},
+{
+  "title": "Télévision en panne ou appareil qui ne s'allume plus ? Le guide complet sur les condensateurs électrolytiques au Togo",
+  "date": "2026-03-26",
+  "category": "Guide pratique",
+  "url": "/blog/posts/condensateur-electrolytique-tv-panne-togo.html",
+  "excerpt": "Vous avez une télévision qui met du temps à s'allumer ? Un décodeur qui siffle ? Découvrez comment diagnostiquer et remplacer un condensateur électrolytique défectueux, avec des conseils adaptés au Togo.",
+  "image": "/assets/images/condensateur-electrolytique-tv-panne-togo.png"
 }
 ]
