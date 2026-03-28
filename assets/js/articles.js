@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "Top 5 des pannes électroniques les plus fréquentes au Togo (et les composants à remplacer)",
+    "url": "/blog/posts/pannes-electroniques-frequentes-togo.html",
+    "category": "Guide pratique",
+    "date": "2026-03-28",
+    "image": "/assets/images/pannes-electroniques.jpg"
+  },
+  {
     "title": "Télévision en panne ou appareil qui ne s'allume plus ? Le guide complet sur les condensateurs électrolytiques au Togo",
     "url": "/blog/posts/condensateur-electrolytique-tv-panne-togo.html",
     "category": "Guide pratique",
