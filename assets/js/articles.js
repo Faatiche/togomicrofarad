@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "⚡ Pourquoi vos appareils électroniques tombent en panne après une coupure de courant au Togo ?",
+    "url": "/blog/posts/pannes-coupure-courant-togo.html",
+    "category": "Pannes & Réparations",
+    "date": "2026-03-30",
+    "image": "/assets/images/pannes-coupure-courant.jpg"
+  },
+  {
     "title": "Top 5 des pannes électroniques les plus fréquentes au Togo (et les composants à remplacer)",
     "url": "/blog/posts/pannes-electroniques-frequentes-togo.html",
     "category": "Guide pratique",

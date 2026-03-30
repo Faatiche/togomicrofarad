@@ -62,5 +62,13 @@
   "url": "/blog/posts/pannes-electroniques-frequentes-togo.html",
   "excerpt": "Découvrez les 5 pannes électroniques les plus courantes au Togo : téléviseur qui ne s'allume plus, image instable, appareil qui s'éteint, bruit, chargeur HS. Causes et composants à remplacer.",
   "image": "/assets/images/pannes-electroniques.jpg"
+},
+{
+  "title": "⚡ Pourquoi vos appareils électroniques tombent en panne après une coupure de courant au Togo ?",
+  "date": "2026-03-30",
+  "category": "Pannes & Réparations",
+  "url": "/blog/posts/pannes-coupure-courant-togo.html",
+  "excerpt": "Coupures CEET, surtensions au retour du courant : comprenez pourquoi vos TV, décodeurs et amplis grillent, et comment réparer vos appareils en changeant les condensateurs électrolytiques.",
+  "image": "/assets/images/pannes-coupure-courant.jpg"
 }
 ]
