@@ -70,5 +70,13 @@
   "url": "/blog/posts/pannes-coupure-courant-togo.html",
   "excerpt": "Coupures CEET, surtensions au retour du courant : comprenez pourquoi vos TV, décodeurs et amplis grillent, et comment réparer vos appareils en changeant les condensateurs électrolytiques.",
   "image": "/assets/images/pannes-coupure-courant.jpg"
+},
+{
+  "title": "PC ne s'allume plus ? Diagnostiquer un condensateur électrolytique HS (Guide complet)",
+  "date": "2026-04-01",
+  "category": "Diagnostic PC",
+  "url": "/blog/posts/diagnostic-condensateur-pc.html",
+  "excerpt": "Votre PC ne démarre pas ? Apprenez à repérer un condensateur gonflé, fuyant ou qui chauffe sur la carte mère ou l'alimentation. Guide visuel, test multimètre et solutions de réparation.",
+  "image": "/assets/images/condensateur-pc-carte-mere.jpg"
 }
 ]

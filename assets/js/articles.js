@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "PC ne s'allume plus ? Diagnostiquer un condensateur électrolytique HS (Guide complet)",
+    "url": "/blog/posts/diagnostic-condensateur-pc.html",
+    "category": "Diagnostic PC",
+    "date": "2026-04-01",
+    "image": "/assets/images/condensateur-pc-carte-mere.jpg"
+  },
+  {
     "title": "⚡ Pourquoi vos appareils électroniques tombent en panne après une coupure de courant au Togo ?",
     "url": "/blog/posts/pannes-coupure-courant-togo.html",
     "category": "Pannes & Réparations",
