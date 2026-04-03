@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO PRINCIPAL -->
+    <title>⚡Condensateur électrolytique ou céramique : différence, choix, guide - TogoMicroFarad</title>
+    <meta name="description" content="Électrolytique vs céramique : polarité, capacité, fréquence, durée de vie. Guide complet pour bien choisir vos condensateurs au Togo. Livraison Lomé, Kara, Sokodé.">
+    <meta name="keywords" content="condensateur électrolytique, condensateur céramique, différence, polarisé, non polarisé, ESR faible, filtrage alimentation Togo, découplage haute fréquence, acheter condensateur Lomé, composants électroniques Togo">
+    <meta name="author" content="TogoMicroFarad">
+    <meta name="robots" content="index, follow">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://togomicrofarad.com/blog/posts/condensateur-electrolytique-vs-ceramique">
+    <meta property="og:title" content="Condensateur électrolytique ou céramique : comment faire le bon choix ?">
+    <meta property="og:description" content="Guide complet pour choisir entre condensateur électrolytique et céramique selon vos projets électroniques.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/electrolytique-vs-ceramique.jpg">
+    <meta property="og:site_name" content="TogoMicroFarad">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Condensateur électrolytique ou céramique : guide complet">
+    <meta name="twitter:description" content="Différences, avantages, inconvénients et conseils d'utilisation.">
+    <meta name="twitter:image" content="https://togomicrofarad.com/assets/images/electrolytique-vs-ceramique.jpg">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://togomicrofarad.com/blog/posts/condensateur-electrolytique-vs-ceramique.html">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+
+    <!-- POLICES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- TAILWIND + STYLES PRINCIPAUX -->
+    <link rel="stylesheet" href="../../assets/css/output.css">
+
+    <!-- STRUCTURED DATA (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Condensateur électrolytique vs condensateur céramique : comment faire le bon choix ?",
+      "description": "Guide complet pour choisir entre condensateur électrolytique et céramique selon vos projets électroniques.",
+      "image": "https://togomicrofarad.com/assets/images/electrolytique-vs-ceramique.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "TogoMicroFarad"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TogoMicroFarad",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://togomicrofarad.com/assets/images/favicon.png"
+        }
+      },
+      "datePublished": "2026-04-03",
+      "dateModified": "2026-04-03",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://togomicrofarad.com/blog/posts/condensateur-electrolytique-vs-ceramique.html"
+      }
+    }
+    </script>
+
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+
+    <style>
+        /* Styles complémentaires pour l'article */
+        body {
+            background: #f8fafc;
+        }
+        .article-container {
+            max-width: 880px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem;
+        }
+        .article-card {
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .article-hero {
+            position: relative;
+            height: 360px;
+            overflow: hidden;
+        }
+        .link-red {
+            color: #b91c1c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .link-red:hover {
+            color: #dc2626;
+            text-decoration: underline;
+        }
+        .article-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .article-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%);
+        }
+        .hero-badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 2;
+            background: #2563eb;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.35rem 1rem;
+            border-radius: 99px;
+        }
+        .article-body {
+            padding: 2.5rem 3rem;
+        }
+        @media (max-width: 640px) {
+            .article-hero { height: 220px; }
+            .article-body { padding: 1.8rem 1.5rem; }
+        }
+        .breadcrumb {
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            color: #6b7280;
+        }
+        .breadcrumb a { color: #2563eb; text-decoration: none; }
+        .article-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        .article-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+        .article-lead {
+            font-size: 1.1rem;
+            color: #334155;
+            border-left: 4px solid #2563eb;
+            padding-left: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #0f172a;
+        }
+        .section-title i { font-size: 1.5rem; color: #2563eb; }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: #f8fafc;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.8rem 1rem;
+            text-align: left;
+            vertical-align: top;
+        }
+        .comparison-table th {
+            background: #eef2ff;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        .comparison-table tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+        .value-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 1.2rem;
+            border: 1px solid #e2e8f0;
+        }
+        .tip-box {
+            background: #eef2ff;
+            border-left: 6px solid #2563eb;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
+        .product-card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .product-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 12px 20px -12px rgba(37,99,235,0.15);
+        }
+        .product-icon {
+            width: 48px; height: 48px;
+            background: #dbeafe;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .product-icon i { font-size: 1.4rem; color: #2563eb; }
+        .product-price { font-size: 1.6rem; font-weight: 700; color: #2563eb; margin: 0.5rem 0; }
+        .btn-add-cart {
+            width: 100%;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 40px;
+            padding: 0.6rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .btn-add-cart:hover { background: #1d4ed8; transform: scale(1.02); }
+        .btn-secondary {
+            display: block;
+            text-align: center;
+            background: #f1f5f9;
+            border-radius: 40px;
+            padding: 0.5rem;
+            font-weight: 500;
+            color: #1e293b;
+            margin-top: 0.8rem;
+            text-decoration: none;
+        }
+        .whatsapp-cta {
+            background: linear-gradient(115deg, #f0fdf4, #dcfce7);
+            border-radius: 28px;
+            padding: 1.8rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #16a34a;
+            color: white;
+            padding: 0.7rem 1.8rem;
+            border-radius: 99px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .btn-wa:hover { background: #15803d; transform: scale(1.02); }
+        .share-section {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: transform 0.2s;
+        }
+        .share-btn:hover { transform: scale(1.1); }
+        .share-fb { background: #1877f2; }
+        .share-tw { background: #1da1f2; }
+        .share-li { background: #0a66c2; }
+        .share-wa { background: #25d366; }
+        .related-section {
+            margin-top: 3rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 520px) { .related-grid { grid-template-columns: 1fr; } }
+        .related-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.2s;
+            border: 1px solid #e2e8f0;
+        }
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -12px rgba(0,0,0,0.1);
+        }
+        .related-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        .related-card-body { padding: 1rem; }
+        .related-card-meta { font-size: 0.75rem; color: #6b7280; margin-bottom: 0.3rem; }
+        .related-card-body h4 { font-weight: 700; font-size: 0.9rem; }
+        .related-card-body h4 a { color: #111827; text-decoration: none; }
+        .related-card-body h4 a:hover { color: #2563eb; }
+        header { z-index: 1000; }
+        article header { position: static !important; transform: none !important; }
+        #cart-dropdown { z-index: 100000 !important; background-color: #ffffff !important; }
+        #cart-dropdown button, #cart-dropdown a { pointer-events: auto !important; cursor: pointer !important; }
+        .cart-overlay.active { pointer-events: none; }
+        .faq-item {
+            background: #f9fafb;
+            border-radius: 20px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+
+    <!-- Header standard TogoMicroFarad -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
+                <h2 class="text-xl font-black">TogoMicroFarad</h2>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="../../index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+                <a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <a href="../index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1">Articles <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"></div>
+                </div>
+                <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="../../a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div class="relative" id="cart-container">
+                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 transition-all flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="hidden sm:inline">Panier</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                    </button>
+                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </button>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="../../index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Accueil</a>
+                    <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link"><i class="fas fa-box"></i> Produits</a>
+                    <a href="../index.html" class="mobile-nav-link"><i class="fas fa-newspaper"></i> Blog</a>
+                    <a href="../../index.html#applications" class="mobile-nav-link"><i class="fas fa-cogs"></i> Applications</a>
+                    <a href="../../contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="../../a-propos.html" class="mobile-nav-link"><i class="fas fa-users"></i> À propos</a>
+                </nav>
+                <div class="mobile-menu-footer">
+                    <div class="mobile-contact-info"><p><i class="fas fa-phone"></i> +228 93 60 29 26</p><p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p></div>
+                </div>
+            </div>
+            <div id="menu-overlay" class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <div class="article-container">
+            <article class="article-card">
+                <div class="article-hero">
+                    <span class="hero-badge"><i class="fas fa-microchip mr-1"></i> GUIDE COMPLET</span>
+                    <img src="../../assets/images/electrolytique-vs-ceramique.jpg" alt="Comparaison visuelle entre condensateur électrolytique et céramique">
+                </div>
+                <div class="article-body">
+                    <div class="breadcrumb">
+                        <a href="../../index.html">Accueil</a> › <a href="../index.html">Blog</a> › <span>Condensateur électrolytique vs céramique</span>
+                    </div>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar-alt"></i> 3 avril 2026</span>
+                        <span><i class="far fa-clock"></i> 9 min de lecture</span>
+                    </div>
+                    <h1 class="article-title">Condensateur électrolytique vs condensateur céramique : comment faire le bon choix pour vos projets électroniques ?</h1>
+                    <p class="article-lead">En électronique, le choix des composants est crucial pour la performance et la longévité de vos circuits. Parmi les questions les plus fréquentes que nous recevons chez <a href="../../index.html" class="link-red">TogoMicroFarad</a> , une revient sans cesse : <strong>quelle est la différence entre un condensateur électrolytique et un condensateur céramique ?</strong> Que vous répariez une alimentation, conceviez un filtre audio ou stabilisiez une carte microcontrôleur, comprendre ces deux familles de condensateurs vous évitera bien des déceptions.</p>
+
+                    <!-- SOMMAIRE -->
+                    <div class="bg-gray-100 rounded-2xl p-4 my-6">
+                        <h2 class="text-lg font-bold mb-2">📋 Sommaire</h2>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <li><a href="#rappel" class="text-blue-600 hover:underline">1. Qu'est-ce qu'un condensateur ?</a></li>
+                            <li><a href="#electrolytique" class="text-blue-600 hover:underline">2. Condensateur électrolytique</a></li>
+                            <li><a href="#ceramique" class="text-blue-600 hover:underline">3. Condensateur céramique</a></li>
+                            <li><a href="#comparatif" class="text-blue-600 hover:underline">4. Tableau comparatif</a></li>
+                            <li><a href="#utilisation" class="text-blue-600 hover:underline">5. Quand utiliser l'un plutôt que l'autre ?</a></li>
+                            <li><a href="#association" class="text-blue-600 hover:underline">6. Les associer : bonne pratique</a></li>
+                            <li><a href="#achat" class="text-blue-600 hover:underline">7. Où acheter au Togo ?</a></li>
+                            <li><a href="#faq" class="text-blue-600 hover:underline">8. FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 1 : Rappel -->
+                    <section id="rappel">
+                        <h2 class="section-title"><i class="fas fa-question-circle"></i> Qu'est-ce qu'un condensateur ? Rappel de base</h2>
+                        <p>Un condensateur est un composant passif qui stocke et restitue de l’énergie électrique. Il sert à :</p>
+                        <ul class="list-disc pl-6 space-y-1 mt-2">
+                            <li>Lisser une tension (filtrage)</li>
+                            <li>Bloquer le continu tout en laissant passer l’alternatif (découplage)</li>
+                            <li>Créer des temporisations</li>
+                            <li>Filtrer les parasites haute fréquence</li>
+                        </ul>
+                        <p>Mais tous les condensateurs ne se valent pas. Les deux types les plus courants sont l’électrolytique et le céramique.</p>
+                    </section>
+
+                    <!-- Section 2 : Électrolytique -->
+                    <section id="electrolytique">
+                        <h2 class="section-title"><i class="fas fa-battery-full"></i> Condensateur électrolytique : le spécialiste des fortes capacités</h2>
+                        <p>Le condensateur électrolytique utilise un électrolyte liquide ou solide comme cathode. Il est <strong>polarisé</strong> : il possède une borne positive (+) et une borne négative (-).</p>
+                        <div class="grid-2 mt-4">
+                            <div class="value-card">
+                                <h3 class="font-bold">Caractéristiques</h3>
+                                <ul class="list-disc pl-5 text-sm">
+                                    <li>Capacité : 0,1 µF à plusieurs milliers de µF</li>
+                                    <li>Tension : 4V à 450V</li>
+                                    <li>Forme cylindrique, souvent bleu ou noir</li>
+                                    <li>Polarité OBLIGATOIRE (risque d'explosion si inversé)</li>
+                                </ul>
+                            </div>
+                            <div class="value-card">
+                                <h3 class="font-bold">Avantages / Inconvénients</h3>
+                                <p class="text-sm"><span class="font-semibold text-green-600">+</span> Très forte capacité pour un volume modeste<br>
+                                <span class="font-semibold text-green-600">+</span> Excellent pour le filtrage d'alimentation<br>
+                                <span class="font-semibold text-red-600">-</span> Polarité stricte<br>
+                                <span class="font-semibold text-red-600">-</span> Durée de vie limitée (dessèchement)<br>
+                                <span class="font-semibold text-red-600">-</span> Performances médiocres en haute fréquence</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 3 : Céramique -->
+                    <section id="ceramique">
+                        <h2 class="section-title"><i class="fas fa-cube"></i> Condensateur céramique : la rapidité et la stabilité</h2>
+                        <p>Le condensateur céramique utilise un matériau diélectrique en céramique. Il est <strong>non polarisé</strong> : pas de sens de montage.</p>
+                        <div class="grid-2 mt-4">
+                            <div class="value-card">
+                                <h3 class="font-bold">Caractéristiques</h3>
+                                <ul class="list-disc pl-5 text-sm">
+                                    <li>Capacité : 1 pF à environ 100 µF</li>
+                                    <li>Tension : souvent basse à moyenne (jusqu'à quelques kV)</li>
+                                    <li>Forme : petit disque ou pastille CMS</li>
+                                    <li>Polarité : aucune</li>
+                                </ul>
+                            </div>
+                            <div class="value-card">
+                                <h3 class="font-bold">Avantages / Inconvénients</h3>
+                                <p class="text-sm"><span class="font-semibold text-green-600">+</span> Excellente réponse en haute fréquence (GHz)<br>
+                                <span class="font-semibold text-green-600">+</span> Très faible ESR<br>
+                                <span class="font-semibold text-green-600">+</span> Longue durée de vie<br>
+                                <span class="font-semibold text-red-600">-</span> Capacité limitée (rarement > 47 µF)<br>
+                                <span class="font-semibold text-red-600">-</span> Effet de la tension continue (DC bias)<br>
+                                <span class="font-semibold text-red-600">-</span> Microphonique pour certaines classes</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 4 : Tableau comparatif -->
+                    <section id="comparatif">
+                        <h2 class="section-title"><i class="fas fa-table"></i> Tableau comparatif direct</h2>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr><th>Critère</th><th>Électrolytique</th><th>Céramique</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Capacité max courante</td><td>&gt; 10 000 µF</td><td>≈ 100 µF</td></tr>
+                                <tr><td>Polarité</td><td>Oui (+ / -)</td><td>Non</td></tr>
+                                <tr><td>Fréquence max efficace</td><td>&lt; 100 kHz</td><td>&gt; 1 GHz</td></tr>
+                                <tr><td>ESR (résistance série)</td><td>Élevée</td><td>Très faible</td></tr>
+                                <tr><td>Durée de vie</td><td>2000 à 10 000 h</td><td>&gt; 50 ans</td></tr>
+                                <tr><td>Prix pour 10 µF / 25V</td><td>Abordable</td><td>Plus cher</td></tr>
+                                <tr><td>Sensibilité à la chaleur</td><td>Modérée (dessèchement)</td><td>Faible</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Section 5 : Guide d'utilisation -->
+                    <section id="utilisation">
+                        <h2 class="section-title"><i class="fas fa-lightbulb"></i> Quand utiliser l'un plutôt que l'autre ? Guide pratique</h2>
+                        <div class="grid-2">
+                            <div class="value-card bg-blue-50 border-blue-200">
+                                <h3 class="font-bold text-blue-800"><i class="fas fa-bolt"></i> Utilisez un électrolytique si :</h3>
+                                <ul class="list-disc pl-5 text-sm mt-2">
+                                    <li>Capacité &gt; 1 µF (100 µF à 4700 µF)</li>
+                                    <li>Filtrage d'alimentation après pont de diodes</li>
+                                    <li>Lissage de tension secteur</li>
+                                    <li>Étage de sortie audio (liaison forte)</li>
+                                </ul>
+                            </div>
+                            <div class="value-card bg-green-50 border-green-200">
+                                <h3 class="font-bold text-green-800"><i class="fas fa-waveform"></i> Utilisez un céramique si :</h3>
+                                <ul class="list-disc pl-5 text-sm mt-2">
+                                    <li>Haute fréquence (RF, découplage µC)</li>
+                                    <li>Faible ESR (alimentation à découpage)</li>
+                                    <li>Espace très limité (CMS)</li>
+                                    <li>Pas de polarité à gérer</li>
+                                    <li>Circuit oscillateur ou horloge</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section 6 : Les associer -->
+                    <section id="association">
+                        <h2 class="section-title"><i class="fas fa-handshake"></i> La bonne pratique : les associer</h2>
+                        <div class="tip-box">
+                            <p><strong>💡 Conseil d’expert :</strong> Dans un circuit réel, on utilise souvent les deux :</p>
+                            <ul class="list-disc pl-6 mt-2">
+                                <li>Un <strong>électrolytique 470 µF</strong> pour le filtrage principal de l’alimentation.</li>
+                                <li>Une <strong>céramique 0,1 µF</strong> placée juste à côté des broches d’alimentation d’un CI pour éliminer les parasites haute fréquence.</li>
+                            </ul>
+                            <p class="mt-2">Sur une carte à microcontrôleur (Arduino, ESP32, STM32), placez toujours un céramique 100 nF à moins de 1 cm de la broche VCC.</p>
+                        </div>
+                    </section>
+
+                    <!-- Section 7 : Achat au Togo -->
+                    <section id="achat">
+                        <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Où acheter des condensateurs de qualité au Togo ?</h2>
+                        <p>Chez <a href="../../condensateurs-electrolytiques-togo.html"><strong>TogoMicroFarad</strong></a>, nous proposons un large stock de condensateurs électrolytiques neufs, garantis d’origine. Nous livrons dans tout le Togo (Lomé, Kara, Sokodé, Atakpamé, etc.).</p>
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <div class="product-icon"><i class="fas fa-boxes"></i></div>
+                                <h3 class="font-bold text-lg">📦 Lot électrolytiques 10 valeurs</h3>
+                                <p class="text-sm text-gray-500">0,1 µF à 100 µF (50V) — toutes en 105°C</p>
+                                <div class="product-price">2 500 <small>FCFA</small></div>
+                                <button class="btn-add-cart btn-shine"
+                                        data-nom="Lot électrolytiques 10 valeurs"
+                                        data-tension="50V"
+                                        data-temperature="105°C"
+                                        data-quantite="10"
+                                        data-prix="2500">
+                                    <i class="fas fa-cart-plus"></i> Ajouter
+                                </button>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-icon"><i class="fas fa-microchip"></i></div>
+                                <h3 class="font-bold text-lg">⚡ Condensateurs électrolytiques</h3>
+                            
+                                <div class="product-price">À partir de 200<small>FCFA</small></div>
+                                <p class="text-xs text-gray-400">Prix selon valeur</p>
+                                <a href="../../condensateurs-electrolytiques-togo.html" class="btn-secondary">Voir la sélection</a>
+                            </div>
+                        </div>
+                        <div class="whatsapp-cta">
+                            <p class="font-semibold text-green-800">📱 Besoin d’un condensateur spécifique ?</p>
+                            <a href="https://wa.me/22893602926?text=Bonjour%2C%20je%20souhaite%20commander%20des%20condensateurs%20pour%20mes%20projets%20électroniques." class="btn-wa" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Commander sur WhatsApp
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Section 8 : FAQ -->
+                    <section id="faq">
+                        <h2 class="section-title"><i class="fas fa-question"></i> Questions fréquentes (FAQ)</h2>
+                        <div class="faq-item">
+                            <p class="font-bold">❓ Un condensateur céramique peut-il remplacer un électrolytique ?</p>
+                            <p>Pas directement pour les fortes capacités. Un 1000 µF en céramique n’existe pas à prix raisonnable. Par contre, pour des valeurs ≤ 10 µF, le céramique est souvent meilleur.</p>
+                        </div>
+                        <div class="faq-item">
+                            <p class="font-bold">❓ Comment reconnaître un condensateur électrolytique ?</p>
+                            <p>Forme cylindrique, bande blanche ou grise indiquant le négatif (-), valeur clairement imprimée.</p>
+                        </div>
+                        <div class="faq-item">
+                            <p class="font-bold">❓ Les condensateurs électrolytiques craignent-ils la chaleur togolaise ?</p>
+                            <p>Oui. La chaleur accélère le dessèchement de l’électrolyte. Pour une utilisation durable sous climat chaud (30-40°C), choisissez des modèles <strong>105°C</strong> (et non 85°C). Stockez-les à l’abri du soleil.</p>
+                        </div>
+                    </section>
+
+                    <!-- Conclusion -->
+                    <div class="mt-8 p-5 bg-gray-100 rounded-2xl">
+                        <h2 class="font-bold text-xl mb-2">🎯 En résumé</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                            <div><span class="font-bold">Filtrage d’alimentation (grosse capacité)</span> → <span class="text-blue-600">Électrolytique</span></div>
+                            <div><span class="font-bold">Découplage HF près d’un CI</span> → <span class="text-blue-600">Céramique</span></div>
+                            <div><span class="font-bold">Liaison audio entre étages</span> → Électrolytique (ou film)</div>
+                            <div><span class="font-bold">Oscillateur / Horloge</span> → <span class="text-blue-600">Céramique (NP0/C0G)</span></div>
+                            <div><span class="font-bold">Réserve d’énergie pour flash ou moteur</span> → <span class="text-blue-600">Électrolytique</span></div>
+                        </div>
+                        <p class="mt-4"><strong>En résumé :</strong> l’électrolytique pour le gros stockage d’énergie à basse fréquence, le céramique pour la rapidité et le filtrage des parasites.</p>
+                    </div>
+
+                    <!-- Footer de l'article -->
+                    <footer class="mt-8 pt-6 border-t border-gray-200">
+                        <div class="flex flex-wrap justify-between items-center gap-4">
+                            <div class="flex flex-wrap gap-3">
+                                <a href="../../condensateurs-electrolytiques-togo.html" class="text-blue-600 hover:underline inline-flex items-center gap-1"><i class="fas fa-arrow-right"></i> Voir notre catalogue</a>
+                                <a href="../../contact.html" class="text-blue-600 hover:underline inline-flex items-center gap-1"><i class="fas fa-envelope"></i> Nous contacter</a>
+                                <a href="../index.html" class="text-blue-600 hover:underline inline-flex items-center gap-1"><i class="fas fa-newspaper"></i> Retour au blog</a>
+                            </div>
+                            <div class="share-section">
+                                <span class="text-gray-500 text-sm">Partager :</span>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://togomicrofarad.com/blog/posts/condensateur-electrolytique-vs-ceramique.html" class="share-btn share-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/intent/tweet?url=https://togomicrofarad.com/blog/posts/condensateur-electrolytique-vs-ceramique.html&text=Condensateur%20électrolytique%20ou%20céramique%20%3F" class="share-btn share-tw" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://togomicrofarad.com/blog/posts/condensateur-electrolytique-vs-ceramique.html" class="share-btn share-li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://wa.me/?text=Condensateur%20électrolytique%20ou%20céramique%20%3F%20https://togomicrofarad.com/blog/posts/condensateur-electrolytique-vs-ceramique.html" class="share-btn share-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+
+            <!-- Articles similaires -->
+            <div class="related-section">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">📖 Vous aimerez aussi</h3>
+                <div class="related-grid" id="related-articles"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer standard -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div><div class="flex items-center"><i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i><h1 class="text-xl font-black">TogoMicroFarad</h1></div><p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p></div>
+                <div><h3 class="text-lg font-semibold mb-4">Liens rapides</h3><ul class="space-y-2"><li><a href="../../index.html" class="text-gray-400 hover:text-white">Accueil</a></li><li><a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li><li><a href="../index.html" class="text-gray-400 hover:text-white">Blog</a></li><li><a href="../../a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li><li><a href="../../contact.html" class="text-gray-400 hover:text-white">Contact</a></li><li><a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Confidentialité</a></li><li><a href="../../conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions</a></li></ul></div>
+                <div><h3 class="text-lg font-semibold mb-4">Contact</h3><ul class="space-y-2 text-gray-400"><li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li><li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li><li><i class="fas fa-envelope mr-2"></i> <a href="mailto:parfaitementzix@gmail.com" class="hover:text-white">parfaitementzix@gmail.com</a></li></ul></div>
+                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg"><h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3><p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p><div class="flex"><input type="email" id="email" placeholder="parfaitementzix@gmail.com" class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required><button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200"><i class="fas fa-paper-plane text-white"></i></button></div><p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p></div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400"><p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="../../conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p></div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../assets/js/articles.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+    <!-- Script articles similaires -->
+    <script>
+        (function() {
+            if (!window.recentArticles || !Array.isArray(window.recentArticles) || window.recentArticles.length === 0) {
+                console.warn('Aucun article disponible');
+                return;
+            }
+            const currentUrl = window.location.pathname;
+            const others = window.recentArticles.filter(article => article.url !== currentUrl).slice(0, 2);
+            const container = document.getElementById('related-articles');
+            if (container && others.length > 0) {
+                container.innerHTML = others.map(article => `
+                    <div class="related-card">
+                        <a href="${article.url}">
+                            <img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy">
+                        </a>
+                        <div class="related-card-body">
+                            <div class="related-card-meta">${article.category || 'Article'} · ${article.date || ''}</div>
+                            <h4><a href="${article.url}" class="hover:text-blue-600">${article.title}</a></h4>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        })();
+    </script>
+</body>
+</html>

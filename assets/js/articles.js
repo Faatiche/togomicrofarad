@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": " Condensateur électrolytique vs condensateur céramique : comment faire le bon choix pour vos projets électroniques ?",
+    "url": "/blog/posts/condensateur-electrolytique-vs-ceramique.html",
+    "category": "Guide composants",
+    "date": "2026-04-03",
+    "image": "/assets/images/electrolytique-vs-ceramique.jpg"
+  },
+  {
     "title": "PC ne s'allume plus ? Diagnostiquer un condensateur électrolytique HS (Guide complet)",
     "url": "/blog/posts/diagnostic-condensateur-pc.html",
     "category": "Diagnostic PC",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Réparation électronique",
     "date": "2026-03-14",
     "image": "/assets/images/un Multimètre et un condensateur électrolytique sur un plan de travail.png"
-  },
-  {
-    "title": "Comment remplacer les condensateurs électrolytiques d'une alimentation de téléviseur ou d'ampli audio ? ",
-    "url": "/blog/posts/remplacer-condensateurs-electrolytique-alimentation-téléviseur-et-ampli.html",
-    "category": "Conseils",
-    "date": "2026-03-11",
-    "image": "/assets/images/remplacer-condensateur-alimentation-tv.png"
   }
 ];
