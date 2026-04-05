@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "👨‍🔬 L'Histoire de l'Invention du Condensateur Électrolytique : Une Révolution Silencieuse",
+    "url": "/blog/posts/histoire-condensateur-electrolytique.html",
+    "category": "Histoire & Innovation",
+    "date": "2026-04-05",
+    "image": "/assets/images/histoire-condensateur.jpg"
+  },
+  {
     "title": " Condensateur électrolytique vs condensateur céramique : comment faire le bon choix pour vos projets électroniques ?",
     "url": "/blog/posts/condensateur-electrolytique-vs-ceramique.html",
     "category": "Guide composants",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Guide technique",
     "date": "2026-03-17",
     "image": "/assets/images/condensateur-gonfler.png"
-  },
-  {
-    "title": "Comment mesurer la capacité d'un condensateur électrolytique avec un multimètre ?",
-    "url": "/blog/posts/comment-tester-condensateur-electrolytique-avec-un-multimetre.html",
-    "category": "Réparation électronique",
-    "date": "2026-03-14",
-    "image": "/assets/images/un Multimètre et un condensateur électrolytique sur un plan de travail.png"
   }
 ];
