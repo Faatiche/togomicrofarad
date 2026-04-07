@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "📌 D’où vient l’unité microfarad (µF) pour les condensateurs ? Histoire et explications",
+    "url": "/blog/posts/origine-microfarad.html",
+    "category": "Histoire & Innovation",
+    "date": "2026-04-07",
+    "image": "/assets/images/origine-microfarad.jpg"
+  },
+  {
     "title": "👨‍🔬 L'Histoire de l'Invention du Condensateur Électrolytique : Une Révolution Silencieuse",
     "url": "/blog/posts/histoire-condensateur-electrolytique.html",
     "category": "Histoire & Innovation",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Guide pratique",
     "date": "2026-03-21",
     "image": "/assets/images/lire-condensateur.png"
-  },
-  {
-    "title": "Pourquoi les condensateurs gonflent-ils ? Guide de réparation au Togo",
-    "url": "/blog/posts/pourquoi-les-condensateurs-gonflent.html",
-    "category": "Guide technique",
-    "date": "2026-03-17",
-    "image": "/assets/images/condensateur-gonfler.png"
   }
 ];
