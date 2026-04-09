@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "⚠️Le Rôle Crucial (et Fragile) des Condensateurs Électrolytiques dans Vos Ampoules LED",
+    "url": "/blog/posts/condensateurs-ampoules-led.html",
+    "category": "Éclairage LED",
+    "date": "2026-04-09",
+    "image": "/assets/images/condensateur-led.jpg"
+  },
+  {
     "title": "📌 D’où vient l’unité microfarad (µF) pour les condensateurs ? Histoire et explications",
     "url": "/blog/posts/origine-microfarad.html",
     "category": "Histoire & Innovation",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Guide pratique",
     "date": "2026-03-22",
     "image": "/assets/images/condensateur-chauffe.png"
-  },
-  {
-    "title": "Comment lire la valeur d’un condensateur électrolytique ? (Guide complet)",
-    "url": "/blog/posts/lire-condensateur-electrolytique.html",
-    "category": "Guide pratique",
-    "date": "2026-03-21",
-    "image": "/assets/images/lire-condensateur.png"
   }
 ];

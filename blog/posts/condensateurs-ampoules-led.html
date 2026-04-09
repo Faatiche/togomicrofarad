@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le rôle crucial (et fragile) des condensateurs électrolytiques dans vos ampoules LED - TogoMicroFarad</title>
+    <meta name="description" content="Pourquoi vos ampoules LED ne tiennent-elles pas leurs promesses de longévité ? Le condensateur électrolytique est souvent en cause. Découvrez son rôle, ses faiblesses et comment choisir des ampoules durables.">
+    <meta name="keywords" content="condensateur électrolytique, ampoule LED, driver LED, scintillement LED, réparation LED, durée de vie LED, condensateur 105°C, Togo">
+    <meta name="author" content="TogoMicroFarad">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://togomicrofarad.com/blog/posts/condensateurs-ampoules-led.html">
+    <meta property="og:title" content="Le rôle crucial (et fragile) des condensateurs électrolytiques dans vos ampoules LED">
+    <meta property="og:description" content="Comprenez pourquoi le condensateur électrolytique est le maillon faible de vos ampoules LED et comment choisir des éclairages durables.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/condensateur-led.jpg">
+    <meta property="og:site_name" content="TogoMicroFarad">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Condensateurs électrolytiques et ampoules LED – guide complet">
+    <meta name="twitter:description" content="Pourquoi vos LED clignotent ou meurent prématurément ? La réponse est souvent un petit composant : le condensateur électrolytique.">
+    <meta name="twitter:image" content="https://togomicrofarad.com/assets/images/condensateur-led.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://togomicrofarad.com/blog/posts/condensateurs-ampoules-led.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS principal -->
+    <link rel="stylesheet" href="../../assets/css/output.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+
+    <!-- Données structurées Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Le Rôle Crucial (et Fragile) des Condensateurs Électrolytiques dans Vos Ampoules LED",
+      "description": "Pourquoi vos ampoules LED ne tiennent-elles pas leurs promesses de longévité ? Le condensateur électrolytique est souvent en cause. Découvrez son rôle, ses faiblesses et comment choisir des ampoules durables.",
+      "image": "https://togomicrofarad.com/assets/images/condensateur-led.jpg",
+      "datePublished": "2026-04-09",
+      "dateModified": "2026-04-09",
+      "author": {
+        "@type": "Organization",
+        "name": "TogoMicroFarad"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TogoMicroFarad",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://togomicrofarad.com/assets/images/favicon.png"
+        }
+      }
+    }
+    </script>
+
+    <style>
+        /* Styles spécifiques à l'article */
+        body { background: #f8fafc; font-family: 'Inter', sans-serif; }
+        .article-container { max-width: 880px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+        .article-card { background: white; border-radius: 32px; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1); overflow: hidden; }
+        .article-hero { position: relative; height: 360px; overflow: hidden; background: #0f172a; display: flex; align-items: center; justify-content: center; }
+        .article-hero img { width: 100%; height: 100%; object-fit: cover; }
+        .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%); }
+        .hero-badge { position: absolute; top: 1.5rem; left: 1.5rem; background: #2563eb; color: white; padding: 0.35rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 700; z-index: 2; }
+        .article-body { padding: 2.5rem 3rem; }
+        @media (max-width: 640px) { .article-hero { height: 220px; } .article-body { padding: 1.5rem; } }
+        .breadcrumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 1rem; }
+        .breadcrumb a { color: #2563eb; text-decoration: none; }
+        .article-meta { display: flex; gap: 1rem; font-size: 0.85rem; color: #6b7280; margin-bottom: 1rem; }
+        .article-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; color: #0f172a; margin-bottom: 1rem; }
+        .article-lead { font-size: 1.1rem; color: #334155; border-left: 4px solid #2563eb; padding-left: 1.25rem; margin-bottom: 2rem; }
+        .section-title { font-size: 1.6rem; font-weight: 700; margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.75rem; color: #0f172a; }
+        .section-title i { font-size: 1.5rem; color: #2563eb; }
+        .info-box { background: #eef2ff; border-radius: 20px; padding: 1.2rem; margin: 1.5rem 0; border-left: 6px solid #2563eb; }
+        .warning-box { background: #fff1f0; border-left: 6px solid #dc2626; border-radius: 20px; padding: 1.2rem; margin: 1.5rem 0; }
+        .product-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin: 2rem 0; }
+        @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
+        .product-card { background: white; border-radius: 24px; padding: 1.5rem; border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .product-card:hover { border-color: #2563eb; box-shadow: 0 12px 20px -12px rgba(37,99,235,0.15); }
+        .btn-add-cart { background: #2563eb; color: white; border: none; border-radius: 40px; padding: 0.6rem; font-weight: 600; width: 100%; cursor: pointer; transition: background 0.2s; }
+        .btn-add-cart:hover { background: #1d4ed8; }
+        .whatsapp-cta { background: #f0fdf4; border-radius: 28px; padding: 1.5rem; text-align: center; margin: 2rem 0; }
+        .btn-wa { background: #16a34a; color: white; padding: 0.6rem 1.5rem; border-radius: 99px; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+        .share-section { display: flex; align-items: center; gap: 0.8rem; margin-top: 2rem; }
+        .share-btn { width: 38px; height: 38px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: white; transition: transform 0.2s; }
+        .share-btn:hover { transform: scale(1.1); }
+        .share-fb { background: #1877f2; }
+        .share-tw { background: #1da1f2; }
+        .share-li { background: #0a66c2; }
+        .share-wa { background: #25d366; }
+        .related-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 2rem; }
+        @media (max-width: 520px) { .related-grid { grid-template-columns: 1fr; } }
+        .related-card { background: white; border-radius: 24px; overflow: hidden; border: 1px solid #e2e8f0; transition: transform 0.2s; }
+        .related-card:hover { transform: translateY(-5px); box-shadow: 0 12px 20px -12px rgba(0,0,0,0.1); }
+        .related-card img { width: 100%; height: 140px; object-fit: cover; background: #e2e8f0; }
+        .related-card-body { padding: 1rem; }
+        header { z-index: 1000; }
+        #cart-dropdown { z-index: 100000 !important; background-color: #ffffff !important; }
+        .cart-overlay.active { pointer-events: none; }
+        .custom-link {
+            color: #991b1b !important;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .custom-link:hover {
+            color: #7f1d1d !important;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+
+    <!-- Header standard TogoMicroFarad -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
+                <h2 class="text-xl font-black">TogoMicroFarad</h2>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="../../index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+                <a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <a href="../index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1">Articles <i class="fas fa-chevron-down text-xs"></i></button>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"></div>
+                </div>
+                <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="../../a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div class="relative" id="cart-container">
+                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 transition-all flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="hidden sm:inline">Panier</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                    </button>
+                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                    <div class="hamburger"><span></span><span></span><span></span></div>
+                </button>
+            </div>
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="../../index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Accueil</a>
+                    <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link"><i class="fas fa-box"></i> Produits</a>
+                    <a href="../index.html" class="mobile-nav-link"><i class="fas fa-newspaper"></i> Blog</a>
+                    <a href="../../contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="../../a-propos.html" class="mobile-nav-link"><i class="fas fa-users"></i> À propos</a>
+                </nav>
+                <div class="mobile-menu-footer">
+                    <div class="mobile-contact-info"><p><i class="fas fa-phone"></i> +228 93 60 29 26</p><p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p></div>
+                </div>
+            </div>
+            <div id="menu-overlay" class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <div class="article-container">
+            <article class="article-card">
+                <div class="article-hero">
+                    <span class="hero-badge"><i class="fas fa-lightbulb"></i> ÉCLAIRAGE LED</span>
+                    <img src="../../assets/images/condensateur-led.jpg" alt="Condensateur électrolytique dans une ampoule LED" loading="lazy" onerror="this.src='https://placehold.co/800x400/1e293b/ffffff?text=LED+Condensateur'">
+                </div>
+                <div class="article-body">
+                    <div class="breadcrumb">
+                        <a href="../../index.html">Accueil</a> › <a href="../index.html">Blog</a> › <span>Condensateurs et ampoules LED</span>
+                    </div>
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar-alt"></i> 9 avril 2026</span>
+                        <span><i class="far fa-clock"></i> 7 min de lecture</span>
+                    </div>
+                    <h1 class="article-title">Le Rôle Crucial (et Fragile) des Condensateurs Électrolytiques dans Vos Ampoules LED</h1>
+                    <p class="article-lead">Bienvenue sur <a href="../../condensateurs-electrolytiques-togo.html" class="custom-link"><strong>TogoMicroFarad</strong></a>. Nous parlons souvent de la promesse de longévité des ampoules LED : 15 000, 25 000, voire 50 000 heures de fonctionnement. Alors pourquoi certaines rendent-elles l’âme au bout de seulement deux ou trois ans ? La réponse ne se trouve généralement pas dans les puces LED elles-mêmes, capables de briller pendant des décennies, mais dans un composant bien plus discret et souvent mal compris : le <strong>condensateur électrolytique</strong>.</p>
+
+                    <!-- SOMMAIRE -->
+                    <div class="bg-gray-100 rounded-2xl p-4 my-6">
+                        <h2 class="font-bold mb-2">📋 Sommaire</h2>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-1 text-sm">
+                            <li><a href="#quest-ce" class="text-blue-600">1. Qu'est-ce qu'un condensateur électrolytique ?</a></li>
+                            <li><a href="#mission" class="text-blue-600">2. Mission principale dans une ampoule LED</a></li>
+                            <li><a href="#maillon-faible" class="text-blue-600">3. Pourquoi est-il le maillon faible ?</a></li>
+                            <li><a href="#symptomes" class="text-blue-600">4. Symptômes et solutions de dépannage</a></li>
+                            <li><a href="#choisir" class="text-blue-600">5. Comment choisir une ampoule LED durable ?</a></li>
+                            <li><a href="#conclusion" class="text-blue-600">6. Conclusion</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 1 -->
+                    <section id="quest-ce">
+                        <h2 class="section-title"><i class="fas fa-microchip"></i> 1. Qu'est-ce qu'un condensateur électrolytique ?</h2>
+                        <p>Un condensateur est un composant électronique capable de stocker et de restituer de l’énergie électrique. Le <strong>condensateur électrolytique</strong> utilise un électrolyte (liquide ou gel conducteur) pour atteindre une forte capacité dans un volume réduit. C’est cette forte capacité qui le rend indispensable dans les alimentations compactes, comme celles des ampoules LED.</p>
+                    </section>
+
+                    <!-- Section 2 -->
+                    <section id="mission">
+                        <h2 class="section-title"><i class="fas fa-charging-station"></i> 2. La mission principale du condensateur dans une ampoule LED</h2>
+                        <p>Une ampoule LED ne fonctionne pas directement sur le courant alternatif (AC) 230V de nos prises. Elle a besoin d’un courant continu (DC) stable. Le driver (circuit d’alimentation) et son condensateur électrolytique transforment et lissent le courant.</p>
+                        <div class="info-box">
+                            <p><strong>⚡ Rôle de filtrage et de lissage :</strong></p>
+                            <ul class="list-disc pl-5 mt-1">
+                                <li>Élimine le scintillement (flicker) – invisible mais fatigant pour les yeux.</li>
+                                <li>Protège les puces LED contre les variations de courant, garantissant leur longévité.</li>
+                            </ul>
+                            <p class="mt-2">Dans les alimentations capacitaires (courantes sur les modèles d’entrée de gamme), le condensateur (souvent 10 µF) est directement connecté en parallèle des LED pour assurer ce filtrage.</p>
+                        </div>
+                    </section>
+
+                    <!-- Section 3 -->
+                    <section id="maillon-faible">
+                        <h2 class="section-title"><i class="fas fa-temperature-high"></i> 3. Pourquoi est-il le maillon faible de l’éclairage LED ?</h2>
+                        <p>La quasi-totalité de l’énergie consommée par le driver est dissipée en chaleur, et <strong>la chaleur est l’ennemi mortel du condensateur électrolytique</strong>.</p>
+                        <div class="warning-box">
+                            <p><strong>⚠️ Le séchage de l’électrolyte :</strong> Sous l’effet de la température, le liquide s’évapore, la capacité diminue et la résistance interne (ESR) augmente, rendant le filtrage inefficace.</p>
+                            <p class="mt-2"><strong>📉 Règle des 10°C :</strong> Chaque augmentation de 10°C de la température ambiante divise par deux la durée de vie théorique du condensateur.</p>
+                            <p class="mt-2"><strong>💧 Fuite et corrosion :</strong> En cas de surchauffe ou de surtension, l’électrolyte peut fuir, attaquant les pistes du circuit imprimé et condamnant l’ampoule.</p>
+                        </div>
+                        <p>C’est pourquoi les fabricants qui choisissent des condensateurs “low cost” (1 000 h à 85°C au lieu de 10 000 h à 105°C) réduisent drastiquement la durée de vie de leurs ampoules pour économiser quelques centimes.</p>
+                    </section>
+
+                    <!-- Section 4 -->
+                    <section id="symptomes">
+                        <h2 class="section-title"><i class="fas fa-stethoscope"></i> 4. Symptômes d’un condensateur défaillant et solutions de dépannage</h2>
+                        <ul class="list-disc pl-6 space-y-1 my-3">
+                            <li><strong>Clignotement ou scintillement :</strong> signe que le condensateur ne lisse plus correctement le courant.</li>
+                            <li><strong>Ampoule qui ne s’allume plus :</strong> condensateur complètement “mort” (sec ou en court-circuit).</li>
+                            <li><strong>Baisse de luminosité significative :</strong> capacité réduite → alimentation moins efficace.</li>
+                        </ul>
+                        <div class="info-box">
+                            <p><strong>🔧 Pour les bricoleurs avertis :</strong></p>
+                            <ol class="list-decimal pl-5 mt-1">
+                                <li>Inspectez visuellement : un condensateur défectueux est souvent bombé ou présente des traces de suintement brunâtre.</li>
+                                <li>Dessoudez-le et remplacez-le par un modèle de <strong>même capacité (µF)</strong> et <strong>tension (V) égale ou supérieure</strong>. Privilégiez un modèle <strong>105°C</strong>.</li>
+                                <li><strong>⚠️ Sécurité :</strong> débranchez toujours l’ampoule avant toute manipulation. En cas de doute, confiez la réparation à un professionnel.</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <!-- Section 5 -->
+                    <section id="choisir">
+                        <h2 class="section-title"><i class="fas fa-shopping-cart"></i> 5. Comment choisir une ampoule LED durable ?</h2>
+                        <ul class="list-disc pl-6 space-y-1 my-3">
+                            <li><strong>Méfiez-vous des prix trop bas :</strong> les composants de qualité ont un coût.</li>
+                            <li><strong>Privilégiez les marques reconnues :</strong> Philips, Osram, Sylvania utilisent des condensateurs fiables.</li>
+                            <li><strong>Regardez la garantie :</strong> 3 à 5 ans de garantie est un signe de confiance.</li>
+                            <li><strong>Vérifiez la dissipation thermique :</strong> une ampoule avec ailettes en aluminium évacue mieux la chaleur.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Section 6 -->
+                    <section id="conclusion">
+                        <h2 class="section-title"><i class="fas fa-gem"></i> Conclusion : un petit composant, un grand impact</h2>
+                        <p>Le condensateur électrolytique est l’acteur silencieux mais indispensable de la performance et de la longévité de vos ampoules LED. Chez <a href="../../condensateurs-electrolytiques-togo.html" class="custom-link"><strong>TogoMicroFarad</strong></a>, nous pensons qu’il est essentiel de comprendre ces mécanismes pour faire des choix d’achat éclairés. En étant conscient du rôle et de la fragilité de ce petit composant, vous êtes désormais mieux armé pour sélectionner des ampoules qui tiendront leurs promesses, et peut-être même pour donner une seconde vie à celles qui vacillent.</p>
+                        <p>N’hésitez pas à explorer notre site pour en savoir plus sur les condensateurs et leur univers fascinant !</p>
+                    </section>
+
+                    <!-- Produits en vedette -->
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="flex items-center gap-2 mb-3"><i class="fas fa-boxes text-3xl text-blue-600"></i><h3 class="font-bold text-lg">📦 Lot de 10 valeurs courantes</h3></div>
+                            <p class="text-sm text-gray-600">0,1 µF à 100 µF (50V) — toutes en 105°C, idéal pour réparer vos drivers LED.</p>
+                            <div class="product-price text-2xl font-bold text-blue-600 my-2">2 500 FCFA</div>
+                            <button class="btn-add-cart btn-shine" 
+                                    data-nom="Lot 10 valeurs (LED)" 
+                                    data-tension="50V" 
+                                    data-temperature="105°C" 
+                                    data-quantite="10" 
+                                    data-prix="2500">
+                                <i class="fas fa-cart-plus"></i> Ajouter au panier
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <div class="flex items-center gap-2 mb-3"><i class="fas fa-microchip text-3xl text-blue-600"></i><h3 class="font-bold text-lg">⚡ Condensateurs individuels</h3></div>
+                            <p class="text-sm text-gray-600">De 1 µF à 10 000 µF – parfait pour remplacer précisément le composant défaillant.</p>
+                            <div class="product-price text-2xl font-bold text-blue-600 my-2">200 FCFA</div>
+                            <p class="text-xs text-gray-400">par unité · lot de 6 à 1 000 FCFA</p>
+                            <a href="../../condensateurs-electrolytiques-togo.html" class="inline-block text-center w-full mt-2 bg-gray-200 text-gray-800 py-2 rounded-full hover:bg-gray-300 transition">Voir toutes les valeurs</a>
+                        </div>
+                    </div>
+
+                    <div class="whatsapp-cta">
+                        <p class="font-semibold text-green-800">📱 Besoin d’un condensateur spécifique pour votre réparation LED ?</p>
+                        <a href="https://wa.me/22893602926?text=Bonjour%2C%20je%20souhaite%20commander%20des%20condensateurs%20pour%20mes%20ampoules%20LED." class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Commander sur WhatsApp</a>
+                    </div>
+
+                    <!-- Footer article + partage -->
+                    <footer class="mt-8 pt-6 border-t border-gray-200">
+                        <div class="flex flex-wrap justify-between items-center gap-4">
+                            <div class="flex gap-3">
+                                <a href="../../condensateurs-electrolytiques-togo.html" class="text-blue-600 hover:underline"><i class="fas fa-arrow-right"></i> Découvrez notre catalogue</a>
+                                <a href="../../contact.html" class="text-blue-600 hover:underline"><i class="fas fa-envelope"></i> Nous contacter</a>
+                                <a href="../index.html" class="text-blue-600 hover:underline"><i class="fas fa-newspaper"></i> Retour au blog</a>
+                            </div>
+                            <div class="share-section">
+                                <span class="text-gray-500 text-sm">Partager :</span>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://togomicrofarad.com/blog/posts/condensateurs-ampoules-led.html" class="share-btn share-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://twitter.com/intent/tweet?url=https://togomicrofarad.com/blog/posts/condensateurs-ampoules-led.html&text=Condensateurs%20et%20ampoules%20LED" class="share-btn share-tw" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://togomicrofarad.com/blog/posts/condensateurs-ampoules-led.html" class="share-btn share-li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://wa.me/?text=Pourquoi%20vos%20LED%20clignotent%20?%20https://togomicrofarad.com/blog/posts/condensateurs-ampoules-led.html" class="share-btn share-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+
+            <!-- Articles similaires -->
+            <div class="related-section mt-12">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">📖 Vous aimerez aussi</h3>
+                <div class="related-grid" id="related-articles"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer standard -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div><div class="flex items-center"><i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i><h1 class="text-xl font-black">TogoMicroFarad</h1></div><p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p></div>
+                <div><h3 class="text-lg font-semibold mb-4">Liens rapides</h3><ul class="space-y-2"><li><a href="../../index.html" class="text-gray-400 hover:text-white">Accueil</a></li><li><a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li><li><a href="../index.html" class="text-gray-400 hover:text-white">Blog</a></li><li><a href="../../a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li><li><a href="../../contact.html" class="text-gray-400 hover:text-white">Contact</a></li><li><a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Confidentialité</a></li><li><a href="../../conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions</a></li></ul></div>
+                <div><h3 class="text-lg font-semibold mb-4">Contact</h3><ul class="space-y-2 text-gray-400"><li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li><li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li><li><i class="fas fa-envelope mr-2"></i> <a href="mailto:parfaitementzix@gmail.com" class="hover:text-white">parfaitementzix@gmail.com</a></li></ul></div>
+                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg"><h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3><p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p><div class="flex"><input type="email" id="email" placeholder="parfaitementzix@gmail.com" class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required><button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200"><i class="fas fa-paper-plane text-white"></i></button></div><p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p></div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400"><p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="../../conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p></div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/articles.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        (function() {
+            if (!window.recentArticles || !Array.isArray(window.recentArticles) || window.recentArticles.length === 0) return;
+            const currentUrl = window.location.pathname;
+            const others = window.recentArticles.filter(article => article.url !== currentUrl).slice(0, 2);
+            const container = document.getElementById('related-articles');
+            if (container && others.length) {
+                container.innerHTML = others.map(article => `
+                    <div class="related-card">
+                        <a href="${article.url}"><img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy"></a>
+                        <div class="related-card-body">
+                            <div class="text-xs text-gray-500 mb-1">${article.category || 'Article'} · ${article.date || ''}</div>
+                            <h4><a href="${article.url}" class="hover:text-blue-600">${article.title}</a></h4>
+                        </div>
+                    </div>
+                `).join('');
+            }
+        })();
+    </script>
+</body>
+</html>

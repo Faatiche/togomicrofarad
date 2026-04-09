@@ -102,5 +102,13 @@
   "url": "/blog/posts/origine-microfarad.html",
   "excerpt": "Le microfarad (µF) est né de l’héritage de Michael Faraday. Découvrez l’origine de cette unité de mesure essentielle pour les condensateurs électrolytiques et son importance au Togo.",
   "image": "/assets/images/origine-microfarad.jpg"
+},
+{
+  "title": "⚠️Le Rôle Crucial (et Fragile) des Condensateurs Électrolytiques dans Vos Ampoules LED",
+  "date": "2026-04-09",
+  "category": "Éclairage LED",
+  "url": "/blog/posts/condensateurs-ampoules-led.html",
+  "excerpt": "Pourquoi vos ampoules LED ne tiennent-elles pas leurs promesses de longévité ? Le condensateur électrolytique est souvent en cause. Découvrez son rôle, ses faiblesses et comment choisir des ampoules durables.",
+  "image": "/assets/images/condensateur-led.jpg"
 }
 ]
