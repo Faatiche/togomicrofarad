@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "📘 Guide Complet des Types de Condensateurs (2026)",
+    "url": "/blog/posts/guide-types-condensateurs.html",
+    "category": "Guide Technique",
+    "date": "2026-04-11",
+    "image": "/assets/images/guide-types-condensateurs.jpg"
+  },
+  {
     "title": "⚠️Le Rôle Crucial (et Fragile) des Condensateurs Électrolytiques dans Vos Ampoules LED",
     "url": "/blog/posts/condensateurs-ampoules-led.html",
     "category": "Éclairage LED",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Maintenance Pro",
     "date": "2026-03-24",
     "image": "/assets/images/Protection-des-cartes-electroniques.png"
-  },
-  {
-    "title": "Pourquoi un condensateur chauffe ? Causes, dangers et solutions (Guide complet)",
-    "url": "/blog/posts/pourquoi-condensateur-chauffe.html",
-    "category": "Guide pratique",
-    "date": "2026-03-22",
-    "image": "/assets/images/condensateur-chauffe.png"
   }
 ];
