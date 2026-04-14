@@ -118,5 +118,13 @@
   "url": "/blog/posts/guide-types-condensateurs.html",
   "excerpt": "Découvrez tous les types de condensateurs existants : électrolytiques, céramiques, film, tantale, supercondensateurs… Guide expert pour choisir le bon composant. Livraison au Togo !",
   "image": "/assets/images/guide-types-condensateurs.jpg"
+},
+{
+  "title": "💥 ESR expliqué simplement : le vrai facteur qui tue vos condensateurs",
+  "date": "2026-04-14",
+  "category": "Technique avancée",
+  "url": "/blog/posts/esr-condensateur-explication-simple.html",
+  "excerpt": "Quand un appareil électronique tombe en panne, beaucoup pensent à un composant grillé. Mais l'ennemi le plus discret est l'ESR (Equivalent Series Resistance). Découvrez pourquoi cette résistance interne augmente, comment la détecter et comment choisir des condensateurs Low ESR pour éviter les pannes invisibles.",
+  "image": "/assets/images/esr-condensateur.jpg"
 }
 ]

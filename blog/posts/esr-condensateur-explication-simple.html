@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title> ESR expliqué simplement : le vrai facteur qui tue vos condensateurs - TogoMicroFarad</title>
+    <meta name="description" content="L'ESR (Equivalent Series Resistance) est l'ennemi silencieux de vos appareils électroniques. Découvrez ce qu'est l'ESR, pourquoi il augmente et comment éviter les pannes invisibles.">
+    <meta name="keywords" content="ESR condensateur, résistance série équivalente, condensateur Low ESR, panne électronique, condensateur électrolytique Togo, testeur ESR, réparation électronique Lomé">
+    <meta name="author" content="TogoMicroFarad">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://togomicrofarad.com/blog/posts/esr-condensateur-explication-simple.html">
+    <meta property="og:title" content="💥 ESR expliqué simplement : le vrai facteur qui tue vos condensateurs">
+    <meta property="og:description" content="Même si la capacité en µF semble bonne, l'ESR peut provoquer des pannes invisibles. Comprenez ce phénomène crucial pour tout réparateur.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/esr-condensateur.jpg">
+    <meta property="og:site_name" content="TogoMicroFarad">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ESR expliqué simplement - TogoMicroFarad">
+    <meta name="twitter:description" content="L'ESR, cette résistance cachée qui fait chauffer vos condensateurs et tomber vos appareils en panne. Explications claires.">
+    <meta name="twitter:image" content="https://togomicrofarad.com/assets/images/esr-condensateur.jpg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://togomicrofarad.com/blog/posts/esr-condensateur-explication-simple.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+
+    <!-- Données structurées Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ESR expliqué simplement : le vrai facteur qui tue vos condensateurs",
+      "description": "L'ESR (Equivalent Series Resistance) est une résistance interne qui augmente avec le temps et provoque des pannes électroniques invisibles. Apprenez à le détecter et à choisir les bons condensateurs.",
+      "image": "https://togomicrofarad.com/assets/images/esr-condensateur.jpg",
+      "datePublished": "2026-04-14",
+      "dateModified": "2026-04-14",
+      "author": {
+        "@type": "Organization",
+        "name": "TogoMicroFarad"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TogoMicroFarad",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://togomicrofarad.com/assets/images/favicon.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://togomicrofarad.com/blog/posts/esr-condensateur-explication-simple.html"
+      }
+    }
+    </script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fbf9f8",
+                    "tertiary-fixed": "#ffdad5",
+                    "on-surface": "#1b1c1c",
+                    "inverse-primary": "#b1c5ff",
+                    "on-tertiary-fixed-variant": "#930209",
+                    "on-tertiary-fixed": "#410001",
+                    "inverse-surface": "#303030",
+                    "primary-container": "#0051c3",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#dae2ff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#b71507",
+                    "primary": "#003b93",
+                    "on-primary-fixed-variant": "#00419f",
+                    "secondary-fixed": "#ffdad4",
+                    "primary-fixed-dim": "#b1c5ff",
+                    "secondary-fixed-dim": "#ffb4a7",
+                    "on-primary-fixed": "#001947",
+                    "surface-variant": "#e4e2e1",
+                    "on-tertiary-container": "#ffc0b8",
+                    "tertiary-container": "#ad1d1a",
+                    "inverse-on-surface": "#f3f0f0",
+                    "on-primary-container": "#beceff",
+                    "tertiary": "#880007",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed": "#400100",
+                    "on-secondary-fixed-variant": "#920600",
+                    "on-background": "#1b1c1c",
+                    "surface-container-high": "#eae8e7",
+                    "surface-tint": "#1357c9",
+                    "surface-container-highest": "#e4e2e1",
+                    "error": "#ba1a1a",
+                    "background": "#fbf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container": "#f0eded",
+                    "secondary-container": "#dc3220",
+                    "on-secondary-container": "#fffbff",
+                    "outline-variant": "#c3c6d6",
+                    "on-surface-variant": "#434653",
+                    "error-container": "#ffdad6",
+                    "surface": "#fbf9f8",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#737785"
+            },
+            borderRadius: {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            fontFamily: {
+                    "headline": ["Space Grotesk", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24';
+        }
+        .editorial-asymmetry {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .hover-card-glow {
+            transition: all 0.2s ease;
+        }
+        .hover-card-glow:hover {
+            box-shadow: 0 20px 35px -12px rgba(0,59,147,0.15);
+        }
+        
+        /* Menu mobile */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 350px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+        }
+        .mobile-menu.active { right: 0; }
+        .mobile-nav { padding: 1.5rem; flex: 1; }
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            color: #1e293b;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .mobile-nav-link:hover { color: #2563eb; }
+        .mobile-menu-footer {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+        .mobile-contact-info p { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: #475569; }
+        .menu-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(2px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .menu-overlay.active { opacity: 1; visibility: visible; }
+        .hamburger { display: flex; flex-direction: column; justify-content: space-between; width: 24px; height: 18px; }
+        .hamburger span { display: block; height: 2px; background: #1e293b; border-radius: 2px; transition: 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        
+        #cart-dropdown {
+            max-height: 450px;
+            overflow-y: auto;
+            box-shadow: 0 20px 30px -8px rgba(0,0,0,0.2);
+        }
+        .cart-item { display: flex; align-items: center; padding: 12px; border-bottom: 1px solid #e2e8f0; }
+        .cart-item-info { flex: 1; }
+        .cart-item-title { font-weight: 600; }
+        .cart-item-price { font-size: 0.9rem; color: #2563eb; }
+        .cart-item-remove { color: #ef4444; cursor: pointer; padding: 4px; }
+        
+        .custom-link { color: #991b1b !important; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+        .custom-link:hover { color: #7f1d1d !important; text-decoration: underline; }
+        .custom-linke { color: #f5911e !important; text-decoration: none; font-weight: 600; transition: color 0.2s; }
+        .custom-linke:hover { color: #d39510 !important; text-decoration: underline; }
+
+        /* Styles pour l'article */
+        .article-container { max-width: 880px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+        .article-card { background: white; border-radius: 32px; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.1); overflow: hidden; }
+        .article-hero { position: relative; height: 360px; overflow: hidden; background: #0f172a; display: flex; align-items: center; justify-content: center; }
+        .article-hero img { width: 100%; height: 100%; object-fit: cover; }
+        .article-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%); }
+        .hero-badge { position: absolute; top: 1.5rem; left: 1.5rem; background: #2563eb; color: white; padding: 0.35rem 1rem; border-radius: 99px; font-size: 0.75rem; font-weight: 700; z-index: 2; }
+        .article-body { padding: 2.5rem 3rem; }
+        @media (max-width: 640px) { .article-hero { height: 220px; } .article-body { padding: 1.5rem; } }
+        .breadcrumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 1rem; }
+        .breadcrumb a { color: #2563eb; text-decoration: none; }
+        .article-meta { display: flex; gap: 1rem; font-size: 0.85rem; color: #6b7280; margin-bottom: 1rem; }
+        .article-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; color: #0f172a; margin-bottom: 1rem; line-height: 1.2; }
+        .article-lead { font-size: 1.1rem; color: #334155; border-left: 4px solid #2563eb; padding-left: 1.25rem; margin-bottom: 2rem; }
+        .section-title { font-size: 1.6rem; font-weight: 700; margin: 2rem 0 1rem; display: flex; align-items: center; gap: 0.75rem; color: #0f172a; }
+        .section-title i { font-size: 1.5rem; color: #2563eb; }
+        .tip-box { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 1.2rem 1.5rem; border-radius: 0 16px 16px 0; margin: 1.5rem 0; }
+        .warning-box { background: #fff7ed; border-left: 4px solid #ea580c; padding: 1.2rem 1.5rem; border-radius: 0 16px 16px 0; margin: 1.5rem 0; }
+        .related-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px -12px rgba(0,0,0,0.1);
+        }
+        .related-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            background: #e2e8f0;
+        }
+        .related-card-body {
+            padding: 1rem;
+        }
+        .related-card-meta {
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-bottom: 0.25rem;
+        }
+        .related-card h4 a {
+            color: #1e293b;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .related-card h4 a:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed">
+
+<!-- ========== HEADER ========== -->
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+            <h2 class="text-xl font-black">TogoMicroFarad</h2>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+            <a href="../../index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+            <a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+            <a href="../index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+            <div class="relative group">
+                <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1">Articles <i class="fas fa-chevron-down text-xs"></i></button>
+                <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"></div>
+            </div>
+            <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+            <a href="../../a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <div class="relative" id="cart-container">
+                <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 transition-all flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                    <i class="fas fa-shopping-cart text-lg"></i>
+                    <span class="hidden sm:inline">Panier</span>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                </button>
+                <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="../../index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Accueil</a>
+                <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link"><i class="fas fa-box"></i> Produits</a>
+                <a href="../index.html" class="mobile-nav-link"><i class="fas fa-newspaper"></i> Blog</a>
+                <a href="../../contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../../a-propos.html" class="mobile-nav-link"><i class="fas fa-users"></i> À propos</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-contact-info"><p><i class="fas fa-phone"></i> +228 93 60 29 26</p><p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p></div>
+            </div>
+        </div>
+        <div id="menu-overlay" class="menu-overlay"></div>
+    </div>
+</header>
+
+<main style="padding-top: 80px;">
+    <div class="article-container">
+        <article class="article-card">
+            <div class="article-hero">
+                <span class="hero-badge"><i class="fas fa-bolt"></i> TECHNIQUE AVANCÉE</span>
+                <img src="../../assets/images/esr-condensateur.jpg" alt="Illustration de l'ESR dans un condensateur" loading="lazy" onerror="this.src='https://placehold.co/800x400/1e293b/ffffff?text=ESR+Condensateur'">
+            </div>
+            <div class="article-body">
+                <div class="breadcrumb">
+                    <a href="../../index.html">Accueil</a> › <a href="../index.html">Blog</a> › <span>ESR expliqué simplement</span>
+                </div>
+                <div class="article-meta">
+                    <span><i class="far fa-calendar-alt"></i> 14 avril 2026</span>
+                    <span><i class="far fa-clock"></i> 7 min de lecture</span>
+                </div>
+                <h1 class="article-title">⚡ ESR expliqué simplement : le vrai facteur qui tue vos condensateurs</h1>
+                <p class="article-lead">Quand un appareil électronique tombe en panne, beaucoup pensent immédiatement à un composant "grillé". Mais dans la réalité, un des ennemis les plus discrets — et les plus destructeurs — s'appelle <strong>l'ESR (Equivalent Series Resistance)</strong>. Et si tu ne comprends pas ça, tu peux remplacer un condensateur… et avoir toujours la panne.</p>
+
+                <!-- Sommaire -->
+                <div class="bg-gray-100 rounded-2xl p-4 my-6">
+                    <h2 class="font-bold mb-2">📋 Sommaire</h2>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-1 text-sm">
+                        <li><a href="#esr-definition" class="text-blue-600">1. C'est quoi l'ESR ?</a></li>
+                        <li><a href="#importance" class="text-blue-600">2. Pourquoi est-ce si important ?</a></li>
+                        <li><a href="#augmentation" class="text-blue-600">3. L'ESR augmente avec le temps</a></li>
+                        <li><a href="#cas-reel" class="text-blue-600">4. Cas réel fréquent au Togo</a></li>
+                        <li><a href="#detection" class="text-blue-600">5. Comment détecter un ESR élevé ?</a></li>
+                        <li><a href="#erreur" class="text-blue-600">6. Erreur très fréquente</a></li>
+                        <li><a href="#dommages" class="text-blue-600">7. Pourquoi l'ESR détruit les circuits</a></li>
+                        <li><a href="#solutions" class="text-blue-600">8. Comment éviter ce problème ?</a></li>
+                        <li><a href="#astuce" class="text-blue-600">9. Astuce de pro</a></li>
+                        <li><a href="#conclusion" class="text-blue-600">10. Conclusion</a></li>
+                    </ul>
+                </div>
+
+                <!-- Section 1 : Définition -->
+                <section id="esr-definition">
+                    <h2 class="section-title"><i class="fas fa-search"></i> 🔍 C'est quoi l'ESR (explication simple)</h2>
+                    <p>L'<strong>ESR (Equivalent Series Resistance)</strong> ou <strong>résistance série équivalente</strong> est une petite résistance interne présente dans <strong>tous</strong> les condensateurs. En clair : un condensateur parfait n'existe pas. Il a toujours une résistance cachée à l'intérieur, même minuscule.</p>
+                    <p class="mt-2">Cette résistance est modélisée comme une petite résistance en série avec la capacité idéale. Elle est due aux matériaux utilisés (électrodes, connexions, électrolyte) et aux imperfections de fabrication.</p>
+                </section>
+
+                <!-- Section 2 : Importance -->
+                <section id="importance" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> ⚡ Pourquoi l'ESR est si important ?</h2>
+                    <p>Un condensateur sert à :</p>
+                    <ul class="list-disc pl-6 space-y-1 my-3">
+                        <li>filtrer le courant</li>
+                        <li>stabiliser une tension</li>
+                        <li>lisser les variations</li>
+                    </ul>
+                    <p>Mais si son ESR augmente :</p>
+                    <ul class="list-disc pl-6 space-y-1 my-3 text-red-600 font-medium">
+                        <li>❌ il chauffe</li>
+                        <li>❌ il filtre mal</li>
+                        <li>❌ il perturbe le circuit</li>
+                    </ul>
+                    <p><strong>👉 Résultat :</strong> L'appareil devient instable… puis tombe en panne.</p>
+                </section>
+
+                <!-- Section 3 : Augmentation avec le temps -->
+                <section id="augmentation" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-chart-line"></i> 💥 Le vrai problème : l'ESR augmente avec le temps</h2>
+                    <p>Même si ton condensateur a la bonne valeur en µF, il peut être défectueux. Pourquoi ?</p>
+                    <div class="tip-box">
+                        <p class="font-semibold text-green-800">👉 Parce que :</p>
+                        <ul class="list-disc pl-6 mt-2">
+                            <li>la chaleur</li>
+                            <li>les surtensions</li>
+                            <li>le vieillissement naturel</li>
+                        </ul>
+                        <p class="mt-2">👉 font monter l'ESR</p>
+                    </div>
+                    <p>L'électrolyte liquide à l'intérieur des condensateurs électrolytiques s'assèche progressivement, ce qui augmente la résistance interne. La température ambiante élevée (comme au Togo) accélère ce phénomène.</p>
+                </section>
+
+                <!-- Section 4 : Cas réel au Togo -->
+                <section id="cas-reel" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> 🔥 Cas réel (très fréquent au Togo)</h2>
+                    <p>Dans beaucoup d'appareils :</p>
+                    <ul class="list-disc pl-6 my-3">
+                        <li>TV</li>
+                        <li>alimentations</li>
+                        <li>décodeurs</li>
+                        <li>ordinateurs</li>
+                    </ul>
+                    <p><strong>👉 le condensateur n'est pas gonflé</strong><br>
+                    <strong>👉 mais l'appareil ne fonctionne plus correctement</strong></p>
+                    <p class="mt-2">Pourquoi ?</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <p>✔️ ESR trop élevé<br>
+                        ❌ mais capacité encore "normale"</p>
+                    </div>
+                </section>
+
+                <!-- Section 5 : Détection -->
+                <section id="detection" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-microscope"></i> 🧪 Comment savoir si un condensateur a un ESR élevé ?</h2>
+                    <h3 class="font-semibold text-lg mt-4">1️⃣ Avec un testeur ESR</h3>
+                    <p>C'est l'outil le plus fiable. Il mesure directement la résistance interne et est très utilisé par les techniciens professionnels. Un bon testeur ESR peut mesurer des résistances de quelques milliohms.</p>
+                    
+                    <h3 class="font-semibold text-lg mt-6">2️⃣ Avec les symptômes (méthode terrain)</h3>
+                    <p>Tu peux suspecter un ESR élevé si :</p>
+                    <ul class="list-disc pl-6 my-3">
+                        <li>l'appareil met du temps à démarrer</li>
+                        <li>redémarre tout seul</li>
+                        <li>clignote</li>
+                        <li>fait du bruit électrique</li>
+                    </ul>
+                    <div class="warning-box">
+                        <p class="font-semibold text-orange-800">👉 Dans 70% des cas :</p>
+                        <p class="mt-1">condensateur fatigué (ESR élevé)</p>
+                    </div>
+                </section>
+
+                <!-- Section 6 : Erreur fréquente -->
+                <section id="erreur" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-times-circle"></i> ⚠️ Erreur très fréquente</h2>
+                    <p>Beaucoup de réparateurs font ça :</p>
+                    <div class="bg-red-50 p-4 rounded-lg border border-red-200 my-4">
+                        <p class="font-mono">👉 "Le condensateur fait 100 µF → donc il est bon"</p>
+                    </div>
+                    <p class="text-2xl font-bold text-center text-red-600">❌ FAUX</p>
+                    <p class="mt-2">👉 La capacité peut être correcte<br>
+                    👉 MAIS l'ESR peut être mauvais</p>
+                    <p>Un multimètre classique en mode capacité ne détecte pas un ESR anormal. C'est pourquoi les pannes intermittentes sont si difficiles à diagnostiquer sans le bon outil.</p>
+                </section>
+
+                <!-- Section 7 : Dommages -->
+                <section id="dommages" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-fire"></i> 🔧 Pourquoi l'ESR détruit les circuits</h2>
+                    <p>Quand l'ESR augmente :</p>
+                    <p class="font-bold text-lg mt-2">👉 le condensateur dissipe de l'énergie en chaleur</p>
+                    <p>Donc :</p>
+                    <ul class="list-disc pl-6 my-3">
+                        <li>il chauffe</li>
+                        <li>il fatigue</li>
+                        <li>il peut endommager d'autres composants</li>
+                    </ul>
+                    <p class="font-semibold">👉 Effet domino : la chaleur excessive peut faire fondre les soudures, détériorer le circuit imprimé ou provoquer la défaillance d'autres condensateurs voisins.</p>
+                </section>
+
+                <!-- Section 8 : Solutions -->
+                <section id="solutions" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-check-circle"></i> 🧠 Comment éviter ce problème ?</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-600 text-xl">✔️</span>
+                            <div><strong>1. Utiliser des condensateurs de qualité</strong><br>Tous les condensateurs ne se valent pas. Les marques reconnues (Nichicon, Rubycon, Panasonic) ont un ESR plus faible et plus stable.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-600 text-xl">✔️</span>
+                            <div><strong>2. Respecter la tension (voltage)</strong><br>Toujours prendre une marge de sécurité. Par exemple, remplacer un condensateur 16V par un 25V augmente considérablement sa durée de vie.</div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-green-600 text-xl">✔️</span>
+                            <div><strong>3. Choisir des condensateurs "Low ESR"</strong><br>Indispensable pour les alimentations à découpage, les cartes mères d'ordinateur et tous les appareils modernes. Ils sont spécialement conçus pour supporter des courants de ripple élevés.</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 9 : Astuce de pro -->
+                <section id="astuce" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-lightbulb"></i> 💡 Astuce de pro</h2>
+                    <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-blue-600">
+                        <p class="text-lg">👉 Dans une alimentation à découpage :</p>
+                        <p class="font-bold mt-2">Si tu ne mets pas un condensateur Low ESR, la panne peut revenir rapidement (quelques semaines ou mois).</p>
+                        <p class="mt-2">Les condensateurs standard surchauffent et gonflent prématurément dans ces circuits.</p>
+                    </div>
+                </section>
+
+                <!-- Section 10 : Conclusion et CTA -->
+                <section id="conclusion" class="mt-8">
+                    <h2 class="section-title"><i class="fas fa-gem"></i> 🎯 Conclusion</h2>
+                    <p class="text-xl font-semibold">👉 L'ESR est souvent invisible… mais redoutable</p>
+                    <p>Tu peux avoir :</p>
+                    <ul class="list-disc pl-6 my-3">
+                        <li>un condensateur qui semble bon</li>
+                        <li>mais qui provoque une panne</li>
+                    </ul>
+                    <div class="bg-primary-fixed/30 p-5 rounded-xl my-6">
+                        <p class="font-bold text-primary text-lg">👉 Retiens ceci :</p>
+                        <p class="text-2xl font-headline font-bold text-primary mt-2">Un bon condensateur, ce n'est pas seulement les µF — c'est aussi un ESR faible</p>
+                    </div>
+                    
+                    <h3 class="font-bold text-xl mt-6">🔥 Résumé rapide</h3>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3">
+                        <li class="flex items-center gap-2"><span class="text-primary">•</span> ESR = résistance interne</li>
+                        <li class="flex items-center gap-2"><span class="text-primary">•</span> augmente avec le temps</li>
+                        <li class="flex items-center gap-2"><span class="text-primary">•</span> cause des pannes invisibles</li>
+                        <li class="flex items-center gap-2"><span class="text-primary">•</span> nécessite parfois un test spécifique</li>
+                        <li class="flex items-center gap-2"><span class="text-primary">•</span> choix du composant = crucial</li>
+                    </ul>
+                </section>
+
+                <!-- CTA -->
+                <div class="whatsapp-cta bg-green-50 rounded-2xl p-6 text-center my-8">
+                    <p class="font-semibold text-green-800 text-lg">🛒 Où trouver des condensateurs fiables ?</p>
+                    <p class="mt-2">Sur <strong>togomicrofarad.com</strong>, nous proposons :</p>
+                    <ul class="text-left max-w-md mx-auto my-3 space-y-1">
+                        <li>✅ des condensateurs électrolytiques de qualité</li>
+                        <li>✅ adaptés aux conditions réelles (chaleur, instabilité électrique)</li>
+                        <li>✅ testés pour une meilleure durée de vie</li>
+                    </ul>
+                    <p class="font-semibold">👉 Choisir le bon condensateur = éviter de réparer deux fois</p>
+                    <a href="https://wa.me/22893602926?text=Bonjour%20TogoMicroFarad%2C%20je%20souhaite%20des%20conseils%20sur%20les%20condensateurs%20Low%20ESR." class="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-bold hover:bg-[#20b358] transition mt-4" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp text-xl"></i> Commander sur WhatsApp
+                    </a>
+                </div>
+
+                <!-- Footer article -->
+                <footer class="mt-8 pt-6 border-t border-gray-200">
+                    <div class="flex flex-wrap justify-between items-center gap-4">
+                        <div class="flex gap-3">
+                            <a href="../../condensateurs-electrolytiques-togo.html" class="text-blue-600 hover:underline"><i class="fas fa-arrow-right"></i> Voir notre catalogue</a>
+                            <a href="../../contact.html" class="text-blue-600 hover:underline"><i class="fas fa-envelope"></i> Nous contacter</a>
+                            <a href="../index.html" class="text-blue-600 hover:underline"><i class="fas fa-newspaper"></i> Blog</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+    <span class="text-gray-500 text-sm">Partager :</span>
+    <a id="share-facebook" href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-blue-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-blue-700 transition"><i class="fab fa-facebook-f"></i></a>
+    <a id="share-twitter" href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-sky-500 w-8 h-8 rounded-full flex items-center justify-center hover:bg-sky-600 transition"><i class="fab fa-twitter"></i></a>
+    <a id="share-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="text-white bg-green-500 w-8 h-8 rounded-full flex items-center justify-center hover:bg-green-600 transition"><i class="fab fa-whatsapp"></i></a>
+</div>
+                    </div>
+                </footer>
+            </div>
+        </article>
+
+        <!-- Articles similaires -->
+        <div class="related-section mt-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">📖 Vous aimerez aussi</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" id="related-articles"></div>
+        </div>
+    </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div><div class="flex items-center"><i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i><h1 class="text-xl font-black">TogoMicroFarad</h1></div><p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p></div>
+            <div><h3 class="text-lg font-semibold mb-4">Liens rapides</h3><ul class="space-y-2"><li><a href="../../index.html" class="text-gray-400 hover:text-white">Accueil</a></li><li><a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li><li><a href="../index.html" class="text-gray-400 hover:text-white">Blog</a></li><li><a href="../../a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li><li><a href="../../contact.html" class="text-gray-400 hover:text-white">Contact</a></li><li><a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li><li><a href="../../conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li></ul></div>
+            <div><h3 class="text-lg font-semibold mb-4">Contact</h3><ul class="space-y-2 text-gray-400"><li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li><li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li><li><i class="fas fa-envelope mr-2"></i> <a href="mailto:parfaitementzix@gmail.com" class="hover:text-white">parfaitementzix@gmail.com</a></li></ul></div>
+            <div class="p-6 bg-gray-800 rounded-lg shadow-lg"><h3 class="text-lg font-semibold mb-4">Newsletter</h3><p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres.</p><div class="flex"><input type="email" placeholder="parfaitementzix@gmail.com" class="bg-gray-700 text-white py-2 px-3 rounded-l w-full"><button class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r"><i class="fas fa-paper-plane"></i></button></div></div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400"><p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="../../conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p></div>
+    </div>
+</footer>
+
+<script src="../../assets/js/articles.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script>
+(function() {
+    // Vérifier que window.recentArticles existe et est un tableau
+    if (!window.recentArticles || !Array.isArray(window.recentArticles) || window.recentArticles.length === 0) {
+        console.warn('Aucun article disponible pour la section "Vous aimerez aussi".');
+        return;
+    }
+
+    // Récupérer l'URL de la page courante (sans le domaine)
+    const currentUrl = window.location.pathname;
+
+    // Filtrer les articles pour exclure l'article courant, puis prendre les 2 premiers
+    const others = window.recentArticles
+        .filter(article => article.url !== currentUrl)
+        .slice(0, 2);
+
+    // Si aucun autre article, ne rien afficher (ou afficher un message)
+    if (others.length === 0) {
+        console.log('Aucun autre article à suggérer.');
+        return;
+    }
+
+    const container = document.getElementById('related-articles');
+    if (!container) {
+        console.error('Conteneur #related-articles introuvable.');
+        return;
+    }
+
+    // Générer le HTML des cartes
+    container.innerHTML = others.map(article => `
+        <div class="related-card">
+            <a href="${article.url}">
+                <img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy">
+            </a>
+            <div class="related-card-body">
+                <div class="related-card-meta">${article.category || 'Article'} · ${article.date || 'Date inconnue'}</div>
+                <h4><a href="${article.url}">${article.title}</a></h4>
+            </div>
+        </div>
+    `).join('');
+})();
+// Génération des liens de partage dynamiques
+(function() {
+    const pageUrl = window.location.href;
+    const pageTitle = document.querySelector('h1') ? document.querySelector('h1').innerText : document.title;
+    const encodedUrl = encodeURIComponent(pageUrl);
+    const encodedTitle = encodeURIComponent(pageTitle);
+
+    const fbLink = document.getElementById('share-facebook');
+    const twLink = document.getElementById('share-twitter');
+    const waLink = document.getElementById('share-whatsapp');
+
+    if (fbLink) fbLink.href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+    if (twLink) twLink.href = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`;
+    if (waLink) waLink.href = `https://wa.me/?text=${encodedTitle}%20-%20${encodedUrl}`;
+})();
+</script>
+</body>
+</html>

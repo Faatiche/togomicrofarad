@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>📘 Les Types de Condensateurs | Guide Complet 2026 - TogoMicroFarad</title>
-     <!-- Open Graph -->
+    <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://togomicrofarad.com/blog/posts/guide-types-condensateurs.html">
     <meta property="og:title" content="Guide Complet des Types de Condensateurs (2026) – Électrolytique, Céramique, Film, Tantale…">
@@ -24,7 +24,6 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
-    
     
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -65,7 +64,6 @@
       }
     }
     </script>
-    
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -138,7 +136,6 @@
       }
     </script>
     
-    <!-- Styles personnalisés pour Material Symbols (premier article) -->
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24';
@@ -154,7 +151,7 @@
             box-shadow: 0 20px 35px -12px rgba(0,59,147,0.15);
         }
         
-        /* Styles spécifiques au header/footer du deuxième article (menu mobile, panier, etc.) */
+        /* Menu mobile */
         .mobile-menu {
             position: fixed;
             top: 0;
@@ -229,7 +226,6 @@
         }
         .btn-shine:hover::after { left: 120%; }
         
-        /* Liens personnalisés (rouge) */
         .custom-link { color: #991b1b !important; text-decoration: none; font-weight: 600; transition: color 0.2s; }
         .custom-link:hover { color: #7f1d1d !important; text-decoration: underline; }
         .custom-linke { color: #f5911e !important; text-decoration: none; font-weight: 600; transition: color 0.2s; }
@@ -238,238 +234,253 @@
 </head>
 <body class="bg-surface font-body text-on-surface selection:bg-primary-fixed">
 
-<!-- ========== HEADER DU DEUXIÈME ARTICLE (TogoMicroFarad standard) ========== -->
+<!-- ========== HEADER ========== -->
 <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
-                <h2 class="text-xl font-black">TogoMicroFarad</h2>
-            </div>
-            <nav class="hidden md:flex space-x-6">
-                <a href="../../index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
-                <a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
-                <a href="../index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
-                <div class="relative group">
-                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1">Articles <i class="fas fa-chevron-down text-xs"></i></button>
-                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"></div>
-                </div>
-                <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
-                <a href="../../a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <div class="relative" id="cart-container">
-                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 transition-all flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
-                        <i class="fas fa-shopping-cart text-lg"></i>
-                        <span class="hidden sm:inline">Panier</span>
-                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
-                    </button>
-                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
-                    <div class="hamburger"><span></span><span></span><span></span></div>
-                </button>
-            </div>
-            <div id="mobile-menu" class="mobile-menu">
-                <nav class="mobile-nav">
-                    <a href="../../index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Accueil</a>
-                    <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link"><i class="fas fa-box"></i> Produits</a>
-                    <a href="../index.html" class="mobile-nav-link"><i class="fas fa-newspaper"></i> Blog</a>
-                    <a href="../../contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
-                    <a href="../../a-propos.html" class="mobile-nav-link"><i class="fas fa-users"></i> À propos</a>
-                </nav>
-                <div class="mobile-menu-footer">
-                    <div class="mobile-contact-info"><p><i class="fas fa-phone"></i> +228 93 60 29 26</p><p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p></div>
-                </div>
-            </div>
-            <div id="menu-overlay" class="menu-overlay"></div>
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center">
+            <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+            <h2 class="text-xl font-black">TogoMicroFarad</h2>
         </div>
-    </header>
+        <nav class="hidden md:flex space-x-6">
+            <a href="../../index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+            <a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+            <a href="../index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+            <div class="relative group">
+                <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1">Articles <i class="fas fa-chevron-down text-xs"></i></button>
+                <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"></div>
+            </div>
+            <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+            <a href="../../a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+        </nav>
+        <div class="flex items-center space-x-4">
+            <div class="relative" id="cart-container">
+                <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 transition-all flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                    <i class="fas fa-shopping-cart text-lg"></i>
+                    <span class="hidden sm:inline">Panier</span>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                </button>
+                <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <nav class="mobile-nav">
+                <a href="../../index.html" class="mobile-nav-link"><i class="fas fa-home"></i> Accueil</a>
+                <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link"><i class="fas fa-box"></i> Produits</a>
+                <a href="../index.html" class="mobile-nav-link"><i class="fas fa-newspaper"></i> Blog</a>
+                <a href="../../contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../../a-propos.html" class="mobile-nav-link"><i class="fas fa-users"></i> À propos</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-contact-info"><p><i class="fas fa-phone"></i> +228 93 60 29 26</p><p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p></div>
+            </div>
+        </div>
+        <div id="menu-overlay" class="menu-overlay"></div>
+    </div>
+</header>
 
-<!-- ========== CONTENU PRINCIPAL DU PREMIER ARTICLE (inchangé) ========== -->
+<!-- ========== CONTENU PRINCIPAL ========== -->
 <main style="padding-top: 80px;">
     <!-- Hero Section -->
-    <header class="relative pt-24 pb-32 overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-gradient-to-br from-primary to-primary-container editorial-asymmetry opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
+    <header class="relative pt-12 md:pt-24 pb-16 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-linear-to-br from-primary to-primary-container editorial-asymmetry opacity-10"></div>
+        <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="space-y-4 md:space-y-6">
                 <div class="inline-flex items-center px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-bold tracking-widest uppercase">Guide Technique 2026</div>
-                <h1 class="text-5xl md:text-6xl font-headline font-bold text-primary tracking-tight leading-tight">Guide Complet des Types de Condensateurs</h1>
-                <p class="text-xl text-on-surface-variant font-light max-w-xl leading-relaxed">Tout savoir pour choisir le bon composant électronique. De l'électrolytique au supercondensateur, Découvrez tous les types de condensateurs existants.</p>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-headline font-bold text-primary tracking-tight leading-tight">Guide Complet des Types de Condensateurs</h1>
+                <p class="text-base md:text-xl text-on-surface-variant font-light max-w-xl leading-relaxed">Tout savoir pour choisir le bon composant électronique. De l'électrolytique au supercondensateur, Découvrez tous les types de condensateurs existants.</p>
             </div>
             <div class="relative group"><div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full group-hover:bg-primary/20 transition duration-500"></div><img alt="Composants électroniques condensateurs haute précision" class="rounded-xl shadow-2xl relative z-10 w-full object-cover aspect-video" src="../../assets/images/guide-types-condensateurs.jpg"></div>
         </div>
     </header>
 
     <!-- Introduction Card -->
-    <section class="max-w-7xl mx-auto px-6 -mt-16 relative z-20">
-        <div class="bg-surface-container-lowest p-8 md:p-12 shadow-sm rounded-xl border border-outline-variant/10">
-            <div class="grid md:grid-cols-3 gap-12">
+    <section class="max-w-7xl mx-auto px-4 md:px-6 -mt-8 md:-mt-16 relative z-20">
+        <div class="bg-surface-container-lowest p-6 md:p-8 lg:p-12 shadow-sm rounded-xl border border-outline-variant/10">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-12">
                 <div class="md:col-span-2 space-y-4">
-                    <h2 class="text-2xl font-headline font-semibold text-primary flex items-center gap-2"><span class="material-symbols-outlined">bolt</span> Pourquoi les condensateurs sont essentiels en électronique</h2>
-                    <p class="text-on-surface-variant leading-relaxed text-lg">Le condensateur est l’un des composants électroniques les plus fondamentaux. Que vous soyez professionnel, étudiant ou bricoleur passionné au Togo, comprendre les différents types de condensateurs est crucial. Chez <a href="../../condensateurs-electrolytiques-togo.html" class="custom-link"><strong >TogoMicroFarad</strong></a>, nous distribuons des composants de haute qualité pour le marché togolais. Un condensateur stocke et restitue l’énergie électrique grâce à un diélectrique isolant entre deux électrodes.</p>
+                    <h2 class="text-xl md:text-2xl font-headline font-semibold text-primary flex items-center gap-2"><span class="material-symbols-outlined">bolt</span> Pourquoi les condensateurs sont essentiels en électronique</h2>
+                    <p class="text-on-surface-variant leading-relaxed text-base md:text-lg">Le condensateur est l’un des composants électroniques les plus fondamentaux. Que vous soyez professionnel, étudiant ou bricoleur passionné au Togo, comprendre les différents types de condensateurs est crucial. Chez <a href="../../condensateurs-electrolytiques-togo.html" class="custom-link"><strong>TogoMicroFarad</strong></a>, nous distribuons des composants de haute qualité pour le marché togolais. Un condensateur stocke et restitue l’énergie électrique grâce à un diélectrique isolant entre deux électrodes.</p>
                 </div>
-                <div class="bg-primary-fixed/30 p-6 rounded-lg border-l-4 border-primary"><p class="text-sm font-headline font-bold text-on-primary-fixed uppercase tracking-wider mb-2">💡 Conseil d'expert tropical</p><p class="text-sm text-on-primary-fixed-variant leading-relaxed">Au Togo, la chaleur ambiante accélère le vieillissement. Vérifiez toujours la tension de service et privilégiez des condensateurs endurance 105°C pour les alimentations critiques.</p></div>
+                <div class="bg-primary-fixed/30 p-4 md:p-6 rounded-lg border-l-4 border-primary"><p class="text-sm font-headline font-bold text-on-primary-fixed uppercase tracking-wider mb-2">💡 Conseil d'expert tropical</p><p class="text-sm text-on-primary-fixed-variant leading-relaxed">Au Togo, la chaleur ambiante accélère le vieillissement. Vérifiez toujours la tension de service et privilégiez des condensateurs endurance 105°C pour les alimentations critiques.</p></div>
             </div>
         </div>
     </section>
 
-    <div class="max-w-7xl mx-auto px-6 py-20 space-y-32">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-20 space-y-20 md:space-y-32">
         <!-- 1. ÉLECTROLYTIQUES -->
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <div class="space-y-4"><span class="text-outline font-mono text-sm tracking-widest">TYPE 01</span><h2 class="text-4xl font-headline font-bold text-primary">Condensateurs Électrolytiques</h2><p class="text-on-surface-variant text-lg">Le standard pour le filtrage d’alimentation et le stockage d’énergie. Grande capacité dans un format cylindrique.</p></div>
-                <div class="bg-surface-container-low rounded-xl overflow-hidden">
-                    <table class="w-full text-left text-sm"><thead class="bg-surface-container-high"><tr><th class="px-4 py-3 font-semibold">Caractéristique</th><th class="px-4 py-3 font-semibold">Valeur / Spécification</th></tr></thead><tbody class="divide-y divide-outline-variant/10"><tr><td class="px-4 py-3">Capacité</td><td class="px-4 py-3 font-mono">1 µF → 470 000 µF</td></tr><tr><td class="px-4 py-3">Tension nominale</td><td class="px-4 py-3">Jusqu'à 500 V</td></tr><tr><td class="px-4 py-3">Durée de vie @85°C</td><td class="px-4 py-3">2 000 – 8 000 h</td></tr><tr><td class="px-4 py-3">Polarisation</td><td class="px-4 py-3 text-secondary font-bold">OBLIGATOIRE (+ / -)</td></tr></tbody></table>
+        <section class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div class="space-y-6 md:space-y-8">
+                <div class="space-y-2 md:space-y-4"><span class="text-outline font-mono text-sm tracking-widest">TYPE 01</span><h2 class="text-3xl md:text-4xl font-headline font-bold text-primary">Condensateurs Électrolytiques</h2><p class="text-on-surface-variant text-base md:text-lg">Le standard pour le filtrage d’alimentation et le stockage d’énergie. Grande capacité dans un format cylindrique.</p></div>
+                <div class="bg-surface-container-low rounded-xl overflow-x-auto">
+                    <table class="w-full text-left text-xs md:text-sm"><thead class="bg-surface-container-high"><tr><th class="px-2 md:px-4 py-2 md:py-3 font-semibold">Caractéristique</th><th class="px-2 md:px-4 py-2 md:py-3 font-semibold">Valeur</th></tr></thead><tbody class="divide-y divide-outline-variant/10"><tr><td class="px-2 md:px-4 py-2 md:py-3">Capacité</td><td class="px-2 md:px-4 py-2 md:py-3 font-mono">1 µF → 470 000 µF</td></tr><tr><td class="px-2 md:px-4 py-2 md:py-3">Tension nominale</td><td class="px-2 md:px-4 py-2 md:py-3">Jusqu'à 500 V</td></tr><tr><td class="px-2 md:px-4 py-2 md:py-3">Durée de vie @85°C</td><td class="px-2 md:px-4 py-2 md:py-3">2 000 – 8 000 h</td></tr><tr><td class="px-2 md:px-4 py-2 md:py-3">Polarisation</td><td class="px-2 md:px-4 py-2 md:py-3 text-secondary font-bold">OBLIGATOIRE</td></tr></tbody></table>
                 </div>
-                <div class="grid grid-cols-2 gap-4"><div><h4 class="font-bold text-sm uppercase text-outline">✅ Avantages</h4><ul class="text-sm space-y-1 text-on-surface-variant"><li class="flex gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Capacité volumétrique élevée</li><li class="flex gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Coût compétitif</li></ul></div><div><h4 class="font-bold text-sm uppercase text-outline">🚀 Applications</h4><ul class="text-sm space-y-1 text-on-surface-variant"><li>• Alimentations, lissage</li><li>• Audio de puissance</li><li>• Onduleurs basse fréquence</li></ul></div></div>
-                <div class="bg-error-container p-4 rounded-lg flex gap-4 items-start border-l-4 border-error"><span class="material-symbols-outlined text-error" style="font-variation-settings:'FILL'1">warning</span><div><p class="text-error font-bold text-sm">Inversion polaire = destruction</p><p class="text-on-error-container text-xs">Respectez la bande négative, surtout en climat chaud. Une surtension provoque l’éclatement.</p></div></div>
+                <div class="grid grid-cols-2 gap-2 md:gap-4"><div><h4 class="font-bold text-xs md:text-sm uppercase text-outline">✅ Avantages</h4><ul class="text-xs md:text-sm space-y-1 text-on-surface-variant"><li class="flex gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Capacité élevée</li><li class="flex gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Coût compétitif</li></ul></div><div><h4 class="font-bold text-xs md:text-sm uppercase text-outline">🚀 Applications</h4><ul class="text-xs md:text-sm space-y-1 text-on-surface-variant"><li>• Alimentations</li><li>• Audio</li><li>• Onduleurs</li></ul></div></div>
+                <div class="bg-error-container p-3 md:p-4 rounded-lg flex gap-3 md:gap-4 items-start border-l-4 border-error"><span class="material-symbols-outlined text-error" style="font-variation-settings:'FILL'1">warning</span><div><p class="text-error font-bold text-sm">Inversion polaire = destruction</p><p class="text-on-error-container text-xs">Respectez la bande négative, surtout en climat chaud.</p></div></div>
             </div>
-            <div class="relative group"><div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full group-hover:bg-primary/10 transition"></div><figure class="relative z-10 bg-white p-4 rounded-2xl shadow-xl"><img alt="Condensateur électrolytique aluminium haute capacité" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/electrolytique.png"><figcaption class="mt-4 text-center text-xs text-outline italic">Figure : Électrolytique 4700µF / 35V (NCC)</figcaption></figure></div>
+            <div class="relative group"><div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full group-hover:bg-primary/10 transition"></div><figure class="relative z-10 bg-white p-3 md:p-4 rounded-2xl shadow-xl"><img alt="Condensateur électrolytique" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/electrolytique.png"><figcaption class="mt-2 md:mt-4 text-center text-xs text-outline italic">Figure : Électrolytique 4700µF / 35V</figcaption></figure></div>
         </section>
 
         <!-- 2. CÉRAMIQUES -->
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1 relative group"><div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full group-hover:bg-primary/10 transition"></div><figure class="relative z-10 bg-white p-4 rounded-2xl shadow-xl"><img alt="Condensateurs céramiques disques et MLCC" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/ceramique.png"><figcaption class="mt-4 text-center text-xs text-outline italic">Figure : MLCC et disques céramique</figcaption></figure></div>
-            <div class="order-1 md:order-2 space-y-8">
-                <div><span class="text-outline font-mono text-sm tracking-widest">TYPE 02</span><h2 class="text-4xl font-headline font-bold text-primary">Condensateurs Céramiques</h2><p class="text-on-surface-variant text-lg">Dominent les hautes fréquences. Ultra-compacts, non polarisés, durée de vie quasi illimitée.</p></div>
-                <div class="bg-surface-container-low rounded-xl p-4"><div class="grid grid-cols-2 gap-3 text-sm"><div><span class="font-semibold">Classe 1 (C0G/NP0)</span><p class="text-xs">Stabilité ±1%, -55°C à 125°C, oscillateurs de précision.</p></div><div><span class="font-semibold">Classe 2 (X7R, X5R)</span><p class="text-xs">Capacité élevée, variation avec tension/température, idéal découplage.</p></div></div></div>
-                <div class="grid grid-cols-2 gap-4"><div><h4 class="font-bold text-sm uppercase text-outline">✅ Avantages</h4><ul class="text-sm space-y-1"><li>• ESR très faible</li><li>• Pas de polarité</li><li>• Idéal RF & GHz</li></ul></div><div><h4 class="font-bold text-sm uppercase text-outline">🚀 Applications</h4><ul class="text-sm space-y-1"><li>• Découplage alimentation</li><li>• Circuits de temporisation</li><li>• Télécoms, IoT</li></ul></div></div>
+        <section class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div class="order-2 md:order-1 relative group"><div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full group-hover:bg-primary/10 transition"></div><figure class="relative z-10 bg-white p-3 md:p-4 rounded-2xl shadow-xl"><img alt="Condensateurs céramiques" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/ceramique.png"><figcaption class="mt-2 md:mt-4 text-center text-xs text-outline italic">Figure : MLCC et disques céramique</figcaption></figure></div>
+            <div class="order-1 md:order-2 space-y-6 md:space-y-8">
+                <div><span class="text-outline font-mono text-sm tracking-widest">TYPE 02</span><h2 class="text-3xl md:text-4xl font-headline font-bold text-primary">Condensateurs Céramiques</h2><p class="text-on-surface-variant text-base md:text-lg">Dominent les hautes fréquences. Ultra-compacts, non polarisés, durée de vie quasi illimitée.</p></div>
+                <div class="bg-surface-container-low rounded-xl p-3 md:p-4"><div class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm"><div><span class="font-semibold">Classe 1 (C0G/NP0)</span><p class="text-xs">Stabilité ±1%, -55°C à 125°C</p></div><div><span class="font-semibold">Classe 2 (X7R, X5R)</span><p class="text-xs">Capacité élevée, découplage</p></div></div></div>
+                <div class="grid grid-cols-2 gap-2 md:gap-4"><div><h4 class="font-bold text-xs md:text-sm uppercase text-outline">✅ Avantages</h4><ul class="text-xs md:text-sm space-y-1"><li>• ESR très faible</li><li>• Pas de polarité</li></ul></div><div><h4 class="font-bold text-xs md:text-sm uppercase text-outline">🚀 Applications</h4><ul class="text-xs md:text-sm space-y-1"><li>• Découplage</li><li>• RF & IoT</li></ul></div></div>
             </div>
         </section>
 
         <!-- 3. TANTALE -->
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8"><div><span class="text-outline font-mono text-sm tracking-widest">TYPE 03</span><h2 class="text-4xl font-headline font-bold text-primary">Condensateurs au Tantale</h2><p class="text-on-surface-variant text-lg">Densité de capacité exceptionnelle, courant de fuite ultra-faible, format SMD compact.</p></div>
-            <div class="bg-surface-container-low rounded-xl overflow-hidden"><table class="w-full text-sm"><tbody><tr class="border-b"><td class="px-4 py-2 font-semibold">Capacité</td><td class="px-4 py-2">0,1 µF → 1000 µF</td></tr><tr class="border-b"><td class="px-4 py-2 font-semibold">Tension</td><td class="px-4 py-2">2,5V → 50V</td></tr><tr><td class="px-4 py-2 font-semibold">Risque</td><td class="px-4 py-2 text-secondary">Ignition si surtension >1,3x Vn</td></tr></tbody></table></div>
-            <div class="bg-error-container p-3 rounded-lg"><p class="text-xs font-medium">⚠️ Ne jamais dépasser la tension nominale. Préférer les versions polymère (ESR ultra faible, plus sûres).</p></div>
-            <div><h4 class="font-semibold">Applications : smartphones, équipements médicaux, systèmes embarqués.</h4></div></div>
-            <div class="relative group"><div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full group-hover:bg-primary/10 transition"></div><figure class="relative z-10 bg-white p-4 rounded-2xl shadow-xl"><img alt="Condensateurs tantale SMD et boîtier goutte" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/tantale.png"><figcaption class="mt-2 text-center text-xs text-outline">Tantale MnO₂ et polymère</figcaption></figure></div>
+        <section class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div class="space-y-6 md:space-y-8"><div><span class="text-outline font-mono text-sm tracking-widest">TYPE 03</span><h2 class="text-3xl md:text-4xl font-headline font-bold text-primary">Condensateurs au Tantale</h2><p class="text-on-surface-variant text-base md:text-lg">Densité de capacité exceptionnelle, format SMD compact.</p></div>
+            <div class="bg-surface-container-low rounded-xl overflow-x-auto"><table class="w-full text-xs md:text-sm"><tbody><tr><td class="px-2 md:px-4 py-2 font-semibold">Capacité</td><td class="px-2 md:px-4 py-2">0,1 µF → 1000 µF</td></tr><tr><td class="px-2 md:px-4 py-2 font-semibold">Tension</td><td class="px-2 md:px-4 py-2">2,5V → 50V</td></tr><tr><td class="px-2 md:px-4 py-2 font-semibold">Risque</td><td class="px-2 md:px-4 py-2 text-secondary">Ignition si surtension</td></tr></tbody></table></div>
+            <div class="bg-error-container p-3 rounded-lg"><p class="text-xs font-medium">⚠️ Ne jamais dépasser la tension nominale.</p></div>
+            <div><h4 class="font-semibold text-sm md:text-base">Applications : smartphones, médical, embarqué.</h4></div></div>
+            <div class="relative group"><figure class="relative z-10 bg-white p-3 md:p-4 rounded-2xl shadow-xl"><img alt="Condensateurs tantale" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/tantale.png"><figcaption class="mt-2 text-center text-xs text-outline">Tantale MnO₂ et polymère</figcaption></figure></div>
         </section>
 
         <!-- 4. FILM -->
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1 relative group"><div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full group-hover:bg-primary/10 transition"></div><figure class="relative z-10 bg-white p-4 rounded-2xl shadow-xl"><img alt="Condensateurs à film polypropylène et polyester" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/condensateur_à_film.png"><figcaption class="mt-2 text-center text-xs text-outline">Film polyester (Mylar) et polypropylène</figcaption></figure></div>
-            <div class="order-1 md:order-2 space-y-6"><div><span class="text-outline font-mono text-sm tracking-widest">TYPE 04</span><h2 class="text-4xl font-headline font-bold text-primary">Condensateurs à Film</h2><p class="text-on-surface-variant">Faible perte, autorégénération, tolérance de précision (±1%). Idéal audio haute-fidélité et puissance.</p></div><div class="bg-surface-container-low p-4 rounded-lg"><p class="text-sm"><span class="font-bold">Diélectriques :</span> PP (polypropylène), PET (polyester), PPS, PTFE. Tension jusqu’à 1000V AC, ESR &lt; 10 mΩ.</p><p class="text-sm mt-2">✅ Avantages : stabilité thermique, longue durée (>100 000h), pas de polarité.</p></div><div><h4 class="font-semibold">Applications : onduleurs solaires, correction facteur puissance, crossover audio.</h4></div></div>
+        <section class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div class="order-2 md:order-1 relative group"><figure class="relative z-10 bg-white p-3 md:p-4 rounded-2xl shadow-xl"><img alt="Condensateurs à film" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/condensateur_à_film.png"><figcaption class="mt-2 text-center text-xs text-outline">Film polyester et polypropylène</figcaption></figure></div>
+            <div class="order-1 md:order-2 space-y-4 md:space-y-6"><div><span class="text-outline font-mono text-sm tracking-widest">TYPE 04</span><h2 class="text-3xl md:text-4xl font-headline font-bold text-primary">Condensateurs à Film</h2><p class="text-on-surface-variant">Faible perte, autorégénération, idéal audio et puissance.</p></div><div class="bg-surface-container-low p-3 md:p-4 rounded-lg"><p class="text-xs md:text-sm"><span class="font-bold">Diélectriques :</span> PP, PET, PPS. Tension jusqu'à 1000V AC.</p></div><div><h4 class="font-semibold text-sm md:text-base">Applications : onduleurs solaires, crossover audio.</h4></div></div>
         </section>
 
         <!-- 5. SUPERCONDENSATEURS -->
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6"><div><span class="text-outline font-mono text-sm tracking-widest">TYPE 05</span><h2 class="text-4xl font-headline font-bold text-primary">Supercondensateurs (EDLC)</h2><p class="text-on-surface-variant">Capacité de 1F à 10 000F. Charge en secondes, durée de vie >500 000 cycles.</p></div>
-            <div class="grid grid-cols-2 gap-3 text-sm"><div class="bg-surface-container-high p-3 rounded"><span class="font-bold">Densité énergie</span><p>5-10 Wh/kg</p></div><div class="bg-surface-container-high p-3 rounded"><span class="font-bold">Tension cellule</span><p>2,5V – 3V</p></div><div class="col-span-2 p-3 bg-primary-fixed/20 rounded"><span class="font-bold">🔁 Comparaison batterie :</span> charge ultra-rapide, aucun effet mémoire, écologique.</div></div>
-            <div><h4 class="font-semibold">Utilisations : freinage régénératif véhicules, UPS, stockage tampon énergies renouvelables, sauvegarde RTC.</h4></div></div>
-            <div class="relative group"><div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full group-hover:bg-primary/10 transition"></div><figure class="relative z-10 bg-white p-4 rounded-2xl shadow-xl"><img alt="Supercondensateur industriel Maxwell 1500F" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/super_condensateur.png"><figcaption class="mt-2 text-center text-xs text-outline">Supercondensateur 1500F – stockage haute puissance</figcaption></figure></div>
+        <section class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div class="space-y-4 md:space-y-6"><div><span class="text-outline font-mono text-sm">TYPE 05</span><h2 class="text-3xl md:text-4xl font-headline font-bold text-primary">Supercondensateurs (EDLC)</h2><p class="text-on-surface-variant">Capacité de 1F à 10 000F. Charge rapide.</p></div>
+            <div class="grid grid-cols-2 gap-2 text-xs md:text-sm"><div class="bg-surface-container-high p-2 md:p-3 rounded"><span class="font-bold">Densité</span><p>5-10 Wh/kg</p></div><div class="bg-surface-container-high p-2 md:p-3 rounded"><span class="font-bold">Tension</span><p>2,5V – 3V</p></div><div class="col-span-2 p-2 md:p-3 bg-primary-fixed/20 rounded">🔁 Charge ultra-rapide, écologique.</div></div>
+            <div><h4 class="font-semibold text-sm md:text-base">Utilisations : freinage régénératif, UPS.</h4></div></div>
+            <div class="relative group"><figure class="relative z-10 bg-white p-3 md:p-4 rounded-2xl shadow-xl"><img alt="Supercondensateur" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/super_condensateur.png"><figcaption class="mt-2 text-xs text-outline">Supercondensateur 1500F</figcaption></figure></div>
         </section>
 
         <!-- 6. MICA -->
-        <section class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1 relative group"><div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full group-hover:bg-primary/10 transition"></div><figure class="relative z-10 bg-white p-4 rounded-2xl shadow-xl"><img alt="Condensateur au mica argenté haute précision" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/condensateur_mica.png"><figcaption class="mt-2 text-center text-xs text-outline">Mica argenté – stabilité ultime RF</figcaption></figure></div>
-            <div class="order-1 md:order-2 space-y-6"><div><span class="text-outline font-mono text-sm tracking-widest">TYPE 06</span><h2 class="text-4xl font-headline font-bold text-primary">Condensateurs au Mica</h2><p class="text-on-surface-variant">Précision inégalée (tolérance ±1%), pertes diélectriques minimes, parfait pour oscillateurs et émetteurs.</p></div><div class="bg-surface-container-low p-4 rounded-lg"><p class="text-sm">✔️ Stabilité à long terme<br>✔️ Température -55°C → +150°C<br>✔️ Utilisation militaire, aérospatial, mesure de précision.</p></div></div>
+        <section class="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div class="order-2 md:order-1 relative group"><figure class="relative z-10 bg-white p-3 md:p-4 rounded-2xl shadow-xl"><img alt="Condensateur mica" class="w-full h-auto rounded-lg object-contain aspect-square" src="../../assets/images/condensateur_mica.png"><figcaption class="mt-2 text-xs text-outline">Mica argenté</figcaption></figure></div>
+            <div class="order-1 md:order-2 space-y-4 md:space-y-6"><div><span class="text-outline font-mono text-sm">TYPE 06</span><h2 class="text-3xl md:text-4xl font-headline font-bold text-primary">Condensateurs au Mica</h2><p class="text-on-surface-variant">Précision inégalée, pertes minimes.</p></div><div class="bg-surface-container-low p-3 md:p-4 rounded-lg"><p class="text-xs md:text-sm">✔️ Stabilité à long terme, usage RF et militaire.</p></div></div>
         </section>
 
         <!-- 7. VARIABLES + SPÉCIALISÉS -->
-        <section class="bg-surface-container rounded-2xl p-8 md:p-12 space-y-8">
-            <div class="text-center"><span class="text-outline font-mono text-sm">TYPE 07 & 08</span><h2 class="text-3xl font-headline font-bold text-primary mt-1">Condensateurs Variables & Spécialisés</h2><p class="text-on-surface-variant max-w-2xl mx-auto">Pour les réglages fins, la haute tension et les applications historiques.</p></div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm"><h3 class="font-bold text-xl flex gap-2"><span class="material-symbols-outlined text-primary">tune</span> Variables</h3>
-                    <p>Les condensateurs variables permettent d’ajuster manuellement la capacité. Ils sont essentiels dans les circuits nécessitant un réglage fin de fréquence.
-Types de Condensateurs Variables :
-</p>
-                    <ul class="mt-3 space-y-2 text-sm"><li><strong>À plaques mobiles</strong> : radios, récepteurs AM/FM.</li><li><strong>Trimmer</strong> : calibration, réglage unique.</li><li><strong>Varicap (Varactor)</strong> : syntonisation électronique par tension.</li></ul></div>
-                <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm"><h3 class="font-bold text-xl flex gap-2"><span class="material-symbols-outlined text-primary">history_edu</span> Spécialisés</h3><ul class="mt-3 space-y-2 text-sm"><li><strong>Papier (historique)</strong> : électronique vintage, haute tension => Aujourd’hui largement remplacés, ils utilisaient du papier ciré ou huilé comme diélectrique. Encore présents dans : 
-                    - L’électronique vintage - Certaines applications haute tension - Équipements nécessitant une résistance aux surtensions</li><li><strong>Condensateurs en Verre</strong> : résistance extrême (nucléaire, spatial).</li><li><strong>Traversée (Feedthrough)</strong> : filtrage EMI, blindage boîtier.</li></ul></div>
+        <section class="bg-surface-container rounded-2xl p-6 md:p-8 lg:p-12 space-y-6 md:space-y-8">
+            <div class="text-center"><span class="text-outline font-mono text-sm">TYPE 07 & 08</span><h2 class="text-2xl md:text-3xl font-headline font-bold text-primary mt-1">Condensateurs Variables & Spécialisés</h2><p class="text-on-surface-variant max-w-2xl mx-auto text-sm md:text-base">Pour les réglages fins, la haute tension et les applications historiques.</p></div>
+            <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-surface-container-lowest p-4 md:p-6 rounded-xl shadow-sm"><h3 class="font-bold text-lg md:text-xl flex gap-2"><span class="material-symbols-outlined text-primary">tune</span> Variables</h3><ul class="mt-3 space-y-2 text-xs md:text-sm"><li><strong>À plaques mobiles</strong> : radios AM/FM.</li><li><strong>Trimmer</strong> : calibration.</li><li><strong>Varicap</strong> : syntonisation électronique.</li></ul></div>
+                <div class="bg-surface-container-lowest p-4 md:p-6 rounded-xl shadow-sm"><h3 class="font-bold text-lg md:text-xl flex gap-2"><span class="material-symbols-outlined text-primary">history_edu</span> Spécialisés</h3><ul class="mt-3 space-y-2 text-xs md:text-sm"><li><strong>Papier</strong> : vintage, haute tension.</li><li><strong>Verre</strong> : résistance extrême.</li><li><strong>Traversée</strong> : filtrage EMI.</li></ul></div>
             </div>
         </section>
 
-        <!-- Arbre de décision + critères -->
-        <section class="py-8 space-y-10">
-            <div class="text-center space-y-4"><h2 class="text-3xl font-headline font-bold text-primary">Comment choisir le bon condensateur ?</h2><p class="text-on-surface-variant max-w-2xl mx-auto">Suivez l’arbre de décision selon votre besoin principal.</p></div>
-            <div class="flex flex-wrap justify-center gap-6 text-sm font-medium">
-                <div class="bg-primary text-on-primary px-5 py-2 rounded-full">Alimentation / Filtrage → <span class="font-bold">Électrolytique</span></div>
-                <div class="bg-surface-container-high px-5 py-2 rounded-full">Haute fréquence / découplage → <span class="font-bold">Céramique</span></div>
-                <div class="bg-surface-container-high px-5 py-2 rounded-full">Espace limité + fiabilité → <span class="font-bold">Tantale</span></div>
-                <div class="bg-surface-container-high px-5 py-2 rounded-full">Audio haute fidélité → <span class="font-bold">Film</span></div>
-                <div class="bg-surface-container-high px-5 py-2 rounded-full">Stockage rapide d’énergie → <span class="font-bold">Supercondensateur</span></div>
-                <div class="bg-surface-container-high px-5 py-2 rounded-full">RF / oscillateurs précis → <span class="font-bold">Mica / C0G</span></div>
+        <!-- Arbre de décision -->
+        <section class="py-6 md:py-8 space-y-6 md:space-y-10">
+            <div class="text-center space-y-2 md:space-y-4"><h2 class="text-2xl md:text-3xl font-headline font-bold text-primary">Comment choisir le bon condensateur ?</h2><p class="text-on-surface-variant max-w-2xl mx-auto text-sm md:text-base">Suivez l’arbre de décision selon votre besoin principal.</p></div>
+            <div class="flex flex-wrap justify-center gap-2 md:gap-6 text-xs md:text-sm font-medium">
+                <div class="bg-primary text-on-primary px-3 md:px-5 py-1 md:py-2 rounded-full">Alimentation → Électrolytique</div>
+                <div class="bg-surface-container-high px-3 md:px-5 py-1 md:py-2 rounded-full">HF/découplage → Céramique</div>
+                <div class="bg-surface-container-high px-3 md:px-5 py-1 md:py-2 rounded-full">Compact/fiable → Tantale</div>
+                <div class="bg-surface-container-high px-3 md:px-5 py-1 md:py-2 rounded-full">Audio → Film</div>
+                <div class="bg-surface-container-high px-3 md:px-5 py-1 md:py-2 rounded-full">Stockage rapide → Supercondensateur</div>
+                <div class="bg-surface-container-high px-3 md:px-5 py-1 md:py-2 rounded-full">RF précis → Mica/C0G</div>
             </div>
-            <div class="bg-surface-container-low p-6 rounded-xl max-w-3xl mx-auto"><p class="font-semibold">Critères essentiels : capacité, tension (marge 20-30%), ESR, encombrement, température ambiante (au Togo privilégiez 105°C), durée de vie et coût.</p></div>
+            <div class="bg-surface-container-low p-4 md:p-6 rounded-xl max-w-3xl mx-auto"><p class="font-semibold text-sm md:text-base">Critères essentiels : capacité, tension (marge 20-30%), ESR, encombrement, température ambiante (privilégiez 105°C), durée de vie et coût.</p></div>
         </section>
 
-        <!-- Tableau comparatif complet -->
-        <section class="space-y-6">
-            <h2 class="text-3xl font-headline font-bold text-primary text-center">Tableau comparatif récapitulatif</h2>
+        <!-- Tableau comparatif -->
+        <section class="space-y-4 md:space-y-6">
+            <h2 class="text-2xl md:text-3xl font-headline font-bold text-primary text-center">Tableau comparatif</h2>
             <div class="overflow-x-auto no-scrollbar rounded-xl border border-outline-variant/20 shadow-xl bg-surface-container-lowest">
-                <table class="w-full text-left text-xs md:text-sm border-collapse">
-                    <thead class="bg-primary text-on-primary"><tr><th class="px-4 py-3">Type</th><th class="px-4 py-3">Capacité</th><th class="px-4 py-3">Tension max</th><th class="px-4 py-3">ESR</th><th class="px-4 py-3">Polarité</th><th class="px-4 py-3">Durée de vie</th><th class="px-4 py-3">Usage typique</th></tr></thead>
+                <table class="w-full text-left text-[10px] md:text-xs lg:text-sm border-collapse">
+                    <thead class="bg-primary text-on-primary"><tr><th class="px-2 md:px-4 py-2 md:py-3">Type</th><th class="px-2 md:px-4 py-2 md:py-3">Capacité</th><th class="px-2 md:px-4 py-2 md:py-3">Tension max</th><th class="px-2 md:px-4 py-2 md:py-3">ESR</th><th class="px-2 md:px-4 py-2 md:py-3">Polarité</th><th class="px-2 md:px-4 py-2 md:py-3">Durée de vie</th><th class="px-2 md:px-4 py-2 md:py-3">Usage</th></tr></thead>
                     <tbody class="divide-y">
-                        <tr class="hover:bg-surface-container"><td class="px-4 py-3 font-semibold">Électrolytique Al</td><td>1µF – 470mF</td><td>500V</td><td>Élevé</td><td class="text-secondary">Oui</td><td>2k-8k h @85°C</td><td>Filtrage alimentation</td></tr>
-                        <tr class="hover:bg-surface-container"><td class="font-semibold">Céramique</td><td>1pF – 100µF</td><td>&lt;500V</td><td>Très faible</td><td>Non</td><td>&gt;20 ans</td><td>HF, découplage</td></tr>
-                        <tr class="hover:bg-surface-container"><td class="font-semibold">Tantale</td><td>0,1µF – 1mF</td><td>2,5-50V</td><td>Faible</td><td class="text-secondary">Oui</td><td>Longue</td><td>Portable, médical</td></tr>
-                        <tr class="hover:bg-surface-container"><td class="font-semibold">Film</td><td>100pF – 100µF</td><td>Jusqu’à 1kV</td><td>Ultra-faible</td><td>Non</td><td>&gt;100k h</td><td>Audio, puissance, PFC</td></tr>
-                        <tr class="hover:bg-surface-container"><td class="font-semibold">Supercondensateur</td><td>1F – 10 000F</td><td>2,5-3V/cellule</td><td>Très faible</td><td>Oui</td><td>1M cycles</td><td>Stockage rapide, backup</td></tr>
-                        <tr class="hover:bg-surface-container"><td class="font-semibold">Mica</td><td>1pF – 100nF</td><td>&lt;1kV</td><td>Très faible</td><td>Non</td><td>Illimitée</td><td>RF, oscillateurs de précision</td></tr>
+                        <tr><td class="px-2 md:px-4 py-2 font-semibold">Électrolytique</td><td>1µF–470mF</td><td>500V</td><td>Élevé</td><td>Oui</td><td>2k-8k h</td><td>Filtrage</td></tr>
+                        <tr><td class="font-semibold">Céramique</td><td>1pF–100µF</td><td><500V</td><td>Très faible</td><td>Non</td><td>>20 ans</td><td>HF</td></tr>
+                        <tr><td class="font-semibold">Tantale</td><td>0,1µF–1mF</td><td>2,5-50V</td><td>Faible</td><td>Oui</td><td>Longue</td><td>Portable</td></tr>
+                        <tr><td class="font-semibold">Film</td><td>100pF–100µF</td><td>1kV</td><td>Ultra-faible</td><td>Non</td><td>>100k h</td><td>Audio</td></tr>
+                        <tr><td class="font-semibold">Supercondensateur</td><td>1F–10kF</td><td>2,5-3V</td><td>Très faible</td><td>Oui</td><td>1M cycles</td><td>Backup</td></tr>
+                        <tr><td class="font-semibold">Mica</td><td>1pF–100nF</td><td><1kV</td><td>Très faible</td><td>Non</td><td>Illimitée</td><td>RF</td></tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- FAQ détaillée -->
-        <section class="max-w-4xl mx-auto space-y-8">
-            <h2 class="text-3xl font-headline font-bold text-primary text-center">FAQ – Questions fréquentes</h2>
-            <div class="space-y-4">
-                <details class="group bg-surface-container-low rounded-xl p-5 open:bg-surface-container"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold">Différence entre électrolytique et céramique ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-sm text-on-surface-variant">Les électrolytiques offrent de fortes capacités (µF à mF) mais sont polarisés et vieillissent. Les céramiques sont non polarisés, excellents en HF, durée quasi illimitée mais capacités plus faibles (pF à µF).</div></details>
-                <details class="group bg-surface-container-low rounded-xl p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold">Pourquoi durée de vie limitée des électrolytiques ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-sm">L’électrolyte liquide s’évapore avec la chaleur. À 85°C : 2000-8000h. Versions 105°C ou 125°C durent plus longtemps, indispensables au Togo.</div></details>
-                <details class="group bg-surface-container-low rounded-xl p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold">Qu’est-ce que l’ESR ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-sm">Résistance série équivalente. Un ESR faible = meilleures performances haute fréquence et moins d’échauffement. Films et céramiques ont les ESR les plus bas.</div></details>
-                <details class="group bg-surface-container-low rounded-xl p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold">Peut-on remplacer électrolytique par céramique ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-sm">Partiellement, attention à l’effet DC bias des céramiques classe 2. Pour le filtrage, associer les deux : électrolytique pour la capacité, céramique pour les hautes fréquences.</div></details>
-                <details class="group bg-surface-container-low rounded-xl p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold">Supercondensateur vs batterie ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-sm">Les supercondensateurs excellent en puissance instantanée et cycles extrêmes (1M cycles) mais stockent moins d’énergie. Idéal en complément batterie pour les pics de courant.</div></details>
+        <!-- FAQ -->
+        <section class="max-w-4xl mx-auto space-y-6 md:space-y-8">
+            <h2 class="text-2xl md:text-3xl font-headline font-bold text-primary text-center">FAQ – Questions fréquentes</h2>
+            <div class="space-y-3 md:space-y-4">
+                <details class="group bg-surface-container-low rounded-xl p-4 md:p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-sm md:text-base">Différence électrolytique vs céramique ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-xs md:text-sm text-on-surface-variant">Électrolytiques : fortes capacités, polarisés. Céramiques : non polarisés, excellents en HF.</div></details>
+                <details class="group bg-surface-container-low rounded-xl p-4 md:p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-sm md:text-base">Durée de vie limitée des électrolytiques ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-xs md:text-sm">L'électrolyte s'évapore avec la chaleur. Versions 105°C durent plus longtemps.</div></details>
+                <details class="group bg-surface-container-low rounded-xl p-4 md:p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-sm md:text-base">Qu'est-ce que l'ESR ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-xs md:text-sm">Résistance série équivalente. ESR faible = meilleures performances HF.</div></details>
+                <details class="group bg-surface-container-low rounded-xl p-4 md:p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-sm md:text-base">Remplacer électrolytique par céramique ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-xs md:text-sm">Partiellement, attention à l'effet DC bias. Associer les deux.</div></details>
+                <details class="group bg-surface-container-low rounded-xl p-4 md:p-5"><summary class="flex justify-between items-center cursor-pointer list-none font-semibold text-sm md:text-base">Supercondensateur vs batterie ?<span class="material-symbols-outlined group-open:rotate-180">expand_more</span></summary><div class="pt-3 text-xs md:text-sm">Supercondensateurs : puissance instantanée, nombreux cycles. Batteries : plus d'énergie.</div></details>
             </div>
         </section>
 
-        <!-- CTA / Contact -->
-        <section class="relative rounded-3xl overflow-hidden bg-slate-900 text-white p-12 md:p-20 text-center space-y-8">
+        <!-- CTA -->
+        <section class="relative rounded-3xl overflow-hidden bg-slate-900 text-white p-8 md:p-12 lg:p-20 text-center space-y-6 md:space-y-8">
             <div class="absolute inset-0 opacity-20 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4rcuE5zsHGzaJqy9UDQ8E9ZMVdTledtwrAJuVu4FSv4aCuoEChI0c4BF31_nqEQLiVnwPw6g2COO9zobruFqAEu1_UQOMUBjtrxI9z8gna197qWFXp1aOjBzjTiSY4R0Eq6zfhv9LMPQviCufAn6vRApGhQZDswcOkK4046Oy1BIwF8TbOxqPuF_cM021bTI3-6Wbqt_zgGVqzCPWnDY-1Cpk5uaTr0BPfJur1KxiiNZPmZqwMoIxguCW1bY2jfOkgd6bQaIGWCE');"></div>
-            <div class="relative z-10"><h2 class="text-4xl font-headline font-bold">🛒 Trouvez vos condensateurs chez <a href="../../condensateurs-electrolytiques-togo.html" class="custom-linke ">TogoMicroFarad</a></h2><p class="text-slate-300 text-lg max-w-2xl mx-auto mt-4">Large gamme de composants certifiés, conseil technique, livraison rapide sur tout le Togo.</p>
-            <div class="flex flex-wrap justify-center gap-5 mt-8"><a class="px-8 py-4 bg-[#25D366] rounded-xl font-bold hover:bg-[#20b358] transition flex gap-2 items-center text-white" href="https://wa.me/22893602926?text=Bonjour%20TogoMicroFarad%2C%20je%20souhaite%20des%20informations%20sur%20les%20condensateurs%20(guide%20des%20types)." target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-whatsapp text-xl"></i> Commander sur WhatsApp
-</a><a class="px-8 py-4 bg-white/10 backdrop-blur-md rounded-xl font-bold hover:bg-white/20 transition border border-white/20 flex gap-2 items-center" href="mailto:parfaitementzix@gmail.com"><span class="material-symbols-outlined">mail</span> parfaitementzix@gmail.com</a></div>
-            <p class="text-xs text-slate-400 mt-8 ">Afrique-Togo | <a href="../../index.html" class="custom-linke">www.togomicrofarad.com</a></p></div>
+            <div class="relative z-10"><h2 class="text-2xl md:text-4xl font-headline font-bold">🛒 Trouvez vos condensateurs chez <a href="../../condensateurs-electrolytiques-togo.html" class="custom-linke">TogoMicroFarad</a></h2><p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto mt-4">Large gamme de composants certifiés, conseil technique, livraison rapide sur tout le Togo.</p>
+            <div class="flex flex-wrap justify-center gap-3 md:gap-5 mt-6 md:mt-8"><a class="px-5 md:px-8 py-3 md:py-4 bg-[#25D366] rounded-xl font-bold hover:bg-[#20b358] transition flex gap-2 items-center text-white text-sm md:text-base" href="https://wa.me/22893602926?text=Bonjour%20TogoMicroFarad%2C%20je%20souhaite%20des%20informations%20sur%20les%20condensateurs%20(guide%20des%20types)." target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp text-xl"></i> Commander sur WhatsApp</a><a class="px-5 md:px-8 py-3 md:py-4 bg-white/10 backdrop-blur-md rounded-xl font-bold hover:bg-white/20 transition border border-white/20 flex gap-2 items-center text-sm md:text-base" href="mailto:parfaitementzix@gmail.com"><span class="material-symbols-outlined">mail</span> parfaitementzix@gmail.com</a></div>
+            <p class="text-xs text-slate-400 mt-6 md:mt-8">Afrique-Togo | <a href="../../index.html" class="custom-linke">www.togomicrofarad.com</a></p></div>
         </section>
     </div>
 </main>
 
-<!-- ========== FOOTER DU DEUXIÈME ARTICLE (TogoMicroFarad standard) ========== -->
- <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div><div class="flex items-center"><i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i><h1 class="text-xl font-black">TogoMicroFarad</h1></div><p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p></div>
-                <div><h3 class="text-lg font-semibold mb-4">Liens rapides</h3><ul class="space-y-2"><li><a href="../../index.html" class="text-gray-400 hover:text-white">Accueil</a></li><li><a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li><li><a href="../index.html" class="text-gray-400 hover:text-white">Blog</a></li><li><a href="../../a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li><li><a href="../../contact.html" class="text-gray-400 hover:text-white">Contact</a></li><li><a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Politique de Confidentialité</a></li><li><a href="../../conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li></ul></div>
-                <div><h3 class="text-lg font-semibold mb-4">Contact</h3><ul class="space-y-2 text-gray-400"><li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li><li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li><li><i class="fas fa-envelope mr-2"></i> <a href="mailto:parfaitementzix@gmail.com" class="hover:text-white">parfaitementzix@gmail.com</a></li></ul></div>
-                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg"><h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3><p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p><div class="flex"><input type="email" id="email" placeholder="parfaitementzix@gmail.com" class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required><button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200"><i class="fas fa-paper-plane text-white"></i></button></div><p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p></div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400"><p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="../../conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p></div>
+<!-- ========== FOOTER ========== -->
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div><div class="flex items-center"><i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i><h1 class="text-xl font-black">TogoMicroFarad</h1></div><p class="text-gray-400 text-sm">Votre fournisseur de condensateurs électrolytiques de confiance.</p></div>
+            <div><h3 class="text-lg font-semibold mb-4">Liens rapides</h3><ul class="space-y-2 text-sm"><li><a href="../../index.html" class="text-gray-400 hover:text-white">Accueil</a></li><li><a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li><li><a href="../index.html" class="text-gray-400 hover:text-white">Blog</a></li><li><a href="../../a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li><li><a href="../../contact.html" class="text-gray-400 hover:text-white">Contact</a></li><li><a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Confidentialité</a></li><li><a href="../../conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions</a></li></ul></div>
+            <div><h3 class="text-lg font-semibold mb-4">Contact</h3><ul class="space-y-2 text-gray-400 text-sm"><li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li><li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li><li><i class="fas fa-envelope mr-2"></i> <a href="mailto:parfaitementzix@gmail.com" class="hover:text-white">parfaitementzix@gmail.com</a></li></ul></div>
+            <div class="p-4 md:p-6 bg-gray-800 rounded-lg shadow-lg"><h3 class="text-lg font-semibold mb-4">Newsletter</h3><p class="text-gray-400 text-sm mb-4">Inscrivez-vous pour recevoir nos offres.</p><div class="flex"><input type="email" id="email" placeholder="votre@email.com" class="bg-gray-700 text-white py-2 px-3 rounded-l w-full text-sm" required><button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition"><i class="fas fa-paper-plane text-white"></i></button></div><p id="message" class="mt-2 text-center text-xs opacity-0 transition-opacity duration-500"></p></div>
         </div>
-    </footer>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-xs md:text-sm"><p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="../../conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p></div>
+    </div>
+</footer>
 
-    <script src="../../assets/js/articles.js"></script>
-    <script src="../../assets/js/main.js"></script>
-    <script>
-        (function() {
-            if (!window.recentArticles || !Array.isArray(window.recentArticles) || window.recentArticles.length === 0) return;
-            const currentUrl = window.location.pathname;
-            const others = window.recentArticles.filter(article => article.url !== currentUrl).slice(0, 2);
-            const container = document.getElementById('related-articles');
-            if (container && others.length) {
-                container.innerHTML = others.map(article => `
-                    <div class="related-card">
-                        <a href="${article.url}"><img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy"></a>
-                        <div class="related-card-body">
-                            <div class="text-xs text-gray-500 mb-1">${article.category || 'Article'} · ${article.date || ''}</div>
-                            <h4><a href="${article.url}" class="hover:text-blue-600">${article.title}</a></h4>
-                        </div>
-                    </div>
-                `).join('');
-            }
-        })();
-    </script>
+<script src="../../assets/js/articles.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script>
+(function() {
+    // Vérifier que window.recentArticles existe et est un tableau
+    if (!window.recentArticles || !Array.isArray(window.recentArticles) || window.recentArticles.length === 0) {
+        console.warn('Aucun article disponible pour la section "Vous aimerez aussi".');
+        return;
+    }
 
+    // Récupérer l'URL de la page courante (sans le domaine)
+    const currentUrl = window.location.pathname;
+
+    // Filtrer les articles pour exclure l'article courant, puis prendre les 2 premiers
+    const others = window.recentArticles
+        .filter(article => article.url !== currentUrl)
+        .slice(0, 2);
+
+    // Si aucun autre article, ne rien afficher (ou afficher un message)
+    if (others.length === 0) {
+        console.log('Aucun autre article à suggérer.');
+        return;
+    }
+
+    const container = document.getElementById('related-articles');
+    if (!container) {
+        console.error('Conteneur #related-articles introuvable.');
+        return;
+    }
+
+    // Générer le HTML des cartes
+    container.innerHTML = others.map(article => `
+        <div class="related-card">
+            <a href="${article.url}">
+                <img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy">
+            </a>
+            <div class="related-card-body">
+                <div class="related-card-meta">${article.category || 'Article'} · ${article.date || 'Date inconnue'}</div>
+                <h4><a href="${article.url}">${article.title}</a></h4>
+            </div>
+        </div>
+    `).join('');
+})();
+</script>
 </body>
 </html>

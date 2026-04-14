@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "💥 ESR expliqué simplement : le vrai facteur qui tue vos condensateurs",
+    "url": "/blog/posts/esr-condensateur-explication-simple.html",
+    "category": "Technique avancée",
+    "date": "2026-04-14",
+    "image": "/assets/images/esr-condensateur.jpg"
+  },
+  {
     "title": "📘 Guide Complet des Types de Condensateurs (2026)",
     "url": "/blog/posts/guide-types-condensateurs.html",
     "category": "Guide Technique",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Guide pratique",
     "date": "2026-03-26",
     "image": "/assets/images/condensateur-electrolytique-tv-panne-togo.png"
-  },
-  {
-    "title": "Comment éviter d'endommager une carte électronique ? Le guide complet",
-    "url": "/blog/posts/eviter-dommager-carte-electronique.html",
-    "category": "Maintenance Pro",
-    "date": "2026-03-24",
-    "image": "/assets/images/Protection-des-cartes-electroniques.png"
   }
 ];
