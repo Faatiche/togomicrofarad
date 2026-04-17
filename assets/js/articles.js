@@ -2,7 +2,7 @@
 window.recentArticles = [
   {
     "title": "🔋 Pourquoi les condensateurs ont une durée de vie exprimée en heures… et ce que ça veut vraiment dire",
-    "url": "/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html",
+    "url": "/blog/posts/duree-de-vie-condensateurs.html",
     "category": "Guide technique",
     "date": "2026-04-17",
     "image": "/assets/images/duree-vie-condensateur.jpg"
