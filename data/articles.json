@@ -126,5 +126,13 @@
   "url": "/blog/posts/esr-condensateur-explication-simple.html",
   "excerpt": "Quand un appareil électronique tombe en panne, beaucoup pensent à un composant grillé. Mais l'ennemi le plus discret est l'ESR (Equivalent Series Resistance). Découvrez pourquoi cette résistance interne augmente, comment la détecter et comment choisir des condensateurs Low ESR pour éviter les pannes invisibles.",
   "image": "/assets/images/esr-condensateur.jpg"
+},
+{
+  "title": "🔋 Pourquoi les condensateurs ont une durée de vie exprimée en heures… et ce que ça veut vraiment dire",
+  "date": "2026-04-17",
+  "category": "Guide technique",
+  "url": "/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html",
+  "excerpt": "2000 heures à 105°C signifie-t-il que le condensateur meurt après ce délai ? Non. Découvrez la règle des 10°C qui peut multiplier par 16 la durée de vie, et comment bien choisir vos condensateurs pour des réparations durables.",
+  "image": "/assets/images/duree-vie-condensateur.jpg"
 }
 ]

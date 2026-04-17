@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "🔋 Pourquoi les condensateurs ont une durée de vie exprimée en heures… et ce que ça veut vraiment dire",
+    "url": "/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html",
+    "category": "Guide technique",
+    "date": "2026-04-17",
+    "image": "/assets/images/duree-vie-condensateur.jpg"
+  },
+  {
     "title": "💥 ESR expliqué simplement : le vrai facteur qui tue vos condensateurs",
     "url": "/blog/posts/esr-condensateur-explication-simple.html",
     "category": "Technique avancée",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Guide pratique",
     "date": "2026-03-28",
     "image": "/assets/images/pannes-electroniques.jpg"
-  },
-  {
-    "title": "Télévision en panne ou appareil qui ne s'allume plus ? Le guide complet sur les condensateurs électrolytiques au Togo",
-    "url": "/blog/posts/condensateur-electrolytique-tv-panne-togo.html",
-    "category": "Guide pratique",
-    "date": "2026-03-26",
-    "image": "/assets/images/condensateur-electrolytique-tv-panne-togo.png"
   }
 ];

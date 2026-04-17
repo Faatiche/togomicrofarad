@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Comment éviter d'endommager une carte électronique ? Guide complet sur la protection ESD, la manipulation des PCB, le nettoyage et la maintenance électronique. Conseils pour réparateurs et passionnés.">
-    <meta name="keywords" content="maintenance électronique, protection ESD, manipulation PCB, composants électroniques, éviter court-circuit, nettoyage carte électronique, réparation, Togo">
+    <meta name="description" content="Décryptage de la durée de vie des condensateurs : que signifie '2000 heures à 105°C' ? Règle de l'arrhenius, choix en réparation, et astuces pour éviter les pannes répétitives. Guide complet TogoMicroFarad.">
+    <meta name="keywords" content="durée de vie condensateur, 2000 heures à 105°C, durée de vie nominale, ESR, Low ESR, réparation électronique, choix condensateur, Togo">
     <meta name="author" content="TogoMicroFarad">
     <meta name="robots" content="index, follow">
     
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html">
-    <meta property="og:title" content="Comment éviter d'endommager une carte électronique ? Le guide complet">
-    <meta property="og:description" content="Découvrez les meilleures pratiques pour protéger vos cartes électroniques : décharges électrostatiques, stockage, soudure, nettoyage et gestion thermique.">
-    <meta property="og:image" content="https://togomicrofarad.com/assets/images/Protection-des-cartes-electroniques.png">
+    <meta property="og:url" content="https://togomicrofarad.com/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html">
+    <meta property="og:title" content="Pourquoi les condensateurs ont une durée de vie exprimée en heures… et ce que ça veut vraiment dire">
+    <meta property="og:description" content="Comprendre la signification réelle des heures à température sur les condensateurs électrolytiques. Règle de vieillissement thermique, choix pour réparation et FAQ.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/duree-vie-condensateur.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html">
-    <meta property="twitter:title" content="Comment éviter d'endommager une carte électronique ? Le guide complet">
-    <meta property="twitter:description" content="Guide complet pour la manipulation et la maintenance des cartes électroniques : ESD, stockage, soudure, nettoyage.">
-    <meta property="twitter:image" content="https://togomicrofarad.com/assets/images/Protection-des-cartes-electroniques.png">
+    <meta property="twitter:url" content="https://togomicrofarad.com/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html">
+    <meta property="twitter:title" content="Pourquoi les condensateurs ont une durée de vie exprimée en heures… et ce que ça veut vraiment dire">
+    <meta property="twitter:description" content="Découvrez pourquoi un condensateur 2000h à 105°C peut durer des années, et comment bien choisir ses composants.">
+    <meta property="twitter:image" content="https://togomicrofarad.com/assets/images/duree-vie-condensateur.jpg">
 
-    <title>Comment éviter d'endommager une carte électronique ? - TogoMicroFarad</title>
+    <title>Durée de vie des condensateurs : mythes et réalité - TogoMicroFarad</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,9 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Fichier de styles principal -->
+    <link rel="stylesheet" href="../../assets/css/output.css">
     
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
 
@@ -43,7 +46,7 @@
     </script>
 
     <style>
-        /* ===== NOUVEAU DESIGN POUR LE CONTENU DE L'ARTICLE ===== */
+        /* ===== DESIGN POUR LE CONTENU DE L'ARTICLE (identique à l'autre) ===== */
         .article-wrapper {
             max-width: 900px;
             margin: 0 auto;
@@ -346,26 +349,27 @@
         .related-card-body h4 { font-weight: 700; font-size: 0.95rem; }
         .related-card-body h4 a { color: #111827; text-decoration: none; }
         .related-card-body h4 a:hover { color: #2563eb; }
-        /* Ajustement pour éviter les conflits avec le header */
         header { z-index: 1000; }
         article header { position: static !important; transform: none !important; }
-        #cart-dropdown {
-            z-index: 100000 !important;
-            background-color: #ffffff !important;
-        }
-        #cart-dropdown button, #cart-dropdown a {
-            pointer-events: auto !important;
-            cursor: pointer !important;
-        }
+        #cart-dropdown { z-index: 100000 !important; background-color: #ffffff !important; }
+        #cart-dropdown button, #cart-dropdown a { pointer-events: auto !important; cursor: pointer !important; }
         .cart-overlay.active { pointer-events: none; }
+        .formula {
+            background: #f1f5f9;
+            padding: 0.5rem 1rem;
+            border-radius: 16px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- Toast container -->
     <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
 
-    <!-- Header identique aux autres pages (inchangé) -->
+    <!-- Header identique -->
     <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
@@ -377,18 +381,13 @@
                 <a href="../../index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
                 <a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
                 <a href="../index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
-                
-                <!-- Menu déroulant Articles -->
                 <div class="relative group">
                     <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 cursor-pointer">
                         Articles
                         <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
                     </button>
-                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <!-- injecté par JS -->
-                    </div>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"></div>
                 </div>
-
                 <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
                 <a href="../../a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
             </nav>
@@ -400,12 +399,9 @@
                         <span class="hidden sm:inline">Panier</span>
                         <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
                     </button>
-                    
-                    <!-- Dropdown du panier -->
                     <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
                 </div>
                 
-                <!-- Bouton burger (mobile) -->
                 <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
                     <div class="hamburger">
                         <span></span>
@@ -415,35 +411,15 @@
                 </button>
             </div>
 
-            <!-- Menu mobile -->
             <div id="mobile-menu" class="mobile-menu">
                 <nav class="mobile-nav">
-                    <a href="../../index.html" class="mobile-nav-link">
-                        <i class="fas fa-home"></i>
-                        <span>Accueil</span>
-                    </a>
-                    <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link">
-                        <i class="fas fa-box"></i>
-                        <span>Produits</span>
-                    </a>
-                    <a href="../index.html" class="mobile-nav-link">
-                        <i class="fas fa-newspaper"></i>
-                        <span>Blog</span>
-                    </a>
-                    <a href="../../index.html#applications" class="mobile-nav-link">
-                        <i class="fas fa-cogs"></i>
-                        <span>Applications</span>
-                    </a>
-                    <a href="../../contact.html" class="mobile-nav-link">
-                        <i class="fas fa-envelope"></i>
-                        <span>Contact</span>
-                    </a>
-                    <a href="../../a-propos.html" class="mobile-nav-link">
-                        <i class="fas fa-users"></i>
-                        <span>À propos</span>
-                    </a>
+                    <a href="../../index.html" class="mobile-nav-link"><i class="fas fa-home"></i><span>Accueil</span></a>
+                    <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link"><i class="fas fa-box"></i><span>Produits</span></a>
+                    <a href="../index.html" class="mobile-nav-link"><i class="fas fa-newspaper"></i><span>Blog</span></a>
+                    <a href="../../index.html#applications" class="mobile-nav-link"><i class="fas fa-cogs"></i><span>Applications</span></a>
+                    <a href="../../contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+                    <a href="../../a-propos.html" class="mobile-nav-link"><i class="fas fa-users"></i><span>À propos</span></a>
                 </nav>
-                
                 <div class="mobile-menu-footer">
                     <div class="mobile-contact-info">
                         <p><i class="fas fa-phone"></i> +228 93 60 29 26</p>
@@ -451,147 +427,170 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Overlay -->
             <div id="menu-overlay" class="menu-overlay"></div>
         </div>
     </header>
 
-    <!-- Contenu principal avec nouveau design -->
     <main style="padding-top: 80px;">
         <div class="article-wrapper">
             <article class="article-card">
                 <div class="article-hero">
-                    <span class="article-hero-badge"><i class="fas fa-shield-alt mr-1"></i> GUIDE ULTIME</span>
-                    <img src="../../assets/images/Protection-des-cartes-electroniques.png" alt="Protection des cartes électroniques">
+                    <span class="article-hero-badge"><i class="fas fa-hourglass-half mr-1"></i> DURÉE DE VIE</span>
+                    <img src="../../assets/images/duree-vie-condensateur.jpg" alt="Durée de vie condensateur - graphique température">
                 </div>
                 <div class="article-body">
                     <div class="breadcrumb">
-                        <a href="../../index.html">Accueil</a> › <a href="../index.html">Blog</a> › <span>Éviter d’endommager une carte électronique</span>
+                        <a href="../../index.html">Accueil</a> › <a href="../index.html">Blog</a> › <span>Durée de vie des condensateurs : mythes et réalité</span>
                     </div>
                     <div class="article-meta">
-                        <span><i class="far fa-calendar-alt"></i> 24 mars 2026</span>
-                        <span><i class="far fa-clock"></i> 7 min de lecture</span>
+                        <span><i class="far fa-calendar-alt"></i> 17 avril 2026</span>
+                        <span><i class="far fa-clock"></i> 6 min de lecture</span>
                     </div>
-                    <h1 class="article-title">Comment éviter d'endommager une carte électronique ? Le guide complet</h1>
-                    <p class="article-lead">Que vous soyez un amateur de Raspberry Pi, un passionné de drone ou un technicien en maintenance, la manipulation d'une carte électronique (PCB) est une opération délicate. Un simple geste inapproprié ou une décharge invisible peut rendre un composant inutilisable en une fraction de seconde. Dans cet article, nous passons en revue les meilleures pratiques pour protéger vos composants et prolonger la durée de vie de vos appareils.</p>
+                    <h1 class="article-title">Pourquoi les condensateurs ont une durée de vie exprimée en heures… et ce que ça veut vraiment dire</h1>
+                    <p class="article-lead">Lorsque vous achetez un condensateur électrolytique, vous voyez parfois “2000 heures à 105°C” ou “5000 heures à 105°C”. Beaucoup pensent que le composant cessera de fonctionner après ce nombre d’heures. C’est faux. Et cette erreur peut conduire à de mauvais choix lors d’une réparation. Décodons ensemble ce que signifie réellement cette fameuse durée de vie nominale.</p>
 
-                    <!-- SOMMAIRE (Table of Contents) -->
+                    <!-- SOMMAIRE -->
                     <div style="background: #f8fafc; border-radius: 24px; padding: 1.5rem; margin: 2rem 0; border: 1px solid #e2e8f0;">
                         <h2 style="font-size:1.3rem; font-weight:700; margin-bottom:1rem;">📋 Sommaire</h2>
                         <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:0.5rem;">
-                            <li><a href="#esd" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 1. La menace invisible : Les décharges électrostatiques (ESD)</a></li>
-                            <li><a href="#stockage" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 2. Le stockage : Sacs antistatiques et environnement</a></li>
-                            <li><a href="#soudure" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 3. Précautions lors des branchements et soudures</a></li>
-                            <li><a href="#nettoyage" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 4. Nettoyage et entretien : Les bons produits</a></li>
-                            <li><a href="#thermique" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 5. La gestion de la chaleur (Thermique)</a></li>
-                            <li><a href="#conclusion" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 6. Conclusion</a></li>
+                            <li><a href="#definition" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 1. Que signifie “2000h à 105°C” ?</a></li>
+                            <li><a href="#pourquoi-105" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 2. Pourquoi tester à 105°C ?</a></li>
+                            <li><a href="#regle-10c" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 3. La règle des 10°C : chaque baisse double la durée</a></li>
+                            <li><a href="#exemple" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 4. Exemple concret 2000h → 32 000h</a></li>
+                            <li><a href="#pourquoi-hautes-heures" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 5. Pourquoi acheter du 5000h ou 10 000h ?</a></li>
+                            <li><a href="#autres-criteres" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 6. Attention : la durée n’est pas le seul critère</a></li>
+                            <li><a href="#choix-remplacement" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 7. Comment choisir pour un remplacement</a></li>
+                            <li><a href="#conclusion" style="color:#2563eb; text-decoration:none; display:flex; align-items:center; gap:0.5rem;"><i class="fas fa-arrow-right"></i> 8. Conclusion & FAQ</a></li>
                         </ul>
                     </div>
 
-                    <!-- Section 1 : ESD -->
-                    <section id="esd">
-                        <h2 class="section-title"><i class="fas fa-bolt"></i> 1. La menace invisible : Les décharges électrostatiques (ESD)</h2>
-                        <p>C'est la cause numéro un de panne sur les cartes neuves. Le corps humain peut accumuler des milliers de volts d'électricité statique. En touchant un composant sensible (comme un microprocesseur), vous provoquez un arc électrique minuscule mais dévastateur.</p>
-                        <div class="grid-2">
-                            <div class="value-card"><h3><i class="fas fa-wristwatch"></i> Bracelet antistatique</h3><p>Reliez-le à la terre pour évacuer votre charge corporelle.</p></div>
-                            <div class="value-card"><h3><i class="fas fa-hand-peace"></i> Manipulez par les bords</h3><p>Ne touchez jamais les pistes en cuivre ou les broches.</p></div>
-                            <div class="value-card"><h3><i class="fas fa-table"></i> Tapis ESD</h3><p>Évitez les surfaces en plastique ou en tissu (moquette).</p></div>
-                        </div>
-                        <div class="tip-box"><i class="fas fa-lightbulb"></i> <strong>Conseil :</strong> Même sans équipement, touchez un objet métallique relié à la terre avant chaque manipulation.</div>
+                    <!-- Section 1 -->
+                    <section id="definition">
+                        <h2 class="section-title"><i class="fas fa-hourglass-start"></i> 1. Que signifie “2000 heures à 105°C” sur un condensateur ?</h2>
+                        <p>Cette valeur est une <strong>durée de vie nominale</strong>, déterminée par des tests accélérés du fabricant. Elle indique que le condensateur peut fonctionner pendant au moins <strong>2000 heures à 105°C</strong> dans les conditions spécifiées (tension nominale, courant d’ondulation max) avant que ses caractéristiques ne sortent des tolérances prévues.</p>
+                        <div class="value-card"><h3><i class="fas fa-chart-line"></i> Caractéristiques surveillées</h3><p>Capacité (µF), courant de fuite, ESR (Equivalent Series Resistance). Ce n’est pas une date de mort, mais une garantie minimale en conditions extrêmes.</p></div>
                     </section>
 
-                    <!-- Section 2 : Stockage -->
-                    <section id="stockage">
-                        <h2 class="section-title"><i class="fas fa-box"></i> 2. Le stockage : Sacs antistatiques et environnement</h2>
-                        <p>Laisser une carte électronique à l'air libre sur un bureau est risqué (poussière, humidité, chocs).</p>
+                    <!-- Section 2 -->
+                    <section id="pourquoi-105">
+                        <h2 class="section-title"><i class="fas fa-temperature-high"></i> 2. Pourquoi tester à 105°C ?</h2>
+                        <p>Parce que la chaleur est l’ennemi principal des condensateurs électrolytiques. L’électrolyte interne vieillit plus vite sous forte température. Le fabricant utilise donc des conditions sévères pour accélérer artificiellement le vieillissement : c’est un <strong>test d’endurance</strong>.</p>
+                        <div class="tip-box"><i class="fas fa-flask"></i> <strong>À savoir :</strong> Les tests accélérés suivent souvent la loi d’Arrhenius. Plus la température est élevée, plus la réaction chimique (séchage de l’électrolyte) est rapide.</div>
+                    </section>
+
+                    <!-- Section 3 : règle des 10°C -->
+                    <section id="regle-10c">
+                        <h2 class="section-title"><i class="fas fa-chart-simple"></i> 3. La règle très importante : chaque baisse de 10°C peut doubler la durée de vie</h2>
+                        <p>C’est le point que beaucoup ignorent. On utilise souvent une règle d’estimation basée sur l’effet thermique :</p>
+                        <div class="formula">
+                            L₂ = L₁ × 2<sup>(T₁ - T₂)/10</sup>
+                        </div>
+                        <p>Avec : L₁ = durée nominale, T₁ = température nominale, T₂ = température réelle d’utilisation.</p>
+                    </section>
+
+                    <!-- Section 4 : exemple concret -->
+                    <section id="exemple">
+                        <h2 class="section-title"><i class="fas fa-calculator"></i> 4. Exemple concret</h2>
+                        <p>Condensateur donné pour <strong>2000 heures à 105°C</strong>. Dans une alimentation fonctionnant à 65°C :</p>
+                        <div class="formula">
+                            105 - 65 = 40°C soit 4 paliers de 10°C → 2000 × 2<sup>4</sup> = 32 000 heures
+                        </div>
+                        <p>32 000 heures représentent plusieurs années d’usage réel (env. 3,6 ans en continu, mais en pratique l’équipement n’est pas allumé 24/7). Voilà pourquoi un “2000 heures” peut durer très longtemps.</p>
+                        <div class="warning-box"><i class="fas fa-exclamation-triangle"></i> <strong>Attention :</strong> Cette règle est une approximation. D’autres facteurs comme le courant d’ondulation (ripple) influent aussi fortement sur le vieillissement.</div>
+                    </section>
+
+                    <!-- Section 5 : pourquoi acheter 5000h ou 10000h -->
+                    <section id="pourquoi-hautes-heures">
+                        <h2 class="section-title"><i class="fas fa-rocket"></i> 5. Alors pourquoi acheter des modèles 5000h ou 10 000h ?</h2>
                         <div class="grid-2">
-                            <div class="value-card"><h3><i class="fas fa-shopping-bag"></i> Sacs de protection</h3><p>Sacs gris métallisés (shielding bags) ou roses antistatiques.</p></div>
-                            <div class="value-card"><h3><i class="fas fa-tint"></i> Évitez l'humidité</h3><p>L'oxydation est le cancer de l'électronique. Ajoutez des sachets de gel de silice.</p></div>
+                            <div class="value-card"><h3><i class="fas fa-shield-alt"></i> Plus de marge</h3><p>Fiabilité accrue, surtout en environnement chaud (alimentations PC, chargeurs).</p></div>
+                            <div class="value-card"><h3><i class="fas fa-microchip"></i> Meilleur ESR</h3><p>Les séries longue durée ont souvent un ESR plus bas et supportent mieux le ripple.</p></div>
+                            <div class="value-card"><h3><i class="fas fa-clock"></i> Sécurité</h3><p>En réparation, remplacer un 2000h par un 5000h réduit les risques de retour panne.</p></div>
                         </div>
                     </section>
 
-                    <!-- Section 3 : Branchements et soudures -->
-                    <section id="soudure">
-                        <h2 class="section-title"><i class="fas fa-soldering"></i> 3. Précautions lors des branchements et soudures</h2>
-                        <div class="warning-box"><i class="fas fa-exclamation-triangle text-red-500"></i> <strong>⚠️ Danger :</strong> Inverser la polarité ou souder trop chaud peut détruire une carte.</div>
+                    <!-- Section 6 : autres critères -->
+                    <section id="autres-criteres">
+                        <h2 class="section-title"><i class="fas fa-list-check"></i> 6. Attention : la durée en heures n’est pas le seul critère</h2>
+                        <p>Erreur fréquente : choisir uniquement le plus grand nombre d’heures. Il faut aussi regarder :</p>
                         <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                            <li><strong>Vérifiez la polarité</strong> : Utilisez des détrompeurs. Inverser le "+" et le "-" est fatal pour la plupart des circuits intégrés.</li>
-                            <li><strong>Ne branchez jamais "à chaud"</strong> : Éteignez et débranchez toujours l’alimentation avant de connecter un module.</li>
-                            <li><strong>Maîtrisez la température de soudage</strong> : Un fer trop chaud peut décoller les pistes. Utilisez un fer à température réglable (300-350°C) et des durées courtes.</li>
+                            <li><strong>Température</strong> : 85°C ou 105°C ? Préférez 105°C pour les environnements chauds.</li>
+                            <li><strong>Low ESR ou standard</strong> : crucial pour alimentations à découpage.</li>
+                            <li><strong>Ripple current admissible</strong> : un courant d’ondulation trop élevé chauffe le condensateur de l’intérieur.</li>
+                            <li><strong>Qualité fabricant</strong> : Japanese (Nichicon, Rubycon, Panasonic) vs générique.</li>
                         </ul>
+                        <div class="tip-box"><i class="fas fa-lightbulb"></i> Un mauvais choix (ex : standard à la place d’un Low ESR) peut tuer un condensateur bien avant sa durée théorique.</div>
                     </section>
 
-                    <!-- Section 4 : Nettoyage -->
-                    <section id="nettoyage">
-                        <h2 class="section-title"><i class="fas fa-broom"></i> 4. Nettoyage et entretien : Les bons produits</h2>
-                        <p>La poussière accumulée peut devenir conductrice avec l’humidité ou empêcher le refroidissement.</p>
-                        <div class="grid-2">
-                            <div class="value-card"><h3><i class="fas fa-vial"></i> Alcool isopropylique (IPA)</h3><p>À 99%, il s'évapore sans laisser de résidus et dissout les flux de soudure.</p></div>
-                            <div class="value-card"><h3><i class="fas fa-toothbrush"></i> Brosse à dents souple</h3><p>Utilisez une brosse à poils souples pour frotter délicatement.</p></div>
-                            <div class="value-card"><h3><i class="fas fa-wind"></i> Air comprimé</h3><p>Pour déloger la poussière dans les ports de connexion, privilégiez les bombes d’air sec.</p></div>
-                        </div>
-                        <div class="tip-box"><i class="fas fa-check-circle"></i> <strong>Astuce :</strong> Évitez l'eau ou les produits ménagers agressifs. L’IPA est votre meilleur allié.</div>
-                    </section>
-
-                    <!-- Section 5 : Gestion thermique -->
-                    <section id="thermique">
-                        <h2 class="section-title"><i class="fas fa-thermometer-half"></i> 5. La gestion de la chaleur (Thermique)</h2>
-                        <p>La surchauffe réduit drastiquement la durée de vie des semi-conducteurs.</p>
+                    <!-- Section 7 : choix remplacement -->
+                    <section id="choix-remplacement">
+                        <h2 class="section-title"><i class="fas fa-screwdriver-wrench"></i> 7. Comment choisir la bonne durée de vie pour un remplacement ?</h2>
+                        <p>En réparation, visez idéalement :</p>
                         <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                            <li><strong>Pâte thermique et dissipateurs :</strong> Assurez-vous que les puces de puissance disposent de radiateurs bien fixés avec une interface thermique de qualité.</li>
-                            <li><strong>Flux d’air :</strong> Ne confinez pas vos cartes dans des boîtiers trop étroits sans aération si elles dégagent de la chaleur.</li>
+                            <li>Au moins équivalent à l’original (même durée ou mieux).</li>
+                            <li>Si possible : 2000h → 5000h ou 10000h (surcoût minime).</li>
+                            <li>105°C si l’appareil chauffe (alimentations, amplis).</li>
+                            <li>Low ESR pour alimentations à découpage.</li>
                         </ul>
                     </section>
 
                     <!-- Section produits -->
                     <section>
-                        <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Acheter des condensateurs et accessoires au Togo</h2>
-                        <p>Pour vos réparations, TogoMicroFarad propose des condensateurs de qualité, des fer à souder, de l’alcool isopropylique et bien plus. Livraison rapide à Lomé, Kara, Sokodé et partout au Togo.</p>
+                        <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> Des condensateurs longue durée au Togo</h2>
+                        <p>TogoMicroFarad vous propose une sélection de condensateurs électrolytiques adaptés à la réparation professionnelle. Livraison rapide à Lomé, Kara, Sokodé et partout au Togo.</p>
                         <div class="product-grid">
                             <div class="product-card">
-                                <div class="product-card-icon"><i class="fas fa-boxes"></i></div>
-                                <h3 class="font-bold text-lg">📦 Lot de 10 valeurs courantes</h3>
-                                <p class="desc text-gray-500 text-sm">0,1 µF à 100 µF (50V) — toutes en 105°C</p>
-                                <div class="product-price">2 500 <small>FCFA</small></div>
+                                <div class="product-card-icon"><i class="fas fa-battery-full"></i></div>
+                                <h3 class="font-bold text-lg">🔋 Lot pro 5000h @105°C (lot de 12)</h3>
+                                <p class="desc text-gray-500 text-sm">Valeurs courantes : 470µF, 100µF, 680µF  (Low ESR)</p>
+                                <div class="product-price">2000 <small>FCFA</small> l'unité</div>
                                 <button class="btn-add-cart btn-shine"
-                                        data-nom="Lot 10 valeurs courantes"
+                                        data-nom="Lot pro 5000h 105°C"
                                         data-tension="50V"
                                         data-temperature="105°C"
-                                        data-quantite="10"
-                                        data-prix="2500">
+                                        data-quantite="12"
+                                        data-prix="4500">
                                     <i class="fas fa-cart-plus"></i> Ajouter au panier
                                 </button>
                             </div>
                             <div class="product-card">
                                 <div class="product-card-icon"><i class="fas fa-microchip"></i></div>
-                                <h3 class="font-bold text-lg">⚡ Condensateurs individuels</h3>
-                                <p class="desc text-gray-500 text-sm">Achetez exactement la valeur dont vous avez besoin.</p>
+                                <h3 class="font-bold text-lg">⚡ Condensateur 10 000h @105°C</h3>
+                                <p class="desc text-gray-500 text-sm">Série haute fiabilité, ESR très bas.</p>
                                 <div class="product-price">200 <small>FCFA</small></div>
-                                <p class="text-xs text-gray-400">par unité · lot de 6 à 1 000 FCFA</p>
-                                <a href="../../condensateurs-electrolytiques-togo.html" class="btn-secondary">Voir toutes les valeurs</a>
+                                <p class="text-xs text-gray-400">par unité (lot de 6 à 1000 FCFA)</p>
+                                <a href="../../condensateurs-electrolytiques-togo.html" class="btn-secondary">Voir toutes les références</a>
                             </div>
                         </div>
                         <div class="whatsapp-cta">
-                            <p class="font-semibold text-green-800">📱 Besoin de conseils ou d’un kit de maintenance ?</p>
-                            <a href="https://wa.me/22893602926?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20la%20maintenance%20électronique." class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Commander ou poser une question</a>
+                            <p class="font-semibold text-green-800">📱 Conseil personnalisé pour votre réparation ?</p>
+                            <a href="https://wa.me/22893602926?text=Bonjour%2C%20j%27aimerais%20choisir%20le%20bon%20condensateur%20pour%20mon%20appareil." class="btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> Discuter avec un technicien</a>
                         </div>
                     </section>
 
-                    <!-- Conclusion -->
+                    <!-- Conclusion + FAQ -->
                     <footer id="conclusion" class="article-footer">
-                        <p class="outro text-gray-700 leading-relaxed">Prendre soin d’une carte électronique demande de la rigueur et un équipement minimal (bracelet ESD, alcool isopropylique). En respectant ces quelques règles de manipulation et de stockage, vous réduirez de plus de 80% les risques de pannes inexpliquées. Protégez vos investissements et réparez durablement grâce à <a href="../../condensateurs-electrolytiques-togo.html" class="text-blue-600 hover:underline font-semibold">TogoMicroFarad</a>.</p>
+                        <p class="outro text-gray-700 leading-relaxed">Quand vous voyez “2000 heures” ou “10 000 heures”, cela ne signifie pas que le condensateur mourra après ce temps. Cela signifie qu’il a été conçu pour tenir au moins cela dans des conditions extrêmes. Comprendre cette différence permet de mieux choisir, mieux réparer et d’éviter les pannes répétitives. Chez <a href="../../condensateurs-electrolytiques-togo.html" class="text-blue-600 hover:underline font-semibold">TogoMicroFarad</a>, nous vous aidons à sélectionner les composants adaptés à vos besoins.</p>
+                        
+                        <h3 class="text-xl font-bold mt-6 mb-3">❓ FAQ – Durée de vie des condensateurs</h3>
+                        <div class="space-y-3">
+                            <div><strong class="text-gray-800">Un condensateur 2000 heures est-il mauvais ?</strong><br>Non. Tout dépend de sa température réelle d’utilisation. À 45°C, il peut durer des années.</div>
+                            <div><strong class="text-gray-800">5000h est-il meilleur que 2000h ?</strong><br>Souvent oui, mais il faut aussi regarder l’ESR et le courant d’ondulation.</div>
+                            <div><strong class="text-gray-800">105°C est-il meilleur que 85°C ?</strong><br>Oui, pour la fiabilité en environnement chaud. À température ambiante, les deux sont corrects.</div>
+                            <div><strong class="text-gray-800">Un condensateur peut-il dépasser sa durée nominale ?</strong><br>Oui, très souvent, surtout s’il n’a jamais travaillé à la température maximale.</div>
+                        </div>
+
                         <div class="footer-links">
-                            <a href="../../condensateurs-electrolytiques-togo.html"><i class="fas fa-arrow-right"></i> Découvrez notre catalogue</a>
-                            <a href="../../contact.html"><i class="fas fa-envelope"></i> Nous contacter</a>
-                            <a href="../index.html"><i class="fas fa-newspaper"></i> Retour au blog</a>
+                            <a href="../../condensateurs-electrolytiques-togo.html"><i class="fas fa-arrow-right"></i> Catalogue complet</a>
+                            <a href="../../contact.html"><i class="fas fa-envelope"></i> Contact technique</a>
+                            <a href="../index.html"><i class="fas fa-newspaper"></i> Autres articles</a>
                         </div>
                         <div class="share-section">
                             <span class="text-gray-500 text-sm">Partager :</span>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html" class="share-btn share-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://twitter.com/intent/tweet?url=https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html&text=Comment%20éviter%20d'endommager%20une%20carte%20électronique%20%3F" class="share-btn share-tw" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html" class="share-btn share-li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://wa.me/?text=Comment%20éviter%20d'endommager%20une%20carte%20électronique%20%3F%20https://togomicrofarad.com/blog/posts/eviter-dommager-carte-electronique.html" class="share-btn share-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://togomicrofarad.com/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html" class="share-btn share-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url=https://togomicrofarad.com/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html&text=Pourquoi%20les%20condensateurs%20ont%20une%20durée%20de%20vie%20exprimée%20en%20heures" class="share-btn share-tw" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://togomicrofarad.com/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html" class="share-btn share-li" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/?text=Comprendre%20la%20durée%20de%20vie%20des%20condensateurs%20https://togomicrofarad.com/blog/posts/pourquoi-condensateurs-duree-de-vie-heures.html" class="share-btn share-wa" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </footer>
                 </div>
@@ -605,7 +604,7 @@
         </div>
     </main>
 
-    <!-- Footer identique aux autres pages -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -616,7 +615,6 @@
                     </div>
                     <p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p>
                 </div>
-                
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
                     <ul class="space-y-2">
@@ -630,40 +628,30 @@
                         <li><a href="../../conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
                     </ul>
                 </div>
-                
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li>
                         <li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2"></i>
-                            <a href="mailto:parfaitementzix@gmail.com" class="text-gray-400 hover:text-white hover:underline">parfaitementzix@gmail.com</a>
-                        </li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2"></i><a href="mailto:parfaitementzix@gmail.com" class="text-gray-400 hover:text-white hover:underline">parfaitementzix@gmail.com</a></li>
                     </ul>
                 </div>
-                
                 <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg">
                     <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
                     <p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p>
                     <div class="flex">
-                        <input type="email" id="email" placeholder="parfaitementzix@gmail.com"
-                               class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required>
-                        <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200">
-                            <i class="fas fa-paper-plane text-white"></i>
-                        </button>
+                        <input type="email" id="email" placeholder="parfaitementzix@gmail.com" class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required>
+                        <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200"><i class="fas fa-paper-plane text-white"></i></button>
                     </div>
                     <p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p>
                 </div>
             </div>
-            
             <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
                 <p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="../../conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="../../assets/js/articles.js"></script>
     <script src="../../assets/js/main.js"></script>
 
@@ -674,31 +662,16 @@
             console.warn('Aucun article disponible pour la section "Vous aimerez aussi".');
             return;
         }
-
         const currentUrl = window.location.pathname;
-
-        const others = window.recentArticles
-            .filter(article => article.url !== currentUrl)
-            .slice(0, 2);
-
-        if (others.length === 0) {
-            console.log('Aucun autre article à suggérer.');
-            return;
-        }
-
+        const others = window.recentArticles.filter(article => article.url !== currentUrl).slice(0, 2);
+        if (others.length === 0) return;
         const container = document.getElementById('related-articles');
-        if (!container) {
-            console.error('Conteneur #related-articles introuvable.');
-            return;
-        }
-
+        if (!container) return;
         container.innerHTML = others.map(article => `
             <div class="related-card">
-                <a href="${article.url}">
-                    <img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy">
-                </a>
+                <a href="${article.url}"><img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy"></a>
                 <div class="related-card-body">
-                    <div class="related-card-meta">${article.category || 'Article'} · ${article.date || 'Date inconnue'}</div>
+                    <div class="related-card-meta">${article.category || 'Article'} · ${article.date || ''}</div>
                     <h4><a href="${article.url}">${article.title}</a></h4>
                 </div>
             </div>
