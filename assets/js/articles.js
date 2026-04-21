@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "🔴 Pourquoi votre alimentation meurt à cause d’UN seul petit condensateur ?",
+    "url": "/blog/posts/pourquoi-alimentation-meurt-condensateur-demarrage.html",
+    "category": "Dépannage",
+    "date": "2026-04-20",
+    "image": "/assets/images/condensateur-demarrage-carte.jpg"
+  },
+  {
     "title": "🔋 Pourquoi les condensateurs ont une durée de vie exprimée en heures… et ce que ça veut vraiment dire",
     "url": "/blog/posts/duree-de-vie-condensateurs.html",
     "category": "Guide technique",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Pannes & Réparations",
     "date": "2026-03-30",
     "image": "/assets/images/pannes-coupure-courant.jpg"
-  },
-  {
-    "title": "Top 5 des pannes électroniques les plus fréquentes au Togo (et les composants à remplacer)",
-    "url": "/blog/posts/pannes-electroniques-frequentes-togo.html",
-    "category": "Guide pratique",
-    "date": "2026-03-28",
-    "image": "/assets/images/pannes-electroniques.jpg"
   }
 ];

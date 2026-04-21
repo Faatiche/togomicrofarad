@@ -134,5 +134,13 @@
   "url": "/blog/posts/duree-de-vie-condensateurs.html",
   "excerpt": "2000 heures à 105°C signifie-t-il que le condensateur meurt après ce délai ? Non. Découvrez la règle des 10°C qui peut multiplier par 16 la durée de vie, et comment bien choisir vos condensateurs pour des réparations durables.",
   "image": "/assets/images/duree-vie-condensateur.jpg"
+},
+{
+  "title": "🔴 Pourquoi votre alimentation meurt à cause d’UN seul petit condensateur ?",
+  "date": "2026-04-20",
+  "category": "Dépannage",
+  "url": "/blog/posts/pourquoi-alimentation-meurt-condensateur-demarrage.html",
+  "excerpt": "Vous pensez que votre téléviseur ou votre ampli Hi-Fi est 'mort' ? Dans 90% des cas au Togo, le coupable est un composant à moins de 500 FCFA : le condensateur de démarrage. Voici pourquoi il tue vos appareils et comment l'arrêter.",
+  "image": "/assets/images/condensateur-demarrage-carte.jpg"
 }
 ]
