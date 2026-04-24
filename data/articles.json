@@ -142,5 +142,13 @@
   "url": "/blog/posts/pourquoi-alimentation-meurt-condensateur-demarrage.html",
   "excerpt": "Vous pensez que votre téléviseur ou votre ampli Hi-Fi est 'mort' ? Dans 90% des cas au Togo, le coupable est un composant à moins de 500 FCFA : le condensateur de démarrage. Voici pourquoi il tue vos appareils et comment l'arrêter.",
   "image": "/assets/images/condensateur-demarrage-carte.jpg"
+},
+{
+  "title": "↨ Pourquoi les condensateurs sont le point faible numéro 1 des appareils électroniques",
+  "date": "2026-04-24",
+  "category": "Guide technique",
+  "url": "/blog/posts/condensateur-point-faible-electronique.html",
+  "excerpt": "Chaleur, surtensions, vieillissement chimique : les condensateurs électrolytiques sont la première cause de panne au Togo. Apprenez à détecter les signes avant-coureurs et à choisir des remplacements 105°C qui tiennent dans la durée.",
+  "image": "/assets/images/condensateur-bombe-fuite.jpg"
 }
 ]

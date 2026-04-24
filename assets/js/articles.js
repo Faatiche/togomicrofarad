@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "↨ Pourquoi les condensateurs sont le point faible numéro 1 des appareils électroniques",
+    "url": "/blog/posts/condensateur-point-faible-electronique.html",
+    "category": "Guide technique",
+    "date": "2026-04-24",
+    "image": "/assets/images/condensateur-bombe-fuite.jpg"
+  },
+  {
     "title": "🔴 Pourquoi votre alimentation meurt à cause d’UN seul petit condensateur ?",
     "url": "/blog/posts/pourquoi-alimentation-meurt-condensateur-demarrage.html",
     "category": "Dépannage",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Diagnostic PC",
     "date": "2026-04-01",
     "image": "/assets/images/condensateur-pc-carte-mere.jpg"
-  },
-  {
-    "title": "⚡ Pourquoi vos appareils électroniques tombent en panne après une coupure de courant au Togo ?",
-    "url": "/blog/posts/pannes-coupure-courant-togo.html",
-    "category": "Pannes & Réparations",
-    "date": "2026-03-30",
-    "image": "/assets/images/pannes-coupure-courant.jpg"
   }
 ];
