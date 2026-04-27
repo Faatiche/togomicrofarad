@@ -150,5 +150,13 @@
   "url": "/blog/posts/condensateur-point-faible-electronique.html",
   "excerpt": "Chaleur, surtensions, vieillissement chimique : les condensateurs électrolytiques sont la première cause de panne au Togo. Apprenez à détecter les signes avant-coureurs et à choisir des remplacements 105°C qui tiennent dans la durée.",
   "image": "/assets/images/condensateur-bombe-fuite.jpg"
+},
+{
+  "title": "📋 Comment lire un datasheet de condensateur électrolytique ?",
+  "date": "2026-04-27",
+  "category": "Guide technique",
+  "url": "/blog/posts/lire-datasheet-condensateur.html",
+  "excerpt": "Capacité, tension, ESR, durée de vie : apprenez à décoder une fiche technique de condensateur pour ne plus jamais vous tromper dans vos achats. Guide simple avec exemple concret.",
+  "image": "/assets/images/lire-datasheet-condensateur.jpg"
 }
 ]

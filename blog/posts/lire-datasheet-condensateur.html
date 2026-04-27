@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Vous ne savez pas déchiffrer une fiche technique de condensateur électrolytique ? Découvrez notre guide simple pour lire capacité, tension, ESR, durée de vie et choisir le bon modèle pour vos réparations au Togo.">
+    <meta name="keywords" content="lire datasheet condensateur, comprendre datasheet, fiche technique condensateur électrolytique, achat condensateur Togo, TogoMicroFarad, réparation électronique Lomé">
+    <meta name="author" content="TogoMicroFarad">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://togomicrofarad.com/blog/posts/lire-datasheet-condensateur.html">
+    <meta property="og:title" content="Comment lire un datasheet de condensateur électrolytique ?">
+    <meta property="og:description" content="Maîtrisez les fiches techniques pour ne plus acheter un condensateur inadapté. Guide pratique pour réparateurs et bricoleurs au Togo.">
+    <meta property="og:image" content="https://togomicrofarad.com/assets/images/lire-datasheet-condensateur.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://togomicrofarad.com/blog/posts/lire-datasheet-condensateur.html">
+    <meta property="twitter:title" content="Comment lire un datasheet de condensateur électrolytique ?">
+    <meta property="twitter:description" content="Maîtrisez les fiches techniques pour ne plus acheter un condensateur inadapté. Guide pratique pour réparateurs et bricoleurs au Togo.">
+    <meta property="twitter:image" content="https://togomicrofarad.com/assets/images/lire-datasheet-condensateur.jpg">
+
+    <title>Lire un datasheet de condensateur électrolytique – TogoMicroFarad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles principaux du site -->
+    <link rel="stylesheet" href="../../assets/css/output.css">
+    
+    <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FM5WHLRKQH"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FM5WHLRKQH');
+    </script>
+
+    <style>
+        .article-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2rem 1rem 4rem;
+        }
+        .article-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px -12px rgba(26,26,46,0.15);
+            overflow: hidden;
+        }
+        .article-hero {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        .article-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .article-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 60%);
+        }
+        .article-hero-badge {
+            position: absolute;
+            top: 1.25rem;
+            left: 1.25rem;
+            z-index: 2;
+            background: #6366f1;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.35rem 1rem;
+            border-radius: 99px;
+            letter-spacing: 0.05em;
+        }
+        .article-body {
+            padding: 2.5rem 3rem;
+        }
+        @media (max-width: 640px) {
+            .article-hero { height: 240px; }
+            .article-body { padding: 1.5rem 1.25rem; }
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        .article-title {
+            font-family: 'Lora', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.3;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+        .article-lead {
+            font-size: 1.1rem;
+            color: #4b5563;
+            border-left: 4px solid #6366f1;
+            padding-left: 1.25rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin: 2rem 0 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 2px solid #f3f4f6;
+            padding-bottom: 0.5rem;
+        }
+        .section-title i {
+            font-size: 1.3rem;
+            color: #6366f1;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+        .symptom-list {
+            list-style: none;
+            padding: 0;
+        }
+        .symptom-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .symptom-list i {
+            color: #6366f1;
+            margin-top: 0.2rem;
+            width: 18px;
+        }
+        .visual-panel {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+        .visual-panel img {
+            max-width: 100%;
+            border-radius: 8px;
+            max-height: 200px;
+            object-fit: contain;
+        }
+        .visual-panel figcaption {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+        .info-box {
+            background: #eef2ff;
+            border-left: 4px solid #6366f1;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+        .info-box i {
+            color: #6366f1;
+            font-size: 1.1rem;
+        }
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 520px) { .criteria-grid { grid-template-columns: 1fr; } }
+        .criteria-card {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+        .criteria-card h3 {
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+        .criteria-card p {
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+            border: 1px solid #c7d2fe;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .cta-banner-text p:first-child {
+            font-weight: 700;
+            color: #3730a3;
+            margin-bottom: 0.25rem;
+        }
+        .cta-banner-text p:last-child {
+            color: #4b5563;
+            font-size: 0.9rem;
+        }
+        .btn-primary {
+            background: #6366f1;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 99px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+        .btn-primary:hover { background: #4f46e5; }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1.25rem;
+            margin: 2rem 0;
+        }
+        @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
+        .product-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 1.5rem;
+            background: white;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .product-card:hover {
+            border-color: #6366f1;
+            box-shadow: 0 10px 20px -8px rgba(99,102,241,0.2);
+        }
+        .product-card-icon {
+            width: 48px; height: 48px;
+            background: #e0e7ff;
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            color: #6366f1;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .product-card h3 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .product-card .desc {
+            font-size: 0.9rem;
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+        .product-price {
+            font-family: 'Lora', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #6366f1;
+            margin-bottom: 0.75rem;
+        }
+        .product-price small {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #6b7280;
+            display: block;
+        }
+        .btn-add-cart {
+            width: 100%;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.6rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center; justify-content: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+        .btn-add-cart:hover { background: #4f46e5; }
+        .btn-secondary {
+            display: block;
+            text-align: center;
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 0.5rem;
+            font-weight: 600;
+            color: #111827;
+            text-decoration: none;
+            margin-top: 0.75rem;
+            transition: background 0.2s;
+        }
+        .btn-secondary:hover { background: #e5e7eb; }
+        .whatsapp-cta {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .whatsapp-cta p {
+            font-weight: 600;
+            color: #14532d;
+            margin-bottom: 1rem;
+        }
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #16a34a;
+            color: white;
+            font-weight: 700;
+            padding: 0.75rem 2rem;
+            border-radius: 99px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn-wa:hover { background: #15803d; }
+        .article-footer {
+            border-top: 2px solid #f3f4f6;
+            padding-top: 2rem;
+            margin-top: 1rem;
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+        .footer-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #e0e7ff;
+            color: #3730a3;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .footer-links a:hover { background: #c7d2fe; }
+        .share-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .share-section span {
+            font-weight: 600;
+            color: #6b7280;
+        }
+        .share-btn {
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.15s;
+        }
+        .share-btn:hover { transform: scale(1.1); }
+        .share-fb { background: #1877f2; }
+        .share-tw { background: #1da1f2; }
+        .share-li { background: #0a66c2; }
+        .share-wa { background: #25d366; }
+        .related-section {
+            margin-top: 3rem;
+        }
+        .related-section h3 {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 1.25rem;
+        }
+        @media (max-width: 520px) { .related-grid { grid-template-columns: 1fr; } }
+        .related-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .related-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .related-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        .related-card-body { padding: 1rem; }
+        .related-card-meta { font-size: 0.75rem; color: #6b7280; margin-bottom: 0.3rem; }
+        .related-card-body h4 { font-weight: 700; font-size: 0.95rem; }
+        .related-card-body h4 a { color: #111827; text-decoration: none; }
+        .related-card-body h4 a:hover { color: #6366f1; }
+        header { z-index: 1000; }
+        article header { position: static !important; transform: none !important; }
+        #cart-dropdown {
+            z-index: 100000 !important;
+            background-color: #ffffff !important;
+        }
+        #cart-dropdown button,
+        #cart-dropdown a,
+        #cart-dropdown .btn,
+        #cart-dropdown [onclick] {
+            pointer-events: auto !important;
+            cursor: pointer !important;
+            touch-action: manipulation;
+        }
+        .cart-overlay {
+            background-color: transparent !important;
+        }
+        .cart-overlay.active {
+            pointer-events: none;
+            z-index: 99999;
+        }
+        #cart-dropdown.show-mobile {
+            z-index: 100001 !important;
+        }
+        .datasheet-example {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-family: 'DM Sans', monospace;
+        }
+        .datasheet-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .datasheet-table th,
+        .datasheet-table td {
+            border: 1px solid #cbd5e1;
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+        .datasheet-table th {
+            background: #e0e7ff;
+            color: #3730a3;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-bolt text-blue-600 text-2xl mr-2 btn-attention"></i>
+                <h2 class="text-xl font-black">TogoMicroFarad</h2>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6">
+                <a href="../../index.html" class="text-gray-600 font-medium hover:text-blue-600">Accueil</a>
+                <a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <a href="../../blog/index.html" class="text-gray-600 hover:text-blue-600">Blog</a>
+                
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 font-medium flex items-center gap-1 cursor-pointer">
+                        Articles
+                        <i class="fas fa-chevron-down text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+                    </button>
+                    <div id="articles-dropdown-desktop" class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    </div>
+                </div>
+
+                <a href="../../contact.html" class="text-gray-600 hover:text-blue-600">Contact</a>
+                <a href="../../a-propos.html" class="text-gray-600 hover:text-blue-600">À propos</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative" id="cart-container">
+                    <button id="cart-btn" class="relative bg-blue-600 text-white py-2.5 px-3 sm:px-5 rounded-full hover:bg-blue-700 cursor-pointer transition-all duration-300 flex items-center gap-2 sm:gap-3 shadow-lg hover:shadow-xl transform hover:scale-105 font-medium">
+                        <i class="fas fa-shopping-cart text-lg"></i>
+                        <span class="hidden sm:inline">Panier</span>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-6 w-6 flex items-center justify-center shadow-md">0</span>
+                    </button>
+                    
+                    <div id="cart-dropdown" class="hidden fixed sm:absolute top-16 sm:top-auto right-2 sm:right-0 left-2 sm:left-auto w-auto sm:w-80 max-w-sm bg-white text-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 z-9999"></div>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none z-50">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="../../index.html" class="mobile-nav-link"><i class="fas fa-home"></i><span>Accueil</span></a>
+                    <a href="../../condensateurs-electrolytiques-togo.html" class="mobile-nav-link"><i class="fas fa-box"></i><span>Produits</span></a>
+                    <a href="../../blog/index.html" class="mobile-nav-link"><i class="fas fa-newspaper"></i><span>Blog</span></a>
+                    <a href="../../index.html#applications" class="mobile-nav-link"><i class="fas fa-cogs"></i><span>Applications</span></a>
+                    <a href="../../contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+                    <a href="../../a-propos.html" class="mobile-nav-link"><i class="fas fa-users"></i><span>À propos</span></a>
+                </nav>
+                
+                <div class="mobile-menu-footer">
+                    <div class="mobile-contact-info">
+                        <p><i class="fas fa-phone"></i> +228 93 60 29 26</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Djabou Mango, Togo</p>
+                    </div>
+                </div>
+            </div>
+            <div id="menu-overlay" class="menu-overlay"></div>
+        </div>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <div class="article-wrapper">
+
+            <article class="article-card">
+
+                <div class="article-hero">
+                    <span class="article-hero-badge">Guide Pratique</span>
+                    <video src="../../assets/images/lire-datasheet-condensateur.mp4" loop autoplay muted playsinline></video>
+                </div>
+
+                <div class="article-body">
+
+                    <header class="mb-8">
+                        <div class="article-meta">
+                            <span><i class="far fa-calendar-alt"></i> 27 avril 2026</span>
+                            <span class="dot">•</span>
+                            <span><i class="far fa-clock"></i> 11 min de lecture</span>
+                        </div>
+                        <h1 class="article-title">
+                            Comment lire un datasheet de condensateur électrolytique ?
+                        </h1>
+                        <p class="article-lead">
+                            Capacité, tension, ESR, durée de vie, température… Une fiche technique de condensateur peut faire peur. Pourtant, savoir la déchiffrer, c'est la garantie d'acheter le bon composant pour une réparation durable au Togo. Suivez ce guide pas à pas pour ne plus vous tromper.
+                        </p>
+                    </header>
+
+                    <!-- Introduction -->
+                    <section>
+                        <h2 class="section-title">
+                            <i class="fas fa-file-alt"></i>
+                            À quoi sert un datasheet ?
+                        </h2>
+                        <p>Un datasheet (ou fiche technique) est la carte d'identité d'un condensateur. Il vous dit tout ce qu'il faut savoir pour l'utiliser correctement, sans risque. Mais entre les acronymes anglais et les tableaux de chiffres, on peut vite se perdre.</p>
+                        
+                        <div class="info-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <span><strong>Un bon choix commence par la bonne lecture.</strong> En comprenant les valeurs essentielles, vous éviterez les pannes prématurées et les composants qui explosent dès la première mise sous tension.</span>
+                        </div>
+                    </section>
+
+                    <!-- Les 6 paramètres à connaître -->
+                    <section>
+                        <h2 class="section-title">
+                            <i class="fas fa-magnifying-glass"></i>
+                            Les 6 informations vitales à repérer
+                        </h2>
+                        
+                        <div class="criteria-grid">
+                            <div class="criteria-card">
+                                <h3>📦 Capacité (Capacitance)</h3>
+                                <p>Exprimée en µF (microfarads). C'est la quantité d'énergie que le condensateur peut stocker. Ex : 1000 µF. À respecter à ±20% près.</p>
+                            </div>
+                            <div class="criteria-card">
+                                <h3>⚡ Tension nominale (Rated Voltage)</h3>
+                                <p>La tension maximale supportée en continu (V DC). Ne jamais dépasser. Ex : 25 V, 50 V, 400 V.</p>
+                            </div>
+                            <div class="criteria-card">
+                                <h3>🌡️ Température de fonctionnement</h3>
+                                <p>Indique la plage, par exemple -40°C à +105°C. La valeur haute est capitale pour la durée de vie sous le climat togolais.</p>
+                            </div>
+                            <div class="criteria-card">
+                                <h3>⏱️ Durée de vie (Load Life)</h3>
+                                <p>Souvent exprimée en heures à une certaine température (ex : 2000h @105°C). Plus c'est long, mieux c'est.</p>
+                            </div>
+                            <div class="criteria-card">
+                                <h3>📉 ESR (Résistance série équivalente)</h3>
+                                <p>Mesurée en ohms (Ω). Plus elle est basse, meilleur est le filtrage. Crucial pour les alimentations à découpage.</p>
+                            </div>
+                            <div class="criteria-card">
+                                <h3>📏 Dimensions et pas</h3>
+                                <p>Diamètre x Hauteur en mm. Vérifiez que le nouveau condensateur entre physiquement sur la carte.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Exemple concret -->
+                    <section>
+                        <h2 class="section-title">
+                            <i class="fas fa-table"></i>
+                            Exemple réel d'un datasheet simplifié
+                        </h2>
+                        <p>Voici ce que vous pourriez trouver pour un condensateur électrolytique courant. Les éléments importants sont commentés.</p>
+                        
+                        <div class="datasheet-example">
+                            <h3 style="font-weight:700; color:#1e293b;">Modèle : CD110-X 1000µF 25V 105°C Low ESR</h3>
+                            <table class="datasheet-table">
+                                <thead>
+                                    <tr><th>Paramètre</th><th>Valeur</th><th>Ce que ça signifie</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Capacitance</td><td>1000 µF ±20%</td><td>La valeur est garantie entre 800 et 1200 µF</td></tr>
+                                    <tr><td>Rated Voltage</td><td>25 V DC</td><td>Ne pas utiliser sur une ligne >25V</td></tr>
+                                    <tr><td>Category Temp. Range</td><td>-40 ~ +105°C</td><td>Supporte la chaleur de Lomé en continu</td></tr>
+                                    <tr><td>Load Life</td><td>3000 hours @105°C</td><td>Durée de vie garantie dans ces conditions</td></tr>
+                                    <tr><td>ESR (100kHz, 20°C)</td><td>0.038 Ω max</td><td>Très faible, idéal pour alimentations</td></tr>
+                                    <tr><td>Dimensions</td><td>10 x 20 mm</td><td>À vérifier avant achat</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="text-sm text-gray-600 mt-3"><i class="fas fa-check-circle text-indigo-500 mr-1"></i> Ce condensateur est parfait pour réparer l'alimentation d'un téléviseur LCD ou d'un ampli Hi-Fi.</p>
+                        </div>
+                    </section>
+
+                    <!-- Pièges à éviter -->
+                    <section>
+                        <h2 class="section-title">
+                            <i class="fas fa-triangle-exclamation"></i>
+                            Les 3 erreurs classiques en lisant un datasheet
+                        </h2>
+                        <div class="grid-2">
+                            <ul class="symptom-list">
+                                <li><i class="fas fa-times-circle"></i> <strong>Confondre tension crête et tension nominale :</strong> Un condensateur 400V DC peut ne pas supporter les pics du secteur (qui montent à 630V crête). Vérifiez la "Surge Voltage".</li>
+                                <li><i class="fas fa-times-circle"></i> <strong>Ignorer l'ESR :</strong> Un condensateur à forte ESR dans une alimentation à découpage va chauffer et sécher rapidement.</li>
+                                <li><i class="fas fa-times-circle"></i> <strong>Oublier le "derating" :</strong> Si la durée de vie est donnée à 105°C, à 85°C elle sera bien plus longue. Mais si votre boîtier est déjà à 60°C, le condensateur 85°C mourra vite.</li>
+                            </ul>
+                            <figure class="visual-panel">
+                                <img src="../../assets/images/condensateur-temperature-comparaison.jpg" alt="Comparaison condensateur 85°C et 105°C">
+                                <figcaption>Un modèle 105°C (à droite) tiendra bien plus longtemps dans un appareil fermé.</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- Où trouver des condensateurs conformes au Togo -->
+                    <section>
+                        <h2 class="section-title">
+                            <i class="fas fa-store"></i>
+                            Des condensateurs conformes à leur datasheet, livrés au Togo
+                        </h2>
+                        <p>Sur TogoMicroFarad.com, nous sélectionnons des condensateurs dont les datasheets sont clairs et les spécifications adaptées aux réparations sous les tropiques. Chaque lot est testé avant expédition.</p>
+                        
+                        <div class="cta-banner">
+                            <div class="cta-banner-text">
+                                <p>📋 Toutes les valeurs de condensateurs électrolytiques disponibles partout au Togo</p>
+                                <p>Besoin d'un détail technique ? Écrivez-nous, nous vous aiderons à décoder le datasheet.</p>
+                            </div>
+                            <a href="../../condensateurs-electrolytiques-togo.html" class="btn-primary">
+                                <i class="fas fa-boxes"></i> Voir notre catalogue
+                            </a>
+                        </div>
+
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <div class="product-card-icon"><i class="fas fa-microchip"></i></div>
+                                <h3>Pack Réparateur Essentiel (30 pièces)</h3>
+                                <p class="desc">Les 15 valeurs les plus courantes (10V à 50V, 10 µF à 1000 µF) pour dépanner TV, amplis, alimentations. Un indispensable de l'atelier.</p>
+                                <div class="product-price">6 500 <small>FCFA</small></div>
+                                <button class="btn-add-cart btn-shine"
+                                        data-nom="Pack Réparateur Essentiel 30 pièces"
+                                        data-tension="10V-50V"
+                                        data-temperature="105°C"
+                                        data-quantite="30"
+                                        data-prix="6500">
+                                    <i class="fas fa-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card-icon"><i class="fas fa-book-open"></i></div>
+                                <h3>Kit spécial </h3>
+                                <p class="desc">5 pièces spéciales alimentations secteur : 10 µF, 22 µF, 33 µF, 47 µF, 100 µF. Résout 90% des pannes de démarrage.</p>
+                                <div class="product-price">750 <small>FCFA</small></div>
+                                <button class="btn-add-cart btn-shine"
+                                        data-nom="Kit spécial"
+                                        data-tension="16V-25V"
+                                        data-temperature="105°C"
+                                        data-quantite="5"
+                                        data-prix="750">
+                                    <i class="fas fa-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="whatsapp-cta">
+                            <p>Vous hésitez sur une référence ? Envoyez-nous la photo du datasheet, on vous aide à choisir.</p>
+                            <a href="https://wa.me/22893602926?text=Bonjour%2C%20je%20voudrais%20de%20l'aide%20pour%20lire%20une%20fiche%20technique%20de%20condensateur." class="btn-wa" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Demander conseil
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- FAQ -->
+                    <section>
+                        <h2 class="section-title"><i class="fas fa-question-circle"></i> Questions fréquentes</h2>
+                        <div class="criteria-grid">
+                            <div class="criteria-card">
+                                <h3>Où trouver le datasheet d'un condensateur ?</h3>
+                                <p>Sur le site du fabricant, ou en scannant le QR code sur l'emballage. </p>
+                            </div>
+                            <div class="criteria-card">
+                                <h3>Que signifie "Ripple Current" ?</h3>
+                                <p>C'est le courant alternatif que le condensateur peut supporter sans chauffer. Important dans les alimentations.</p>
+                            </div>
+                            <div class="criteria-card">
+                                <h3>Un condensateur 105°C dure-t-il vraiment plus longtemps ?</h3>
+                                <p>Oui, grâce à la règle des 10°C : chaque baisse de 10°C double la durée de vie. Un 105°C à 65°C vivra 16 fois plus longtemps que sa spécification.</p>
+                            </div>
+                            <div class="criteria-card">
+                                <h3>Puis-je remplacer un condensateur 85°C par un 105°C ?</h3>
+                                <p>C'est même fortement recommandé ! À condition de respecter la capacité, la tension et l'encombrement.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer class="article-footer">
+                        <p class="outro">
+                            Lire un datasheet n'est pas réservé aux ingénieurs. Avec ces quelques repères, vous pouvez sélectionner le bon condensateur à chaque fois, et prolonger la vie des appareils que vous réparez. Besoin d'un composant de qualité ? TogoMicroFarad vous livre rapidement dans tout le Togo.
+                        </p>
+
+                        <div class="footer-links">
+                            <a href="../../condensateurs-electrolytiques-togo.html">
+                                <i class="fas fa-arrow-right"></i> Catalogue complet
+                            </a>
+                            <a href="../../blog/index.html">
+                                <i class="fas fa-newspaper"></i> Voir tous les articles
+                            </a>
+                            <a href="../../contact.html">
+                                <i class="fas fa-envelope"></i> Contactez-nous
+                            </a>
+                        </div>
+
+                        <div class="share-section">
+                            <span>Partager :</span>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://togomicrofarad.com/blog/posts/lire-datasheet-condensateur.html" target="_blank" class="share-btn share-fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/intent/tweet?url=https://togomicrofarad.com/blog/posts/lire-datasheet-condensateur.html&text=Comment lire un datasheet de condensateur électrolytique" target="_blank" class="share-btn share-tw" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://togomicrofarad.com/blog/posts/lire-datasheet-condensateur.html" target="_blank" class="share-btn share-li" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wa.me/?text=Comment lire un datasheet de condensateur électrolytique https://togomicrofarad.com/blog/posts/lire-datasheet-condensateur.html" target="_blank" class="share-btn share-wa" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </footer>
+                </div>
+            </article>
+
+            <div class="related-section">
+                <h3>Ces articles pourraient vous intéresser</h3>
+                <div class="related-grid" id="related-articles">
+                    <!-- Dynamiquement rempli -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center">
+                        <i class="fas fa-bolt text-blue-600 text-2xl mr-2"></i>
+                        <h1 class="text-xl font-black">TogoMicroFarad</h1>
+                    </div>
+                    <p class="text-gray-400">Votre fournisseur de condensateurs électrolytiques de confiance.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../../index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="../../condensateurs-electrolytiques-togo.html" class="text-gray-400 hover:text-white">Produits</a></li>
+                        <li><a href="../../blog/index.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="../../a-propos.html" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="../../contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
+                        <li><a href="../../conditions-utilisation.html" class="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Djabou Mango Togo</li>
+                        <li><i class="fas fa-phone mr-2"></i> +228 93 60 29 26</li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:parfaitementzix@gmail.com" class="text-gray-400 hover:text-white hover:underline">parfaitementzix@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Inscrivez-vous pour recevoir nos offres spéciales.</p>
+                    <div class="flex">
+                        <input type="email" id="email" placeholder="parfaitementzix@gmail.com"
+                               class="bg-gray-700 text-white py-2 px-3 rounded-l w-full" required>
+                        <button id="submitBtn" class="bg-blue-600 hover:bg-blue-700 py-2 px-4 rounded-r transition-colors duration-200">
+                            <i class="fas fa-paper-plane text-white"></i>
+                        </button>
+                    </div>
+                    <p id="message" class="mt-2 text-center opacity-0 transition-opacity duration-500"></p>
+                </div>
+            </div>
+            
+             <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2026 TogoMicroFarad. Tous droits réservés. | <a href="../../Politique-de-confidentialité-TogoMicroFarad.html" class="hover:text-white">Politique de confidentialité</a> | <a href="../../conditions-utilisation.html" class="hover:text-white">Conditions d'utilisation</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/articles.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+   <script>
+(function() {
+    if (!window.recentArticles || !Array.isArray(window.recentArticles) || window.recentArticles.length === 0) {
+        console.warn('Aucun article récent trouvé.');
+        return;
+    }
+
+    const currentUrl = window.location.pathname;
+    const others = window.recentArticles
+        .filter(article => article.url !== currentUrl)
+        .slice(0, 2);
+
+    if (others.length === 0) return;
+
+    const container = document.getElementById('related-articles');
+    if (!container) return;
+
+    container.innerHTML = others.map(article => `
+        <div class="related-card">
+            <a href="${article.url}">
+                <img src="${article.image || '../../assets/images/placeholder.jpg'}" alt="${article.title}" loading="lazy">
+            </a>
+            <div class="related-card-body">
+                <div class="related-card-meta">${article.category || 'Article'} · ${article.date || ''}</div>
+                <h4><a href="${article.url}">${article.title}</a></h4>
+            </div>
+        </div>
+    `).join('');
+})();
+</script>
+</body>
+</html>

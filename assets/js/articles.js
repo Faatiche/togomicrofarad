@@ -1,6 +1,13 @@
 // Fichier généré automatiquement – ne pas modifier
 window.recentArticles = [
   {
+    "title": "📋 Comment lire un datasheet de condensateur électrolytique ?",
+    "url": "/blog/posts/lire-datasheet-condensateur.html",
+    "category": "Guide technique",
+    "date": "2026-04-27",
+    "image": "/assets/images/lire-datasheet-condensateur.jpg"
+  },
+  {
     "title": "↨ Pourquoi les condensateurs sont le point faible numéro 1 des appareils électroniques",
     "url": "/blog/posts/condensateur-point-faible-electronique.html",
     "category": "Guide technique",
@@ -62,12 +69,5 @@ window.recentArticles = [
     "category": "Guide composants",
     "date": "2026-04-03",
     "image": "/assets/images/electrolytique-vs-ceramique.jpg"
-  },
-  {
-    "title": "PC ne s'allume plus ? Diagnostiquer un condensateur électrolytique HS (Guide complet)",
-    "url": "/blog/posts/diagnostic-condensateur-pc.html",
-    "category": "Diagnostic PC",
-    "date": "2026-04-01",
-    "image": "/assets/images/condensateur-pc-carte-mere.jpg"
   }
 ];
