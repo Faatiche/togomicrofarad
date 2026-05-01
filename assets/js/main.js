@@ -564,7 +564,7 @@ function initArticlesDropdown() {
     // Trier par date (du plus récent au plus ancien) et garder les 5 premiers
     const recentArticles = [...window.recentArticles]
         .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, 5);
+        // .slice(0, 5);
 
     if (recentArticles.length === 0) {
         dropdown.innerHTML = '<div class="p-4 text-center text-gray-500">Aucun article pour le moment</div>';

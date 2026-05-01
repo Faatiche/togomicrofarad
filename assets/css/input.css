@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+#articles-dropdown-desktop {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
   .product-card:hover {
             transform: translateY(-5px);
             transition: transform 0.3s ease;
