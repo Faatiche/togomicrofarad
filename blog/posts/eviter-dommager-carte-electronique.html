@@ -31,6 +31,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Styles principaux du site (Tailwind + composants header/footer) -->
+    <link rel="stylesheet" href="../../assets/css/output.css">
+    
     <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.png">
 
     <!-- Google tag (gtag.js) -->
@@ -125,6 +128,7 @@
             line-height: 1.25;
             letter-spacing: -0.01em;
             background: linear-gradient(135deg, #0f172a, #1e293b);
+            -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1.2rem;
@@ -365,7 +369,7 @@
     <!-- Toast container -->
     <div id="toast-container" class="fixed bottom-5 right-5 flex flex-col gap-2 z-50"></div>
 
-    <!-- Header identique aux autres pages (inchangé) -->
+    <!-- Header identique aux autres pages -->
     <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
